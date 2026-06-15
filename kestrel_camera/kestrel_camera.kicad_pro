@@ -217,7 +217,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -237,7 +237,24 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "footprint_link_issues|241300|1524000|d7c457a9-e67a-4741-9a61-0f8cc0aa3322|00000000-0000-0000-0000-000000000000|||",
+        "will fix later"
+      ],
+      [
+        "lib_symbol_issues|990600|1181100|2601d6a3-590a-4c70-bc96-da304e045a09|00000000-0000-0000-0000-000000000000|||",
+        "renamed the library to capital letters"
+      ],
+      [
+        "lib_symbol_mismatch|241300|1524000|d7c457a9-e67a-4741-9a61-0f8cc0aa3322|00000000-0000-0000-0000-000000000000|||",
+        "changed pins in local symbol to 'passive' to shut up warnings"
+      ],
+      [
+        "multiple_net_names|825500|190500|4125e949-0a79-4216-b9cd-b5639a98c16d|d55bc7f8-b78f-4668-9ec9-8e5129bd1060|/97a847c9-d989-41dc-b959-cfc0f8d7a8bf|/97a847c9-d989-41dc-b959-cfc0f8d7a8bf|/97a847c9-d989-41dc-b959-cfc0f8d7a8bf",
+        "these nets are connected, V1V8 for both is fine"
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -426,6 +443,7 @@
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
+      "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
       "isolated_pin_label": "warning",
@@ -617,25 +635,33 @@
     "meta": {
       "version": 1
     },
+    "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
+    "space_save_all_events": true,
+    "spice_current_sheet_as_root": false,
+    "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_dissipations": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
         "filename": "kestrel_camera.kicad_sch",
-        "name": "kestrel_camera",
+        "name": "asic110c_fmc-hpc",
         "uuid": "97a847c9-d989-41dc-b959-cfc0f8d7a8bf"
       }
     ],
-    "used_designators": "C5-6,#PWR6-7,D1-2",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
       "97a847c9-d989-41dc-b959-cfc0f8d7a8bf",
-      "kestrel_camera"
+      "asic110c_fmc-hpc"
     ]
   ],
   "text_variables": {},
