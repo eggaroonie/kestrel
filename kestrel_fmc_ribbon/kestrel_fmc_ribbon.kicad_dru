@@ -1,0 +1,5 @@
+(version 1)
+(rule "fine pitch width in fmc-hpc breakout zome"
+	(constraint track_width (min 0.1mm) (opt 0.1mm))
+	(condition "A.insideArea('breakout_zone')")
+)

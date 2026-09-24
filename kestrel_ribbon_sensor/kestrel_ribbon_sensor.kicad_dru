@@ -1,0 +1,5 @@
+(version 1)
+(rule "fine pitch width in sensor breakout zome"
+	(constraint clearance (min 0.08mm))
+	(condition "A.insideArea('sensor_breakout')")
+)
