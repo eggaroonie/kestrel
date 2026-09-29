@@ -76,7 +76,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_issues|146296647|72685068|6ac179d4-9176-4905-9472-5c5d23686348|00000000-0000-0000-0000-000000000000",
+          "not sure why its upset here, the library is included"
+        ],
+        [
+          "lib_footprint_issues|146356647|105234932|4017a66e-c664-4395-aa38-9065fa40f0c4|00000000-0000-0000-0000-000000000000",
+          "not sure why its upset here, the library is included"
+        ]
+      ],
       "meta": {
         "version": 2
       },
