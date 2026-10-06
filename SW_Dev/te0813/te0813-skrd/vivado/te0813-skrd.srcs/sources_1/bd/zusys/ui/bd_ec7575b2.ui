@@ -1,0 +1,18 @@
+{
+   "comment_0":"Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!!",
+   "comment_1":"Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!!",
+   "commentid":"comment_0|comment_1|",
+   "font_comment_0":"14",
+   "font_comment_1":"14",
+   "linktoobj_comment_0":"",
+   "linktoobj_comment_1":"",
+   "linktotype_comment_0":"bd_design",
+   "linktotype_comment_1":"bd_design"
+}
+{
+   ""da_zynq_ultra_ps_e_cnt"":"1"
+}
+{
+   "/comment_0":"comment_0",
+   "/comment_2":"comment_1"
+}

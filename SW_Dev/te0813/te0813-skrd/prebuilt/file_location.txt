@@ -1,0 +1,92 @@
+--------------------,------------,--------------------------------------------------------------------------------,,
+Short Dir           ,Group       ,Article Numbers (Typ, Path, Update Time)                                        
+--------------------,------------,--------------------------------------------------------------------------------,,
+3cg_1e_2gb          ,ARTICLE_LIST,TE0813-01-3AE11-A|                                                              ,,
+3cg_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/3cg_1e_2gb/u-boot         ,2025_10_02:07_53_56   
+3cg_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/3cg_1e_2gb                   ,2025_10_01:15_30_31   
+3cg_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   
+--------------------,------------,--------------------------------------------------------------------------------,,
+3eg_1e_2gb          ,ARTICLE_LIST,TE0813-01-3BE11-A|                                                              ,,
+3eg_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/3eg_1e_2gb/u-boot         ,2025_10_02:07_57_43   
+3eg_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/3eg_1e_2gb                   ,2025_10_01:15_35_30   
+3eg_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   
+--------------------,------------,--------------------------------------------------------------------------------,,
+4cg_1e_2gb          ,ARTICLE_LIST,TE0813-01-4AE11-A|                                                              ,,
+4cg_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/4cg_1e_2gb/u-boot         ,2025_10_02:08_01_07   
+4cg_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/4cg_1e_2gb                   ,2025_10_01:15_37_41   
+4cg_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   
+--------------------,------------,--------------------------------------------------------------------------------,,
+4eg_1e_2gb          ,ARTICLE_LIST,TE0813-01-4BE11-AZ|TE0813-01-4BE11-A|                                           ,,
+4eg_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/4eg_1e_2gb/u-boot         ,2025_10_02:08_04_34   
+4eg_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/4eg_1e_2gb                   ,2025_10_01:15_45_18   
+4eg_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   
+--------------------,------------,--------------------------------------------------------------------------------,,
+2cg_1e_2gb          ,ARTICLE_LIST,TE0813-01-2AE11-KZ|TE0813-01-2AE11-AZ|TE0813-01-2AE11-A|                        ,,
+2cg_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/2cg_1e_2gb/u-boot         ,2025_10_02:07_46_36   
+2cg_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/2cg_1e_2gb                   ,2025_10_01:15_25_54   
+2cg_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   
+--------------------,------------,--------------------------------------------------------------------------------,,
+4eg_1e_4gb          ,ARTICLE_LIST,TE0813-02-4BE81-A|TE0813-02-4BE71-A|TE0813-01-4BE81-AZ|TE0813-01-4BE81-A|TE0813-01-4BE71-AZ|TE0813-01-4BE71-A|,,
+4eg_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/4eg_1e_4gb/u-boot         ,2025_10_02:08_07_58   
+4eg_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/4eg_1e_4gb                   ,2025_10_01:15_45_01   
+4eg_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+4ev_1e_2gb          ,ARTICLE_LIST,TE0813-01-4DE11-AZ|TE0813-01-4DE11-A|                                           ,,
+4ev_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/4ev_1e_2gb/u-boot         ,2025_10_02:08_11_23   
+4ev_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/4ev_1e_2gb                   ,2025_10_01:15_52_56   
+4ev_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   
+--------------------,------------,--------------------------------------------------------------------------------,,
+5ev_1e_2gb          ,ARTICLE_LIST,TE0813-01-5DE11-A|                                                              ,,
+5ev_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/5ev_1e_2gb/u-boot         ,2025_10_02:08_14_49   
+5ev_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/5ev_1e_2gb                   ,2025_10_01:15_55_08   
+5ev_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   
+--------------------,------------,--------------------------------------------------------------------------------,,
+2cg_1e_4gb          ,ARTICLE_LIST,TE0813-02-2AE81-AK|TE0813-02-2AE81-A|                                           ,,
+2cg_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/2cg_1e_4gb/u-boot         ,2025_10_02:08_18_12   
+2cg_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/2cg_1e_4gb                   ,2025_10_01:15_59_57   
+2cg_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+2eg_1e_4gb          ,ARTICLE_LIST,TE0813-02-2BE81-A|                                                              ,,
+2eg_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/2eg_1e_4gb/u-boot         ,2025_10_02:08_21_42   
+2eg_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/2eg_1e_4gb                   ,2025_10_01:16_04_47   
+2eg_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+3cg_1e_4gb          ,ARTICLE_LIST,TE0813-02-3AE81-A|                                                              ,,
+3cg_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/3cg_1e_4gb/u-boot         ,2025_10_02:08_25_03   
+3cg_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/3cg_1e_4gb                   ,2025_10_01:16_07_44   
+3cg_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+3eg_1e_4gb          ,ARTICLE_LIST,TE0813-02-3BE81-A|                                                              ,,
+3eg_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/3eg_1e_4gb/u-boot         ,2025_10_02:08_28_25   
+3eg_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/3eg_1e_4gb                   ,2025_10_01:16_14_24   
+3eg_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+4cg_1e_4gb          ,ARTICLE_LIST,TE0813-02-4AE81-A|                                                              ,,
+4cg_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/4cg_1e_4gb/u-boot         ,2025_10_02:08_31_44   
+4cg_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/4cg_1e_4gb                   ,2025_10_01:16_15_38   
+4cg_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+4ev_1e_4gb          ,ARTICLE_LIST,TE0813-02-4DE81-A|                                                              ,,
+4ev_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/4ev_1e_4gb/u-boot         ,2025_10_02:08_35_10   
+4ev_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/4ev_1e_4gb                   ,2025_10_01:16_24_06   
+4ev_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+5ev_1e_4gb          ,ARTICLE_LIST,TE0813-02-5DE81-A|                                                              ,,
+5ev_1e_4gb          ,FILE_LIST   ,BI      ,./boot_images/5ev_1e_4gb/u-boot         ,2025_10_02:08_38_33   
+5ev_1e_4gb          ,FILE_LIST   ,HW      ,./hardware/5ev_1e_4gb                   ,2025_10_01:16_23_27   
+5ev_1e_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+5ev_1i_4gb          ,ARTICLE_LIST,TE0813-02-5DI81-A|                                                              ,,
+5ev_1i_4gb          ,FILE_LIST   ,BI      ,./boot_images/5ev_1i_4gb/u-boot         ,2025_10_02:08_41_56   
+5ev_1i_4gb          ,FILE_LIST   ,HW      ,./hardware/5ev_1i_4gb                   ,2025_10_01:16_31_32   
+5ev_1i_4gb          ,FILE_LIST   ,OS      ,./os/petalinux/4GB                      ,2025_10_01:16_47_30   
+--------------------,------------,--------------------------------------------------------------------------------,,
+4eg_1i_8gb          ,ARTICLE_LIST,TE0813-02-S001|                                                                 ,,
+4eg_1i_8gb          ,FILE_LIST   ,BI      ,./boot_images/4eg_1i_8gb/u-boot         ,2025_10_02:08_45_21   
+4eg_1i_8gb          ,FILE_LIST   ,HW      ,./hardware/4eg_1i_8gb                   ,2025_10_01:16_33_52   
+4eg_1i_8gb          ,FILE_LIST   ,OS      ,./os/petalinux/8GB                      ,2025_10_01:17_03_26   
+--------------------,------------,--------------------------------------------------------------------------------,,
+2eg_1e_2gb          ,ARTICLE_LIST,TE0813-01-2BE11-A|                                                              ,,
+2eg_1e_2gb          ,FILE_LIST   ,BI      ,./boot_images/2eg_1e_2gb/u-boot         ,2025_10_02:07_50_19   
+2eg_1e_2gb          ,FILE_LIST   ,HW      ,./hardware/2eg_1e_2gb                   ,2025_10_01:15_23_44   
+2eg_1e_2gb          ,FILE_LIST   ,OS      ,./os/petalinux/2GB                      ,2025_10_02:07_42_16   

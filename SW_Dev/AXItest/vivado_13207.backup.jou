@@ -1,0 +1,111 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Oct  2 11:17:50 2026
+# Process ID         : 13207
+# Current directory  : /home/jackson/projects/Kestrel/AXItest
+# Command line       : vivado
+# Log file           : /home/jackson/projects/Kestrel/AXItest/vivado.log
+# Journal file       : /home/jackson/projects/Kestrel/AXItest/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 2208.406 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 34995 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.xpr
+update_compile_order -fileset sources_1
+set_property file_type SystemVerilog [get_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test1.v]
+remove_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test1.v
+close [ open /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv w ]
+add_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv
+update_compile_order -fileset sources_1
+remove_files  -fileset sim_1 /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sim_1/new/SIM1.v
+file delete -force /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sim_1/new/SIM1.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sim_1/new/sim_test.sv w ]
+add_files -fileset sim_1 /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sim_1/new/sim_test.sv
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top sim_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+export_ip_user_files -of_objects  [get_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv] -no_script -reset -force -quiet
+remove_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv
+file delete -force /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv
+close [ open /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/sim_test.sv w ]
+add_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/sim_test.sv
+update_compile_order -fileset sources_1
+add_files -norecurse /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test1.v
+update_compile_order -fileset sources_1
+close [ open /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv w ]
+add_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test1.v] -no_script -reset -force -quiet
+remove_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test1.v
+file delete -force /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test1.v
+export_ip_user_files -of_objects  [get_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/sim_test.sv] -no_script -reset -force -quiet
+remove_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/sim_test.sv
+file delete -force /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/sim_test.sv
+launch_simulation
+source tb_capture_test1.tcl
+add_bp {/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sim_1/new/sim_test.sv} 25
+remove_bps -file {/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sim_1/new/sim_test.sv} -line 25
+run all
+restart
+run all
+run 10 us
+run 10 us
+restart
+run 10 us
+run all
+close_sim
+launch_simulation
+source tb_capture_test1.tcl
+run all
+create_ip -name AXILite2 -vendor user.org -library user -version 1.0 -module_name AXILite2_0
+generate_target {instantiation_template} [get_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/ip/AXILite2_0/AXILite2_0.xci]
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_2_project -directory /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.tmp/AXILite2_v1_2_project /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_0_project -directory /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.tmp/AXILite2_v1_2_project/AXILite2_v1_2_project.tmp/AXILite2_v1_0_project /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project AXILite2_v1_2_project
+close_project
+current_project AXITest
+close [ open /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/touch_test.sv w ]
+add_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/touch_test.sv
+update_compile_order -fileset sources_1
+current_project AXILite2_v1_0_project
+current_project AXITest
+current_project AXILite2_v1_0_project
+current_project AXITest
+open_bd_design {/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/bd/zusys/zusys.bd}
+current_project AXILite2_v1_0_project
+current_project AXITest
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property file_type Verilog [get_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd]
+update_compile_order -fileset sources_1
+undo
+update_compile_order -fileset sources_1
+set_property file_type Verilog [get_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv]
+set_property file_type Verilog [get_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/touch_test.sv]
+close_sim
+close_project

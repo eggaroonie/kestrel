@@ -1,0 +1,4 @@
+AXILite2_slave_lite_v1_0_S00_AXI.v,verilog,xil_defaultlib,../../../../AXITest.gen/sources_1/ip/AXILite2_0/hdl/AXILite2_slave_lite_v1_0_S00_AXI.v,
+AXILite2.v,verilog,xil_defaultlib,../../../../AXITest.gen/sources_1/ip/AXILite2_0/hdl/AXILite2.v,
+AXILite2_0.v,verilog,xil_defaultlib,../../../../AXITest.gen/sources_1/ip/AXILite2_0/sim/AXILite2_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

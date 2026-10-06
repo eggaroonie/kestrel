@@ -1,0 +1,197 @@
+/include/ "system-conf.dtsi"
+ 
+ 
+/*------------------ gtr --------------------*/
+ 
+//https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841716/Zynq+Ultrascale+MPSOC+Linux+SIOU+driver
+ 
+/ {
+  refclk3:psgtr_dp_clock {
+          compatible = "fixed-clock";
+          #clock-cells = <0x00>;
+          clock-frequency = <27000000>;
+  };
+ 
+  refclk2:psgtr_pcie_usb_clock {
+          compatible = "fixed-clock";
+          #clock-cells = <0x00>;
+          clock-frequency = <100000000>;
+  };
+ 
+  refclk1:psgtr_sata_clock {
+          compatible = "fixed-clock";
+          #clock-cells = <0x00>;
+          clock-frequency = <150000000>;
+  };
+ 
+  refclk0:psgtr_unused_clock {
+          compatible = "fixed-clock";
+          #clock-cells = <0x00>;
+          clock-frequency = <100000000>;
+  };
+};
+ 
+&psgtr {
+  clocks = <&refclk0 &refclk1 &refclk2 &refclk3>;
+  //clocks = <&refclk0 &refclk2 &refclk3>;
+  /* ref clk instances used per lane */
+  clock-names = "ref0\0ref1\0ref2\0ref3";
+};
+ 
+ 
+ 
+/*-------------------- SD0 eMMC ----------------*/
+&sdhci0 {
+    // bus-width
+    bus-width = <8>;
+};
+ 
+/*-------------------- SD1 SD2.0 ----------------*/
+&sdhci1 {
+    // disable-wp;
+    no-1-8-v;
+};
+ 
+ 
+/*------------------- USB --------------------*/
+&dwc3_0 {
+    //status = "okay";
+    dr_mode = "host";
+    //snps,usb3_lpm_capable;
+    //snps,dis_u3_susphy_quirk;
+    //snps,dis_u2_susphy_quirk;
+    //phy-names = "usb2-phy","usb3-phy";
+    //maximum-speed = "super-speed";
+};
+ 
+ 
+/*------------------ ETH PHY --------------------*/
+&gem3 {
+    /delete-property/ local-mac-address;
+    phy-handle = <&phy0>;
+ 
+    nvmem-cells = <&eth0_addr>;
+    nvmem-cell-names = "mac-address";
+ 
+    phy0: phy0@1 {
+        device_type = "ethernet-phy";
+        reg = <1>;
+    };
+};
+ 
+ 
+/*----------------- SATA PHY --------------------*/
+&sata {
+ 
+     ceva,p0-burst-params = <0x13084a06>;
+     ceva,p0-cominit-params = <0x18401828>;
+     ceva,p0-comwake-params = <0x614080e>;
+     ceva,p0-retry-params = <0x96a43ffc>;
+     ceva,p1-burst-params = <0x13084a06>;
+     ceva,p1-cominit-params = <0x18401828>;
+     ceva,p1-comwake-params = <0x614080e>;
+     ceva,p1-retry-params = <0x96a43ffc>;
+ 
+};
+ 
+ 
+/*-------------------- QSPI ---------------------*/
+&qspi {
+    num-cs = <2>;
+ 
+    flash@0 {
+        compatible = "jedec,spi-nor";
+        reg = <0>, <1>;
+        parallel-memories = /bits/ 64 <0x1000000 0x1000000>; /* 2* 16MB --> dummy for all types of this QSPI type */
+ 
+        spi-rx-bus-width = <4>;
+        spi-tx-bus-width = <4>;
+        // for variants populated with mt25quXXX
+        spi-max-frequency = <125000000>; // max. frequency also depends on the QSPI chip
+                                         // here 125MHz for MT25QU512/02 (Fast Read Quad IO STR, 10 Dummy Cycles)
+         
+        #address-cells = <1>;
+        #size-cells = <1>;       
+    };
+};
+ 
+ 
+/*------------------ I2C --------------------*/
+&i2c0 {
+    i2cswitch@73 { // u
+        compatible = "nxp,pca9548";
+        #address-cells = <1>;
+        #size-cells = <0>;
+        reg = <0x73>;
+        i2c-mux-idle-disconnect;
+        i2c@0 { // MCLK TEBF0818 SI5338A, 570FBB000290DG_unassembled
+            reg = <0>;
+        };
+        i2c@1 { // SFP TEBF0818 PCF8574DWR
+            reg = <1>;
+        };
+        i2c@2 { // PCIe
+            reg = <2>;
+        };
+        i2c@3 { // SFP1 TEBF0818
+            reg = <3>;
+        };
+        i2c@4 {// SFP2 TEBF0818
+            reg = <4>;
+        };
+        i2c@5 { // TEBF0818 EEPROM
+            reg = <5>;
+            eeprom: eeprom@50 {
+                compatible = "microchip,24aa025", "atmel,24c02";
+                reg = <0x50>;
+                 
+                #address-cells = <1>;
+                #size-cells = <1>;
+                eth0_addr: eth-mac-addr@FA {
+                  reg = <0xFA 0x06>;
+                };
+            };
+        };
+        i2c@6 { // TEBF0818 FMC
+            reg = <6>;
+        };
+        i2c@7 { // TEBF0818 USB HUB
+            reg = <7>;
+        };
+    };
+    i2cswitch@77 { // u
+        compatible = "nxp,pca9548";
+        reg = <0x77>;
+        i2c-mux-idle-disconnect;
+        i2c@0 { // TEBF0818 PMOD P1
+            reg = <0>;
+        };
+        i2c@1 { // i2c Audio Codec
+            reg = <1>;
+            /*
+            adau1761: adau1761@38 {
+                compatible = "adi,adau1761";
+                reg = <0x38>;
+            };
+            */
+        };
+        i2c@2 { // TEBF0818 Firefly A
+            reg = <2>;
+        };
+        i2c@3 { // TEBF0818 Firefly B
+            reg = <3>;
+        };
+        i2c@4 { //Module PLL Si5338 or SI5345
+            reg = <4>;
+        };
+        i2c@5 { //TEBF0818 CPLD
+            reg = <5>;
+        };
+        i2c@6 { //TEBF0818 Firefly PCF8574DWR
+            reg = <6>;
+        };
+        i2c@7 { // TEBF0818 PMOD P3
+            reg = <7>;
+        };
+    };
+};

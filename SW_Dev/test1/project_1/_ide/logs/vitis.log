@@ -1,0 +1,15 @@
+17:05:08 INFO  : updated workspace path: 
+17:09:01 INFO  : Marking the target connection as default Local
+17:09:01 INFO  : Marking the target connection as default Linux Agent
+17:09:01 INFO  : Marking the target connection as default XRTServer
+17:09:01 INFO  : Marking the target connection as default LinuxEmulation
+17:09:01 INFO  : Marking the target connection as default QEMU
+17:09:01 INFO  : created .gitignore file for the project /home/jackson/projects/test1/vitis_ws
+17:12:30 INFO  : updated workspace path: 
+17:13:25 INFO  : updated workspace path: 
+17:13:27 INFO  : connection terminated
+17:13:27 INFO  : connection terminated
+17:13:27 INFO  : scheduling shutdown timer for 2 seconds ...
+17:13:27 INFO  : scheduling shutdown timer for 2 seconds ...
+17:13:27 INFO  : Terminating Vitis C++ Server
+17:13:27 INFO  : Vitis C++ Server terminated

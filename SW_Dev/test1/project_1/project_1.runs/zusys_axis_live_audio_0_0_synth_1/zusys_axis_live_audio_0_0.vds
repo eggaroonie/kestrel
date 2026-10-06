@@ -1,0 +1,257 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Sep 25 16:29:38 2026
+# Process ID         : 45412
+# Current directory  : /home/jackson/projects/test1/project_1/project_1.runs/zusys_axis_live_audio_0_0_synth_1
+# Command line       : vivado -log zusys_axis_live_audio_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zusys_axis_live_audio_0_0.tcl
+# Log file           : /home/jackson/projects/test1/project_1/project_1.runs/zusys_axis_live_audio_0_0_synth_1/zusys_axis_live_audio_0_0.vds
+# Journal file       : /home/jackson/projects/test1/project_1/project_1.runs/zusys_axis_live_audio_0_0_synth_1/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 4370.133 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 24591 MB
+#-----------------------------------------------------------
+source zusys_axis_live_audio_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'trenz.biz:user:RGPIO_EXT:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'trenz.biz:user:RGPIO_EXT_rtl:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT_rtl.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_axis_live_audio_0_0
+Command: synth_design -top zusys_axis_live_audio_0_0 -part xczu3eg-sfvc784-1-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 45766
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1770.055 ; gain = 314.797 ; free physical = 887 ; free virtual = 15687
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'zusys_axis_live_audio_0_0' [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/ip/zusys_axis_live_audio_0_0/synth/zusys_axis_live_audio_0_0.vhd:74]
+INFO: [Synth 8-3491] module 'axis_live_audio_v1_0' declared at '/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/ipshared/98b5/hdl/axis_live_audio_v1_0.vhd:9' bound to instance 'U0' of component 'axis_live_audio_v1_0' [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/ip/zusys_axis_live_audio_0_0/synth/zusys_axis_live_audio_0_0.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'axis_live_audio_v1_0' [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/ipshared/98b5/hdl/axis_live_audio_v1_0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'axis_live_audio_v1_0' (0#1) [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/ipshared/98b5/hdl/axis_live_audio_v1_0.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'zusys_axis_live_audio_0_0' (0#1) [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/ip/zusys_axis_live_audio_0_0/synth/zusys_axis_live_audio_0_0.vhd:74]
+WARNING: [Synth 8-7129] Port s_axis_tdata[31] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[30] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[29] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[28] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[3] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[2] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[1] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[0] in module axis_live_audio_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_tready in module axis_live_audio_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1840.992 ; gain = 385.734 ; free physical = 414 ; free virtual = 15218
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1855.836 ; gain = 400.578 ; free physical = 305 ; free virtual = 14828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sfvc784-1-e
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1872.746 ; gain = 417.488 ; free physical = 274 ; free virtual = 14716
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1875.715 ; gain = 420.457 ; free physical = 319 ; free virtual = 14551
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	  24 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   3 Input   31 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design zusys_axis_live_audio_0_0 has port s_axis_tready driven by constant 1
+WARNING: [Synth 8-7129] Port s_axis_tdata[31] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[30] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[29] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[28] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[3] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[2] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[1] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdata[0] in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_tready in module zusys_axis_live_audio_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2571.715 ; gain = 1116.457 ; free physical = 349 ; free virtual = 13316
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2571.715 ; gain = 1116.457 ; free physical = 340 ; free virtual = 13308
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2571.715 ; gain = 1116.457 ; free physical = 339 ; free virtual = 13308
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 830 ; free virtual = 12986
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 854 ; free virtual = 13010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 940 ; free virtual = 13096
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 948 ; free virtual = 13104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 964 ; free virtual = 13120
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 969 ; free virtual = 13126
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name               | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|zusys_axis_live_audio_0_0 | U0/receive_data_reg[8] | 9      | 1     | NO           | YES                | YES               | 1      | 0       | 
++--------------------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT2   |     4|
+|2     |LUT4   |     3|
+|3     |LUT5   |    25|
+|4     |LUT6   |     4|
+|5     |SRL16E |     1|
+|6     |FDRE   |   129|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+---------------------+------+
+|      |Instance |Module               |Cells |
++------+---------+---------------------+------+
+|1     |top      |                     |   166|
+|2     |  U0     |axis_live_audio_v1_0 |   166|
++------+---------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 969 ; free virtual = 13125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.684 ; gain = 1119.426 ; free physical = 966 ; free virtual = 13122
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.691 ; gain = 1119.426 ; free physical = 964 ; free virtual = 13120
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2588.559 ; gain = 0.000 ; free physical = 1110 ; free virtual = 13267
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2667.090 ; gain = 0.000 ; free physical = 908 ; free virtual = 13071
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 707e5a68
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2667.090 ; gain = 1219.836 ; free physical = 900 ; free virtual = 13063
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1791.285; main = 1711.641; forked = 181.583
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3489.465; main = 2667.094; forked = 917.746
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/jackson/projects/test1/project_1/project_1.runs/zusys_axis_live_audio_0_0_synth_1/zusys_axis_live_audio_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3317.176 ; gain = 650.086 ; free physical = 337 ; free virtual = 10261
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP zusys_axis_live_audio_0_0, cache-ID = d5355933249bae29
+INFO: [Common 17-1381] The checkpoint '/home/jackson/projects/test1/project_1/project_1.runs/zusys_axis_live_audio_0_0_synth_1/zusys_axis_live_audio_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file zusys_axis_live_audio_0_0_utilization_synth.rpt -pb zusys_axis_live_audio_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 16:30:05 2026...

@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Oct  5 12:54:07 2026
+# Process ID         : 511452
+# Current directory  : /home/jackson/projects/Kestrel/AXItest/AXITest
+# Command line       : vivado
+# Log file           : /home/jackson/projects/Kestrel/AXItest/AXITest/vivado.log
+# Journal file       : /home/jackson/projects/Kestrel/AXItest/AXITest/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 3916.742 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 19205 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.xpr
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_1_project -directory /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.tmp/AXILite2_v1_1_project /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+close_project
+open_bd_design {/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/bd/zusys/zusys.bd}

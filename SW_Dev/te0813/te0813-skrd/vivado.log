@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Sep 28 16:21:43 2026
+# Process ID         : 251844
+# Current directory  : /home/jackson/projects/te0813/te0813-skrd
+# Command line       : vivado
+# Log file           : /home/jackson/projects/te0813/te0813-skrd/vivado.log
+# Journal file       : /home/jackson/projects/te0813/te0813-skrd/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 525.000 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 22777 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'trenz.biz:user:RGPIO_EXT:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'trenz.biz:user:RGPIO_EXT_rtl:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT_rtl.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+update_compile_order -fileset sources_1
+save_project_as AXITest /home/jackson/projects/AXItest/AXITest -exclude_run_results -force
+INFO: [Coretcl 2-133] resetting run 'synth_1'...
+INFO: [Coretcl 2-133] resetting run 'impl_1'...
+import_files
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 28 23:46:09 2026...

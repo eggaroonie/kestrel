@@ -1,0 +1,29 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ipshared/f465/src/ddrspi_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ddrspi_master'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ipshared/f465/src/ddsrpi_slave.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ddsrpi_slave'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ipshared/f465/src/RGPIO_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RGPIO_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ip/zusys_RGPIO_Master_CPLD_0/sim/zusys_RGPIO_Master_CPLD_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_RGPIO_Master_CPLD_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ip/zusys_RGPIO_Slave_CPLD_0/sim/zusys_RGPIO_Slave_CPLD_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_RGPIO_Slave_CPLD_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ip/zusys_vio_rgpio_0/sim/zusys_vio_rgpio_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_vio_rgpio_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ipshared/c35f/src/SC0808BF.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SC0808BF'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ip/zusys_SC0808BF_0_0/sim/zusys_SC0808BF_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_SC0808BF_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ipshared/98b5/hdl/axis_live_audio_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axis_live_audio_v1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ip/zusys_axis_live_audio_0_0/sim/zusys_axis_live_audio_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_axis_live_audio_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ip/zusys_proc_sys_reset_0_0/sim/zusys_proc_sys_reset_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_proc_sys_reset_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/ip/zusys_vio_general_0/sim/zusys_vio_general_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_vio_general_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.ip_user_files/bd/zusys/sim/zusys.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RGPIO_imp_139ZQEB'
+INFO: [VRFC 10-3107] analyzing entity 'zusys'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zusys_wrapper'

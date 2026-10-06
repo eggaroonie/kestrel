@@ -1,0 +1,96 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sat Oct  3 14:42:13 2026
+| Host         : JLaptop running 64-bit Ubuntu 26.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sfvc784-1-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'zusys_AXILite2_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of zusys_AXILite2_0_1 (user.org:user:AXILite2:1.1) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'zusys_AXILite2_0_1'. These changes may impact your design.
+
+
+-Upgrade has added port 'data_ready'
+
+-Upgrade has added port 'rstn'
+
+-Upgrade has added port 'touch'
+
+-Upgrade has added port 'touch_cnt'
+
+-Upgrade has added port 'touch_received'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sat Oct  3 14:42:13 2026
+| Host         : JLaptop running 64-bit Ubuntu 26.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sfvc784-1-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'AXILite2_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of AXILite2_0 (user.org:user:AXILite2:1.1) from (Rev. 1) to (Rev. 2)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'AXILite2_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'data_ready'
+
+-Upgrade has added port 'rstn'
+
+-Upgrade has added port 'touch'
+
+-Upgrade has added port 'touch_cnt'
+
+-Upgrade has added port 'touch_received'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sat Oct  3 14:25:04 2026
+| Host         : JLaptop running 64-bit Ubuntu 26.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sfvc784-1-e
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'AXILite2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of AXILite2_0 from user.org:user:AXILite2:1.0 (Rev. 2) to user.org:user:AXILite2:1.1 (Rev. 1)
+

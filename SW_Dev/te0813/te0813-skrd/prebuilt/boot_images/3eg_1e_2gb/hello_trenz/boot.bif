@@ -1,0 +1,9 @@
+/* bare-metal */
+/*auto-generated on 2025/10/02 07:57:40 */
+//arch = zynqmp; split = false; format = BIN
+the_ROM_image:
+{
+  [bootloader, destination_cpu= a53-0 ]../../../software/3eg_1e_2gb/fsbl.elf
+  [destination_device = pl]../../../hardware/3eg_1e_2gb/te0813-skrd_3eg_1e_2gb.bit
+  [destination_cpu = a53-0]../../../software/3eg_1e_2gb/hello_trenz.elf
+}

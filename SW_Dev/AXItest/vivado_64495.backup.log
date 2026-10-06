@@ -1,0 +1,129 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Oct  2 16:04:23 2026
+# Process ID         : 64495
+# Current directory  : /home/jackson/projects/Kestrel/AXItest
+# Command line       : vivado
+# Log file           : /home/jackson/projects/Kestrel/AXItest/vivado.log
+# Journal file       : /home/jackson/projects/Kestrel/AXItest/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 400.000 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 29648 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-91] Board repository path '/home/jackson/projects/te0813/te0813-skrd/board_files' does not exist, it will not be used to search board files.
+open_project /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0'.
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'trenz.biz:user:RGPIO_EXT:1.0' found within IP repository '/home/jackson/projects/Kestrel/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/Kestrel/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT.xml
+File ignored: /home/jackson/projects/Kestrel/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'trenz.biz:user:RGPIO_EXT_rtl:1.0' found within IP repository '/home/jackson/projects/Kestrel/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/Kestrel/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT_rtl.xml
+File ignored: /home/jackson/projects/Kestrel/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/Kestrel/te0813/te0813-skrd/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'AXILite2_0' is locked:
+* IP definition 'AXILite2_v1.0 (1.0)' for IP 'AXILite2_0' (customized with software release 2024.2) has a different revision in the IP Catalog.
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+update_compile_order -fileset sources_1
+add_files -norecurse /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv
+WARNING: [filemgmt 56-12] File '/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse {/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.v /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/touch_test.v}
+update_compile_order -fileset sources_1
+open_bd_design {/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/bd/zusys/zusys.bd}
+Reading block design file </home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/bd/zusys/zusys.bd>...
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Master_CPLD
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Slave_CPLD
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_rgpio
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_4
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_5
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_6
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_7
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_8
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_9
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_10
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_11
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_12
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_13
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_14
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_15
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_16
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_17
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_18
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_19
+Adding component instance block -- trenz.biz:user:SC0808BF:1.0 - SC0808BF_0
+Adding component instance block -- trenz.biz:user:axis_live_audio:1.0 - axis_live_audio_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_general
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.5 - zynq_ultra_ps_e_0
+Successfully read diagram <zusys> from block design file </home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/bd/zusys/zusys.bd>
+create_bd_cell -type module -reference capture_test1 capture_test1_0
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port TX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5462] Defaulting to slave bus interface due to conflicts in bus interface inference.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_RGPIO_EXT' of definition 'trenz.biz:user:RGPIO_EXT:1.0' (from User Repositories).
+WARNING: [IP_Flow 19-5464] No port map found for required logical port DATA_OUT on bus interface abstraction RGPIO_M_USR_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port DATA_IN on bus interface abstraction RGPIO_M_USR_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RESERVED_IN on bus interface abstraction RGPIO_M_USR_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RESERVED_OUT on bus interface abstraction RGPIO_M_USR_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port SLAVE_ACTIVATION_CODE on bus interface abstraction RGPIO_M_USR_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RESET_N on bus interface abstraction RGPIO_M_USR_rtl for interface type slave.
+WARNING: [IP_Flow 19-5462] Defaulting to slave bus interface due to conflicts in bus interface inference.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'cap' of definition 'trenz.biz:user:RGPIO_M_USR:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'user_RGPIO_EXT': A port map to the required logical port "RX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'user_RGPIO_EXT': A port map to the required logical port "TX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'cap': A port map to the required logical port "DATA_OUT" of the bus abstraction "trenz.biz:user:RGPIO_M_USR_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'cap': A port map to the required logical port "DATA_IN" of the bus abstraction "trenz.biz:user:RGPIO_M_USR_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'cap': A port map to the required logical port "RESERVED_IN" of the bus abstraction "trenz.biz:user:RGPIO_M_USR_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'cap': A port map to the required logical port "RESERVED_OUT" of the bus abstraction "trenz.biz:user:RGPIO_M_USR_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'cap': A port map to the required logical port "SLAVE_ACTIVATION_CODE" of the bus abstraction "trenz.biz:user:RGPIO_M_USR_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'cap': A port map to the required logical port "RESET_N" of the bus abstraction "trenz.biz:user:RGPIO_M_USR_rtl:1.0" is missing.
+set_property location {2 554 -120} [get_bd_cells capture_test1_0]
+set_property location {2 618 -325} [get_bd_cells capture_test1_0]
+set_property location {3 1264 76} [get_bd_cells capture_test1_0]
+set_property location {1 287 801} [get_bd_cells capture_test1_0]
+create_bd_cell -type module -reference touch_test touch_test_0
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port TX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5462] Defaulting to slave bus interface due to conflicts in bus interface inference.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_RGPIO_EXT' of definition 'trenz.biz:user:RGPIO_EXT:1.0' (from User Repositories).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'user_RGPIO_EXT': A port map to the required logical port "RX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'user_RGPIO_EXT': A port map to the required logical port "TX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+set_property location {2 516 975} [get_bd_cells touch_test_0]
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:AXILite2:1.0 AXILite2_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/AXILite2_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins AXILite2_0/S00_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment '/AXILite2_0/S00_AXI/S00_AXI_reg' is being assigned into address space '/zynq_ultra_ps_e_0/Data' at <0x8000_0000 [ 64K ]>.
+set_property location {0.5 -33 797} [get_bd_cells AXILite2_0]
+save_bd_design
+Wrote  : </home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  2 16:12:20 2026...

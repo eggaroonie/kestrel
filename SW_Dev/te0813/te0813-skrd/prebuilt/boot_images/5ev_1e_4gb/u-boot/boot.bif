@@ -1,0 +1,12 @@
+/* linux */
+/*auto-generated on 2025/10/02 08:38:31 */
+//arch = zynqmp; split = false; format = BIN
+the_ROM_image:
+{
+  [bootloader, destination_cpu= a53-0 ]../../../software/5ev_1e_4gb/fsbl.elf
+  [pmufw_image]../../../software/5ev_1e_4gb/pmufw.elf
+  [destination_device = pl]../../../hardware/5ev_1e_4gb/te0813-skrd_5ev_1e_4gb.bit
+  [destination_cpu = a53-0, exception_level = el-3, trustzone]../../../os/petalinux/4GB/bl31.elf
+  [destination_cpu = a53-0, exception_level = el-2]../../../os/petalinux/4GB/u-boot.elf
+  [destination_cpu = a53-0,load =  0x00100000]../../../os/petalinux/4GB/system.dtb
+}

@@ -1,0 +1,564 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Sep 24 12:09:58 2026
+# Process ID         : 37310
+# Current directory  : /home/jackson/projects/te0813/te0813-skrd/v_log
+# Command line       : vivado -source ../scripts/script_main.tcl -mode batch -notrace -tclargs --run_board_selection
+# Log file           : /home/jackson/projects/te0813/te0813-skrd/v_log/vivado.log
+# Journal file       : /home/jackson/projects/te0813/te0813-skrd/v_log/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 400.341 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 30252 MB
+#-----------------------------------------------------------
+source ../scripts/script_main.tcl -notrace
+-----------------------------------------------------------------------
+INFO:(TE) Load Settings Script finished
+INFO:(TE) Load environment script finished
+INFO:(TE) Load Vivado script finished
+INFO:(TE) Load Utilities script finished
+INFO:(TE) Load Vivado script finished
+INFO:(TE) Load Petalinux script finished
+INFO:(TE) Load Designs script finished
+INFO:(TE) Load User Command scripts finished
+INFO:(TE) Load JTAG Script finished
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+INFO: [TE_INIT-3] Initial project names and paths:
+  TE::VPROJ_NAME:           te0813-skrd 
+  TE::VPROJ_PATH:           /home/jackson/projects/te0813/te0813-skrd/vivado 
+  TE::VLABPROJ_PATH:        /home/jackson/projects/te0813/te0813-skrd/vivado_lab 
+  TE::BOARDDEF_PATH:        /home/jackson/projects/te0813/te0813-skrd/board_files 
+  TE::FIRMWARE_PATH:        /home/jackson/projects/te0813/te0813-skrd/firmware 
+  TE::IP_PATH:              /home/jackson/projects/te0813/te0813-skrd/ip_lib 
+  TE::BD_PATH:              /home/jackson/projects/te0813/te0813-skrd/block_design 
+  TE::XDC_PATH:             /home/jackson/projects/te0813/te0813-skrd/constraints 
+  TE::HDL_PATH:             /home/jackson/projects/te0813/te0813-skrd/hdl 
+  TE::SET_PATH:             /home/jackson/projects/te0813/te0813-skrd/settings 
+  TE::PETALINUX_PATH:       /home/jackson/projects/te0813/te0813-skrd/os/petalinux 
+  TE::WORKSPACE_HSI_PATH:   /home/jackson/projects/te0813/te0813-skrd/workspace/hsi 
+  TE::WORKSPACE_SDK_PATH:   /home/jackson/projects/te0813/te0813-skrd/workspace/sdk 
+  TE::LIB_PATH:             /home/jackson/projects/te0813/te0813-skrd/sw_lib 
+  TE::SCRIPT_PATH:          /home/jackson/projects/te0813/te0813-skrd/scripts 
+  TE::DOC_PATH:             /home/jackson/projects/te0813/te0813-skrd/doc 
+  TE::PREBUILT_BI_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/boot_images 
+  TE::PREBUILT_HW_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/hardware 
+  TE::PREBUILT_SW_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/software 
+  TE::PREBUILT_OS_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/os 
+  TE::PREBUILT_EXPORT_PATH: /home/jackson/projects/te0813/te0813-skrd/../export 
+  TE::LOG_PATH:             /home/jackson/projects/te0813/te0813-skrd/v_log 
+  TE::BACKUP_PATH:          /home/jackson/projects/te0813/te0813-skrd/backup 
+  TE::ZIP_PATH:             /usr/bin/zip 
+  TE::XRT_PATH:             /home/jackson/projects/te0813/te0813-skrd/xrt 
+  TE::XRT_USED:             false 
+  TE::SDSOC_PATH:           /home/jackson/projects/te0813/te0813-skrd/../SDSoC_PFM 
+  TE::ADD_SD_PATH:          /home/jackson/projects/te0813/te0813-skrd/misc/sd 
+  TE::TMP_PATH:             /home/jackson/projects/te0813/te0813-skrd/tmp 
+  TE::XILINXGIT_DEVICETREE: /home/xilinx_git/device-tree-xlnx 
+  TE::XILINXGIT_UBOOT:       
+  TE::XILINXGIT_LINUX:       
+  ------
+-----------------------------------------------------------------------
+INFO:(TE) Parameter Index: 0
+INFO:(TE) Parameter Option: --run_board_selection
+-----------------------------------------------------------------------
+INFO: [TE_INIT-89] Run TE::INIT::run_board_selection
+INFO: [TE_INIT-182] Source /home/jackson/projects/te0813/te0813-skrd/settings/design_settings.tcl.
+CRITICAL WARNING: [TE_INIT-213] Petalinux script features (beta usages) are disbled, enable it on design_basic_settings.sh, in case it should be used
+INFO: [TE_INIT-0] Script Info:
+  Xilinx Directory:                           /tools/Xilinx
+  Vivado Version:                             Vivado v2024.2 (64-bit)
+  TE Script Version:                          2024.2.1
+  Board Part (Definition Files) CSV Version:  1.4
+  Software IP CSV Version:                    2.6
+  Board Design Modify CSV Version:            1.1
+  ZIP ignore CSV Version:                     1.0
+  ---
+  Start project with:                         Unknown
+  ------
+INFO: [TE_INIT-1] Script Environment:
+  Vivado Setting:           1 
+  LabTools Setting:         0 
+  VITIS Setting:            0 
+  Petalinux Setting:        0 
+  ------ 
+  TIMEOUT Setting:          120 
+  RUNNING_JOBS Setting:     4 
+  ------ 
+  WSL USAGE:                0 
+  TEXT Editor:              DEFAULT 
+  ------ 
+  SERIAL PATH:              ../../../../../../articlebyserial 
+  COMPATH:                  ../../../../../../putty 
+  ------ 
+  TE_GUI_DISABLED:          0 
+  ------ 
+  PLX_SSTATE_CACHE_DOWNLOAD:~/design/sstate-cache/downloads_2024.2/downloads 
+  PLX_SSTATE_CACHE_AARCH64: ~/design/sstate-cache/sstate_aarch64_2024.2/aarch64 
+  PLX_SSTATE_CACHE_MB_LITE: ~/design/sstate-cache/sstate_mb-full_2024.2/mb-lite 
+  ------
+INFO: [TE_INIT-207] Delivered Project
+INFO: [TE_INIT-207] ZIPINFO_CSV=        1.0
+INFO: [TE_INIT-207] ExporterInitials=   GIT
+INFO: [TE_INIT-207] ZIPName=            TE0813-te0813-skrd-vivado_2024.2-build_1_20251002084539
+INFO: [TE_INIT-207] Destination=        PublicDoc
+INFO: [TE_INIT-207] Typ=                NA
+INFO: [TE_INIT-207] BoardTyp=           NA
+INFO: [TE_INIT-207] ProjectName=        te0813-skrd
+INFO: [TE_INIT-207] ProjectToolName=    Vivado-2024.2
+INFO: [TE_INIT-207] ReleaseDate=        2025.10.02 08:45:39
+INFO: [TE_INIT-207] Revision=           NA
+INFO: [TE_INIT-3] Initial project names and paths:
+  TE::VPROJ_NAME:           te0813-skrd 
+  TE::VPROJ_PATH:           /home/jackson/projects/te0813/te0813-skrd/vivado 
+  TE::VLABPROJ_PATH:        /home/jackson/projects/te0813/te0813-skrd/vivado_lab 
+  TE::BOARDDEF_PATH:        /home/jackson/projects/te0813/te0813-skrd/board_files 
+  TE::FIRMWARE_PATH:        /home/jackson/projects/te0813/te0813-skrd/firmware 
+  TE::IP_PATH:              /home/jackson/projects/te0813/te0813-skrd/ip_lib 
+  TE::BD_PATH:              /home/jackson/projects/te0813/te0813-skrd/block_design 
+  TE::XDC_PATH:             /home/jackson/projects/te0813/te0813-skrd/constraints 
+  TE::HDL_PATH:             /home/jackson/projects/te0813/te0813-skrd/hdl 
+  TE::SET_PATH:             /home/jackson/projects/te0813/te0813-skrd/settings 
+  TE::PETALINUX_PATH:       /home/jackson/projects/te0813/te0813-skrd/os/petalinux 
+  TE::WORKSPACE_HSI_PATH:   /home/jackson/projects/te0813/te0813-skrd/workspace/hsi 
+  TE::WORKSPACE_SDK_PATH:   /home/jackson/projects/te0813/te0813-skrd/workspace/sdk 
+  TE::LIB_PATH:             /home/jackson/projects/te0813/te0813-skrd/sw_lib 
+  TE::SCRIPT_PATH:          /home/jackson/projects/te0813/te0813-skrd/scripts 
+  TE::DOC_PATH:             /home/jackson/projects/te0813/te0813-skrd/doc 
+  TE::PREBUILT_BI_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/boot_images 
+  TE::PREBUILT_HW_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/hardware 
+  TE::PREBUILT_SW_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/software 
+  TE::PREBUILT_OS_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/os 
+  TE::PREBUILT_EXPORT_PATH: /home/jackson/projects/te0813/te0813-skrd/../export 
+  TE::LOG_PATH:             /home/jackson/projects/te0813/te0813-skrd/v_log 
+  TE::BACKUP_PATH:          /home/jackson/projects/te0813/te0813-skrd/backup 
+  TE::ZIP_PATH:             /usr/bin/zip 
+  TE::XRT_PATH:             /home/jackson/projects/te0813/te0813-skrd/xrt 
+  TE::XRT_USED:             false 
+  TE::SDSOC_PATH:           /home/jackson/projects/te0813/te0813-skrd/../SDSoC_PFM 
+  TE::ADD_SD_PATH:          /home/jackson/projects/te0813/te0813-skrd/misc/sd 
+  TE::TMP_PATH:             /home/jackson/projects/te0813/te0813-skrd/tmp 
+  TE::XILINXGIT_DEVICETREE: /home/xilinx_git/device-tree-xlnx 
+  TE::XILINXGIT_UBOOT:       
+  TE::XILINXGIT_LINUX:       
+  ------
+INFO: [TE_INIT-16] Read board part definition list (File /home/jackson/projects/te0813/te0813-skrd/board_files/TE0813_board_files.csv).
+INFO: [TE_INIT-18] Read Software list (File: /home/jackson/projects/te0813/te0813-skrd/sw_lib/apps_list.csv).
+INFO: [TE_INIT-189] Software Definition CSV version passed
+INFO: [TE_INIT-191] Software Definition CSV Version analyze domain table header
+INFO: [TE_INIT-193] Software Definition CSV Version analyze bsp table header
+INFO: (TE_INIT-??) Software Definition CSV Version analyse app table header
+INFO: [TE_INIT-22] Read ZIP ignore list (File: /home/jackson/projects/te0813/te0813-skrd/sw_lib/apps_list.csv).
+INFO: [TE_UTIL-2] Following block designs were found: 
+   /home/jackson/projects/te0813/te0813-skrd/block_design/zusys_bd.tcl 
+  ------
+Last Input:<L>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID |Product ID          |SoC/FPGA Typ                  |SHORT DIR           |PCB REV                                 |DDR Size  |Flash Size|EMMC Size |Others                        |Notes                         |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|2  |TE0813-01-2AE11-A   |xczu2cg-sfvc784-1-e           |2cg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|4  |TE0813-01-2AE11-AZ  |xczu2cg-sfvc784-1-e           |2cg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|6  |TE0813-01-2AE11-KZ  |xczu2cg-sfvc784-1-e           |2cg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|8  |TE0813-01-2BE11-A   |xczu2eg-sfvc784-1-e           |2eg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|10 |TE0813-01-3AE11-A   |xczu3cg-sfvc784-1-e           |3cg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|12 |TE0813-01-3BE11-A   |xczu3eg-sfvc784-1-e           |3eg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|14 |TE0813-01-4AE11-A   |xczu4cg-sfvc784-1-e           |4cg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|16 |TE0813-01-4BE11-A   |xczu4eg-sfvc784-1-e           |4eg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|18 |TE0813-01-4BE11-AZ  |xczu4eg-sfvc784-1-e           |4eg_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|20 |TE0813-01-4BE71-A   |xczu4eg-sfvc784-1-e           |4eg_1e_4gb          |REV01                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|22 |TE0813-01-4BE71-AZ  |xczu4eg-sfvc784-1-e           |4eg_1e_4gb          |REV01                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|24 |TE0813-01-4BE81-A   |xczu4eg-sfvc784-1-e           |4eg_1e_4gb          |REV01                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|26 |TE0813-01-4BE81-AZ  |xczu4eg-sfvc784-1-e           |4eg_1e_4gb          |REV01                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|28 |TE0813-01-4DE11-A   |xczu4ev-sfvc784-1-e           |4ev_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|30 |TE0813-01-4DE11-AZ  |xczu4ev-sfvc784-1-e           |4ev_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|32 |TE0813-01-5DE11-A   |xczu5ev-sfvc784-1-e           |5ev_1e_2gb          |REV01                                   |2GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|36 |TE0813-02-2AE81-A   |xczu2cg-sfvc784-1-e           |2cg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|38 |TE0813-02-2AE81-AK  |xczu2cg-sfvc784-1-e           |2cg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|40 |TE0813-02-2BE81-A   |xczu2eg-sfvc784-1-e           |2eg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|42 |TE0813-02-3AE81-A   |xczu3cg-sfvc784-1-e           |3cg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|44 |TE0813-02-3BE81-A   |xczu3eg-sfvc784-1-e           |3eg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|46 |TE0813-02-4AE81-A   |xczu4cg-sfvc784-1-e           |4cg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|48 |TE0813-02-4BE71-A   |xczu4eg-sfvc784-1-e           |4eg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|50 |TE0813-02-4BE81-A   |xczu4eg-sfvc784-1-e           |4eg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|52 |TE0813-02-4DE81-A   |xczu4ev-sfvc784-1-e           |4ev_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|54 |TE0813-02-5DE81-A   |xczu5ev-sfvc784-1-e           |5ev_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|56 |TE0813-02-5DI81-A   |xczu5ev-sfvc784-1-i           |5ev_1i_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|58 |TE0813-02-S001      |xczu4eg-sfvc784-1-i           |4eg_1i_8gb          |REV02                                   |8GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+For better table view please resize windows to full screen!
+------------------------------------------------------------------------
+------------------
+Select Module will be done in 2 steps: 
+-----
+Step 1: (select column filter): 
+-Change module list size (for small monitors only), press: 'full' or 'small' 
+-Display current module list, press: 'L' or 'l' 
+-Restore whole module list, press: 'R' or 'r' 
+-Reduce List by ID, press: 'ID' or 'id' or insert ID columns value directly(filter step is bypassed and id number is used) 
+-Reduce List by Article Number, press: 'AN' or 'an' 
+-Reduce List by SoC/FPGA, press: 'FPGA' or 'fpga' 
+-Reduce List by PCB REV, press: 'PCB' or 'pcb' 
+-Reduce List by DDR, press: 'DDR' or 'ddr' 
+-Reduce List by Flash, press: 'FLASH' or 'flash' 
+-Reduce List by EMMC, press: 'EMMC' or 'emmc' 
+-Reduce List by Others, press: 'OTHERS' or 'others' 
+-Reduce List by Notes, press: 'NOTES' or 'notes' 
+-Exit without selection, press: 'Q' or 'q' 
+-----------------------
+Please Enter Option: 
+Last Input:<44>
+Note: Input will be compared with list elements, wildcard * possible. Ex.*1*
+Go back to top menu with 'q' or 'Q'
+Step 2: Insert ID:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|ID |Product ID          |SoC/FPGA Typ                  |SHORT DIR           |PCB REV                                 |DDR Size  |Flash Size|EMMC Size |Others                        |Notes                         |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|44 |TE0813-02-3BE81-A   |xczu3eg-sfvc784-1-e           |3eg_1e_4gb          |REV02                                   |4GB       |128MB     |NA        |NA                            |NA                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+You like to start with this device? y/N
+What would you like to do?
+- Create and open delivery binary folder, press 0
+- Create vivado project, press 1
+- Both, press 2
+Board part csv name check:  44 is unique on position 0.
+INFO: [TE_INIT-4] Board Part definition:
+  TE::ID:             44 
+  TE::PRODID:         TE0813-02-3BE81-A 
+  TE::PARTNAME:       xczu3eg-sfvc784-1-e 
+  TE::BOARDPART:      trenz.biz:te0813_3eg_1e_tebf0808:part0:4.0 
+  TE::SHORTDIR:       3eg_1e_4gb 
+  TE::ZYNQFLASHTYP:   qspi-x8-dual_parallel 
+  TE::FPGAFLASHTYP:   mt25qu512-qspi-x8-dual_parallel 
+  TE::PCB_REV:        REV02 
+  TE::DDR_SIZE:       4GB 
+  TE::FLASH_SIZE:     128MB 
+  TE::EMMC_SIZE:      NA 
+  TE::OTHERS:         NA 
+  TE::NOTES:          NA 
+  ------
+INFO: [TE_INIT-129] Run TE::INIT::run_project 44 1 2 2
+INFO: [TE_INIT-182] Source /home/jackson/projects/te0813/te0813-skrd/settings/design_settings.tcl.
+CRITICAL WARNING: [TE_INIT-213] Petalinux script features (beta usages) are disbled, enable it on design_basic_settings.sh, in case it should be used
+INFO: [TE_INIT-0] Script Info:
+  Xilinx Directory:                           /tools/Xilinx
+  Vivado Version:                             Vivado v2024.2 (64-bit)
+  TE Script Version:                          2024.2.1
+  Board Part (Definition Files) CSV Version:  1.4
+  Software IP CSV Version:                    2.6
+  Board Design Modify CSV Version:            1.1
+  ZIP ignore CSV Version:                     1.0
+  ---
+  Start project with:                         Unknown
+  ------
+INFO: [TE_INIT-1] Script Environment:
+  Vivado Setting:           1 
+  LabTools Setting:         0 
+  VITIS Setting:            0 
+  Petalinux Setting:        0 
+  ------ 
+  TIMEOUT Setting:          120 
+  RUNNING_JOBS Setting:     4 
+  ------ 
+  WSL USAGE:                0 
+  TEXT Editor:              DEFAULT 
+  ------ 
+  SERIAL PATH:              ../../../../../../articlebyserial 
+  COMPATH:                  ../../../../../../putty 
+  ------ 
+  TE_GUI_DISABLED:          0 
+  ------ 
+  PLX_SSTATE_CACHE_DOWNLOAD:~/design/sstate-cache/downloads_2024.2/downloads 
+  PLX_SSTATE_CACHE_AARCH64: ~/design/sstate-cache/sstate_aarch64_2024.2/aarch64 
+  PLX_SSTATE_CACHE_MB_LITE: ~/design/sstate-cache/sstate_mb-full_2024.2/mb-lite 
+  ------
+INFO: [TE_INIT-207] Delivered Project
+INFO: [TE_INIT-207] ZIPINFO_CSV=        1.0
+INFO: [TE_INIT-207] ExporterInitials=   GIT
+INFO: [TE_INIT-207] ZIPName=            TE0813-te0813-skrd-vivado_2024.2-build_1_20251002084539
+INFO: [TE_INIT-207] Destination=        PublicDoc
+INFO: [TE_INIT-207] Typ=                NA
+INFO: [TE_INIT-207] BoardTyp=           NA
+INFO: [TE_INIT-207] ProjectName=        te0813-skrd
+INFO: [TE_INIT-207] ProjectToolName=    Vivado-2024.2
+INFO: [TE_INIT-207] ReleaseDate=        2025.10.02 08:45:39
+INFO: [TE_INIT-207] Revision=           NA
+INFO: [TE_INIT-3] Initial project names and paths:
+  TE::VPROJ_NAME:           te0813-skrd 
+  TE::VPROJ_PATH:           /home/jackson/projects/te0813/te0813-skrd/vivado 
+  TE::VLABPROJ_PATH:        /home/jackson/projects/te0813/te0813-skrd/vivado_lab 
+  TE::BOARDDEF_PATH:        /home/jackson/projects/te0813/te0813-skrd/board_files 
+  TE::FIRMWARE_PATH:        /home/jackson/projects/te0813/te0813-skrd/firmware 
+  TE::IP_PATH:              /home/jackson/projects/te0813/te0813-skrd/ip_lib 
+  TE::BD_PATH:              /home/jackson/projects/te0813/te0813-skrd/block_design 
+  TE::XDC_PATH:             /home/jackson/projects/te0813/te0813-skrd/constraints 
+  TE::HDL_PATH:             /home/jackson/projects/te0813/te0813-skrd/hdl 
+  TE::SET_PATH:             /home/jackson/projects/te0813/te0813-skrd/settings 
+  TE::PETALINUX_PATH:       /home/jackson/projects/te0813/te0813-skrd/os/petalinux 
+  TE::WORKSPACE_HSI_PATH:   /home/jackson/projects/te0813/te0813-skrd/workspace/hsi 
+  TE::WORKSPACE_SDK_PATH:   /home/jackson/projects/te0813/te0813-skrd/workspace/sdk 
+  TE::LIB_PATH:             /home/jackson/projects/te0813/te0813-skrd/sw_lib 
+  TE::SCRIPT_PATH:          /home/jackson/projects/te0813/te0813-skrd/scripts 
+  TE::DOC_PATH:             /home/jackson/projects/te0813/te0813-skrd/doc 
+  TE::PREBUILT_BI_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/boot_images 
+  TE::PREBUILT_HW_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/hardware 
+  TE::PREBUILT_SW_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/software 
+  TE::PREBUILT_OS_PATH:     /home/jackson/projects/te0813/te0813-skrd/prebuilt/os 
+  TE::PREBUILT_EXPORT_PATH: /home/jackson/projects/te0813/te0813-skrd/../export 
+  TE::LOG_PATH:             /home/jackson/projects/te0813/te0813-skrd/v_log 
+  TE::BACKUP_PATH:          /home/jackson/projects/te0813/te0813-skrd/backup 
+  TE::ZIP_PATH:             /usr/bin/zip 
+  TE::XRT_PATH:             /home/jackson/projects/te0813/te0813-skrd/xrt 
+  TE::XRT_USED:             false 
+  TE::SDSOC_PATH:           /home/jackson/projects/te0813/te0813-skrd/../SDSoC_PFM 
+  TE::ADD_SD_PATH:          /home/jackson/projects/te0813/te0813-skrd/misc/sd 
+  TE::TMP_PATH:             /home/jackson/projects/te0813/te0813-skrd/tmp 
+  TE::XILINXGIT_DEVICETREE: /home/xilinx_git/device-tree-xlnx 
+  TE::XILINXGIT_UBOOT:       
+  TE::XILINXGIT_LINUX:       
+  ------
+INFO: [TE_INIT-16] Read board part definition list (File /home/jackson/projects/te0813/te0813-skrd/board_files/TE0813_board_files.csv).
+INFO: [TE_INIT-18] Read Software list (File: /home/jackson/projects/te0813/te0813-skrd/sw_lib/apps_list.csv).
+INFO: [TE_INIT-189] Software Definition CSV version passed
+INFO: [TE_INIT-191] Software Definition CSV Version analyze domain table header
+INFO: [TE_INIT-193] Software Definition CSV Version analyze bsp table header
+INFO: (TE_INIT-??) Software Definition CSV Version analyse app table header
+INFO: [TE_INIT-22] Read ZIP ignore list (File: /home/jackson/projects/te0813/te0813-skrd/sw_lib/apps_list.csv).
+Found ID: 44
+Board part csv name check:  44 is unique on position 0.
+INFO: [TE_INIT-4] Board Part definition:
+  TE::ID:             44 
+  TE::PRODID:         TE0813-02-3BE81-A 
+  TE::PARTNAME:       xczu3eg-sfvc784-1-e 
+  TE::BOARDPART:      trenz.biz:te0813_3eg_1e_tebf0808:part0:4.0 
+  TE::SHORTDIR:       3eg_1e_4gb 
+  TE::ZYNQFLASHTYP:   qspi-x8-dual_parallel 
+  TE::FPGAFLASHTYP:   mt25qu512-qspi-x8-dual_parallel 
+  TE::PCB_REV:        REV02 
+  TE::DDR_SIZE:       4GB 
+  TE::FLASH_SIZE:     128MB 
+  TE::EMMC_SIZE:      NA 
+  TE::OTHERS:         NA 
+  TE::NOTES:          NA 
+  ------
+Generate new project (Path: /home/jackson/projects/te0813/te0813-skrd/vivado).
+INFO: [TE_INIT-234] Replace  /home/jackson/projects/te0813/te0813-skrd/sw_lib/sw_apps/zynqmp_fsbl/src/te_Si5338-Registers.h with /home/jackson/projects/te0813/te0813-skrd/./misc/PLL/Si5338_B/te_Si5338-Registers.h
+INFO: [TE_INIT-247] Replace  /home/jackson/projects/te0813/te0813-skrd/os/petalinux/project-spec/meta-user/recipes-bsp/embeddedsw/fsbl-firmware/git/lib/sw_apps/zynqmp_fsbl/src/te_Si5338-Registers.h with /home/jackson/projects/te0813/te0813-skrd/./misc/PLL/Si5338_B/te_Si5338-Registers.h
+INFO: [TE_INIT-69] Set Board Definition path: /home/jackson/projects/te0813/te0813-skrd/board_files
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+WARNING: [Common 17-1496] Vivado tclapp support version doesn't have install/uninstall hooks. Please update support using ::tclapp::update_support command.
+INFO: [TE_INIT-70] Set IP path : /home/jackson/projects/te0813/te0813-skrd/ip_lib
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'trenz.biz:user:RGPIO_EXT:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'trenz.biz:user:RGPIO_EXT_rtl:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT_rtl.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+WARNING: [Ipconfig 75-871] Could not load NoC clock tree from device
+WARNING: [Ipconfig 75-570] Unable to create NoC or AIE Models.
+Start import design
+INFO: [TE_UTIL-8] Following xdc files were found: 
+   /home/jackson/projects/te0813/te0813-skrd/constraints/_i_bitgen.xdc 
+ /home/jackson/projects/te0813/te0813-skrd/constraints/vivado_target.xdc 
+ /home/jackson/projects/te0813/te0813-skrd/constraints/_i_io.xdc 
+  ------
+Set processing order normal for /home/jackson/projects/te0813/te0813-skrd/constraints/_i_bitgen.xdc
+Set use for implementation only for /home/jackson/projects/te0813/te0813-skrd/constraints/_i_bitgen.xdc
+Set processing order normal for /home/jackson/projects/te0813/te0813-skrd/constraints/vivado_target.xdc
+Set use for synthesis and implementation for /home/jackson/projects/te0813/te0813-skrd/constraints/vivado_target.xdc
+Set processing order normal for /home/jackson/projects/te0813/te0813-skrd/constraints/_i_io.xdc
+Set use for implementation only for /home/jackson/projects/te0813/te0813-skrd/constraints/_i_io.xdc
+INFO: [TE_UTIL-2] Following block designs were found: 
+   /home/jackson/projects/te0813/te0813-skrd/block_design/zusys_bd.tcl 
+  ------
+INFO: [TE_INIT-8] Found BD-Design:
+  TE::BD_TCLNAME:       zusys_bd 
+  TE::PR_TOPLEVELNAME: zusys_wrapper 
+  ------
+  TE::IS_ZUSYS:        true
+INFO: [TE_UTIL-2] Following block designs were found: 
+   /home/jackson/projects/te0813/te0813-skrd/block_design/zusys_bd.tcl 
+  ------
+INFO: [TE_BD-0] This block design tcl-file was generate with Trenz Electronic GmbH Board Part:trenz.biz:te0813_3eg_1e_tebf0808:part0:2.0, FPGA: xczu3eg-sfvc784-1-e at 2025-09-18T09:12:50.
+INFO: [TE_BD-1] This block design tcl-file was modified by TE-Scripts. Modifications are labelled with comment tag  # #TE_MOD# on the Block-Design tcl-file.
+INFO: [BD::TCL 103-2003] Currently there is no design <zusys> in project, so creating one...
+Wrote  : </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd> 
+INFO: [BD::TCL 103-2004] Making design <zusys> as current_bd_design.
+INFO: [BD::TCL 103-2005] Currently the variable <design_name> is equal to "zusys".
+INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:  
+trenz.biz:user:SC0808BF:* trenz.biz:user:axis_live_audio:* xilinx.com:ip:proc_sys_reset:* xilinx.com:ip:vio:* xilinx.com:ip:zynq_ultra_ps_e:* trenz.biz:user:RGPIO:* xilinx.com:ip:xlconcat:* xilinx.com:ip:xlslice:*  .
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconcat:1.0 for the IP type xilinx.com:ip:xlconcat:2.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconcat:2.1 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconcat:1.0 for the IP type xilinx.com:ip:xlconcat:2.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconcat:2.1 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 may be deprecated in future releases. More information on inline hdl IP is available in UG994 
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Master_CPLD/RGPIO_M_OUT> is being overridden by the user with net <RGPIO_Master_CPLD_RGPIO_M_OUT>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Slave_CPLD/RGPIO_M_OUT> is being overridden by the user with net <RGPIO_Slave_CPLD_RGPIO_M_OUT>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Master_CPLD/RGPIO_M_RESET_N> is being overridden by the user with net <proc_sys_reset_0_peripheral_aresetn>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Slave_CPLD/RGPIO_M_RESET_N> is being overridden by the user with net <proc_sys_reset_0_peripheral_aresetn>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Master_CPLD/RGPIO_M_ENABLE> is being overridden by the user with net <vio_rgpio_m_enable>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Slave_CPLD/RGPIO_M_ENABLE> is being overridden by the user with net <vio_rgpio_s_enable>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Master_CPLD/RGPIO_M_IN> is being overridden by the user with net <xlconcat_2_dout>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Slave_CPLD/RGPIO_M_IN> is being overridden by the user with net <xlconcat_3_dout>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Master_CPLD/RGPIO_M_USRCLK> is being overridden by the user with net <zynq_ultra_ps_e_0_pl_clk0>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </RGPIO/RGPIO_Slave_CPLD/RGPIO_M_USRCLK> is being overridden by the user with net <zynq_ultra_ps_e_0_pl_clk0>. This pin will not be connected as a part of interface connection <RGPIO_M_USR>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/zynq_ultra_ps_e_0/Data' to master interface '/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD'. Please either complete or remove this path to resolve.
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+Wrote  : </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+Reading block design file </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd>...
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Master_CPLD
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Slave_CPLD
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_rgpio
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_4
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_5
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_6
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_7
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_8
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_9
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_10
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_11
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_12
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_13
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_14
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_15
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_16
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_17
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_18
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_19
+Adding component instance block -- trenz.biz:user:SC0808BF:1.0 - SC0808BF_0
+Adding component instance block -- trenz.biz:user:axis_live_audio:1.0 - axis_live_audio_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_general
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.5 - zynq_ultra_ps_e_0
+Successfully read diagram <zusys> from block design file </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd>
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/zynq_ultra_ps_e_0/Data' to master interface '/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD'. Please either complete or remove this path to resolve.
+INFO: [BD 41-1662] The design 'zusys.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+VHDL Output written to : /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.gen/sources_1/bd/zusys/synth/zusys.vhd
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+VHDL Output written to : /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.gen/sources_1/bd/zusys/sim/zusys.vhd
+VHDL Output written to : /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/RGPIO_Master_CPLD .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/RGPIO_Slave_CPLD .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/vio_rgpio .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlconcat_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlconcat_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_9 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_11 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_12 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_13 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_14 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_15 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_16 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_17 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_18 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RGPIO/xlslice_19 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SC0808BF_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_live_audio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vio_general .
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.5-0] zusys_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Amd's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Amd's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXIS_AUDIO'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXIS_MIXED_AUDIO'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.gen/sources_1/bd/zusys/hw_handoff/zusys.hwh
+Generated Hardware Definition File /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.gen/sources_1/bd/zusys/synth/zusys.hwdef
+generate_target: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1644.457 ; gain = 41.000 ; free physical = 4087 ; free virtual = 28351
+INFO: [TE_HW-34] Generate top level wrapper
+INFO: [Project 1-1716] Could not find the wrapper file /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/hdl/zusys_wrapper.vhd, checking in project .gen location instead.
+INFO: [Vivado 12-12390] Found file /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd, adding it to Project
+Start GUI...all other messages will be print inside the GUI TCL console of Vivado
+INFO: [TE_INIT-139] Run project finished without Error. 
+  ------
+-----------------------------------------------------------------------
+update_compile_order -fileset sources_1

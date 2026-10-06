@@ -1,0 +1,420 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Sep 25 13:56:06 2026
+# Process ID         : 24444
+# Current directory  : /home/jackson/projects/te0813/te0813-skrd
+# Command line       : vivado
+# Log file           : /home/jackson/projects/te0813/te0813-skrd/vivado.log
+# Journal file       : /home/jackson/projects/te0813/te0813-skrd/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 400.000 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 31657 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'trenz.biz:user:RGPIO_EXT:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'trenz.biz:user:RGPIO_EXT_rtl:1.0' found within IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT_rtl.xml
+File ignored: /home/jackson/projects/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/te0813/te0813-skrd/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+update_compile_order -fileset sources_1
+open_bd_design {/home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd}
+Reading block design file </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd>...
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Master_CPLD
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Slave_CPLD
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_rgpio
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_4
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_5
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_6
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_7
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_8
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_9
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_10
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_11
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_12
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_13
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_14
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_15
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_16
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_17
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_18
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_19
+Adding component instance block -- trenz.biz:user:SC0808BF:1.0 - SC0808BF_0
+Adding component instance block -- trenz.biz:user:axis_live_audio:1.0 - axis_live_audio_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_general
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.5 - zynq_ultra_ps_e_0
+Successfully read diagram <zusys> from block design file </home/jackson/projects/te0813/te0813-skrd/vivado/te0813-skrd.srcs/sources_1/bd/zusys/zusys.bd>
+save_project_as project_1 /home/jackson/projects/test1/project_1 -force
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+import_files
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+file mkdir /home/jackson/projects/test1/project_1/project_1.srcs/constrs_1/new
+close [ open /home/jackson/projects/test1/project_1/project_1.srcs/constrs_1/new/p2_blink_ps.xdc w ]
+add_files -fileset constrs_1 /home/jackson/projects/test1/project_1/project_1.srcs/constrs_1/new/p2_blink_ps.xdc
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+file mkdir /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new
+close [ open /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v w ]
+add_files /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+open_bd_design {/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd}
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property CONFIG.PSU__GPIO_EMIO__PERIPHERAL__ENABLE {1} [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property CONFIG.PSU__GPIO_EMIO__PERIPHERAL__IO {1} [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+create_bd_cell -type module -reference p2_blink_ps p2_blink_ps_0
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port TX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5462] Defaulting to slave bus interface due to conflicts in bus interface inference.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'user_RGPIO_EXT' of definition 'trenz.biz:user:RGPIO_EXT:1.0' (from User Repositories).
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'user_RGPIO_EXT': A port map to the required logical port "RX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'user_RGPIO_EXT': A port map to the required logical port "TX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+validate_bd_design
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/zynq_ultra_ps_e_0/Data' to master interface '/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD'. Please either complete or remove this path to resolve.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/p2_blink_ps_0/clk
+
+set_property location {3 1324 82} [get_bd_cells p2_blink_ps_0]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+report_ip_status -name ip_status 
+open_bd_design {/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd}
+open_bd_design {/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd}
+update_module_reference [get_ips  zusys_p2_blink_ps_0_0]
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port TX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5462] Defaulting to slave bus interface due to conflicts in bus interface inference.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2' of definition 'trenz.biz:user:RGPIO_EXT:1.0' (from User Repositories).
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'p2': A port map to the required logical port "RX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'p2': A port map to the required logical port "TX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port RX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5464] No port map found for required logical port TX on bus interface abstraction RGPIO_EXT_rtl for interface type slave.
+WARNING: [IP_Flow 19-5462] Defaulting to slave bus interface due to conflicts in bus interface inference.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2' of definition 'trenz.biz:user:RGPIO_EXT:1.0' (from User Repositories).
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'p2': A port map to the required logical port "RX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+CRITICAL WARNING: [IP_Flow 19-1965] Bus Interface 'p2': A port map to the required logical port "TX" of the bus abstraction "trenz.biz:user:RGPIO_EXT_rtl:1.0" is missing.
+Upgrading '/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd'
+INFO: [IP_Flow 19-3420] Updated zusys_p2_blink_ps_0_0 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'user_RGPIO_EXT'
+WARNING: [IP_Flow 19-4697] Upgrade has added interface 'p2' (trenz.biz:user:RGPIO_EXT:1.0)
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'zusys_p2_blink_ps_0_0'.
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'clk'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'p2_clk'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'zusys_p2_blink_ps_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'zusys_p2_blink_ps_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+report_ip_status -name ip_status 
+open_bd_design {/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+report_ip_status -name ip_status 
+update_module_reference [get_ips  zusys_p2_blink_ps_0_0]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'p2_clk': Added interface parameter 'FREQ_HZ' with value '100000000'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'p2_clk' has a fixed FREQ_HZ of '100000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-5661] Bus Interface 'p2_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'p2_clk': Added interface parameter 'FREQ_HZ' with value '100000000'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'p2_clk' has a fixed FREQ_HZ of '100000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-5661] Bus Interface 'p2_clk' does not have any bus interfaces associated with it.
+Upgrading '/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd'
+INFO: [IP_Flow 19-3420] Updated zusys_p2_blink_ps_0_0 to use current project options
+WARNING: [IP_Flow 19-4699] Upgrade has removed interface 'p2'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'zusys_p2_blink_ps_0_0'.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'zusys_p2_blink_ps_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins p2_blink_ps_0/p2_clk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/emio_gpio_i] [get_bd_pins p2_blink_ps_0/blink_to_ps]
+WARNING: [BD 41-1306] The connection to interface pin </zynq_ultra_ps_e_0/emio_gpio_i> is being overridden by the user with net <p2_blink_ps_0_blink_to_ps>. This pin will not be connected as a part of interface connection <GPIO_0>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+set_property location {3 1371 49} [get_bd_cells p2_blink_ps_0]
+set_property location {3 1371 42} [get_bd_cells p2_blink_ps_0]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+save_bd_design
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+update_module_reference [get_ips  zusys_p2_blink_ps_0_0]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'p2_clk': Added interface parameter 'FREQ_HZ' with value '100000000'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'p2_clk' has a fixed FREQ_HZ of '100000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-5661] Bus Interface 'p2_clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'p2_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-4728] Bus Interface 'p2_clk': Added interface parameter 'FREQ_HZ' with value '100000000'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'p2_clk' has a fixed FREQ_HZ of '100000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-5661] Bus Interface 'p2_clk' does not have any bus interfaces associated with it.
+Upgrading '/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd'
+INFO: [IP_Flow 19-3420] Updated zusys_p2_blink_ps_0_0 to use current project options
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'x_io5'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'ex_io5'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'zusys_p2_blink_ps_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'zusys_p2_blink_ps_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd> 
+generate_target all [get_files  /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd]
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/zynq_ultra_ps_e_0/Data' to master interface '/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD'. Please either complete or remove this path to resolve.
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd> 
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+VHDL Output written to : /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+VHDL Output written to : /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/sim/zusys.vhd
+VHDL Output written to : /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.5-0] zusys_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Amd's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Amd's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXIS_AUDIO'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXIS_MIXED_AUDIO'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block p2_blink_ps_0 .
+Exporting to file /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hw_handoff/zusys.hwh
+Generated Hardware Definition File /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.hwdef
+generate_target: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 9041.766 ; gain = 0.000 ; free physical = 9913 ; free virtual = 24531
+catch { config_ip_cache -export [get_ips -all zusys_RGPIO_Master_CPLD_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_RGPIO_Master_CPLD_0
+catch { config_ip_cache -export [get_ips -all zusys_RGPIO_Slave_CPLD_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_RGPIO_Slave_CPLD_0
+catch { config_ip_cache -export [get_ips -all zusys_vio_rgpio_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_vio_rgpio_0
+catch { config_ip_cache -export [get_ips -all zusys_SC0808BF_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_SC0808BF_0_0
+catch { config_ip_cache -export [get_ips -all zusys_axis_live_audio_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_axis_live_audio_0_0
+catch { config_ip_cache -export [get_ips -all zusys_proc_sys_reset_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_proc_sys_reset_0_0
+catch { config_ip_cache -export [get_ips -all zusys_vio_general_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_vio_general_0
+catch { config_ip_cache -export [get_ips -all zusys_zynq_ultra_ps_e_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_zynq_ultra_ps_e_0_0
+export_ip_user_files -of_objects [get_files /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd]
+launch_runs zusys_RGPIO_Master_CPLD_0_synth_1 zusys_RGPIO_Slave_CPLD_0_synth_1 zusys_SC0808BF_0_0_synth_1 zusys_axis_live_audio_0_0_synth_1 zusys_p2_blink_ps_0_0_synth_1 zusys_proc_sys_reset_0_0_synth_1 zusys_vio_general_0_synth_1 zusys_vio_rgpio_0_synth_1 zusys_zynq_ultra_ps_e_0_0_synth_1 -jobs 8
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_RGPIO_Master_CPLD_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_RGPIO_Slave_CPLD_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_SC0808BF_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_axis_live_audio_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_vio_general_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_vio_rgpio_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_zynq_ultra_ps_e_0_0
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+[Fri Sep 25 16:29:36 2026] Launched zusys_RGPIO_Master_CPLD_0_synth_1, zusys_RGPIO_Slave_CPLD_0_synth_1, zusys_SC0808BF_0_0_synth_1, zusys_axis_live_audio_0_0_synth_1, zusys_p2_blink_ps_0_0_synth_1, zusys_proc_sys_reset_0_0_synth_1, zusys_vio_general_0_synth_1, zusys_vio_rgpio_0_synth_1, zusys_zynq_ultra_ps_e_0_0_synth_1...
+Run output will be captured here:
+zusys_RGPIO_Master_CPLD_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_RGPIO_Master_CPLD_0_synth_1/runme.log
+zusys_RGPIO_Slave_CPLD_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_RGPIO_Slave_CPLD_0_synth_1/runme.log
+zusys_SC0808BF_0_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_SC0808BF_0_0_synth_1/runme.log
+zusys_axis_live_audio_0_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_axis_live_audio_0_0_synth_1/runme.log
+zusys_p2_blink_ps_0_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_p2_blink_ps_0_0_synth_1/runme.log
+zusys_proc_sys_reset_0_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_proc_sys_reset_0_0_synth_1/runme.log
+zusys_vio_general_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_vio_general_0_synth_1/runme.log
+zusys_vio_rgpio_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_vio_rgpio_0_synth_1/runme.log
+zusys_zynq_ultra_ps_e_0_0_synth_1: /home/jackson/projects/test1/project_1/project_1.runs/zusys_zynq_ultra_ps_e_0_0_synth_1/runme.log
+export_simulation -lib_map_path [list {modelsim=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/modelsim} {questa=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/questa} {xcelium=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/xcelium} {vcs=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/vcs} {riviera=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/riviera}] -of_objects [get_files /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd] -directory /home/jackson/projects/test1/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/jackson/projects/test1/project_1/project_1.ip_user_files -ipstatic_source_dir /home/jackson/projects/test1/project_1/project_1.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+startgroup
+make_bd_pins_external  [get_bd_pins p2_blink_ps_0/ex_io5]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins p2_blink_ps_0/dir4]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins p2_blink_ps_0/dir_unused]
+endgroup
+set_property name ex_io5 [get_bd_ports ex_io5_0]
+set_property name dir4 [get_bd_ports dir4_0]
+set_property name dir_unused [get_bd_ports dir_unused_0]
+save_bd_design
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+validate_bd_design
+WARNING: [BD 41-2670] Found an incomplete address path from address space '/zynq_ultra_ps_e_0/Data' to master interface '/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD'. Please either complete or remove this path to resolve.
+save_bd_design
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+generate_target all [get_files  /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd]
+INFO: [BD 41-1662] The design 'zusys.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+VHDL Output written to : /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+VHDL Output written to : /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/sim/zusys.vhd
+VHDL Output written to : /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd
+Exporting to file /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hw_handoff/zusys.hwh
+Generated Hardware Definition File /home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.hwdef
+export_ip_user_files -of_objects [get_files /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd]
+export_simulation -lib_map_path [list {modelsim=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/modelsim} {questa=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/questa} {xcelium=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/xcelium} {vcs=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/vcs} {riviera=/home/jackson/projects/test1/project_1/project_1.cache/compile_simlib/riviera}] -of_objects [get_files /home/jackson/projects/test1/project_1/project_1.srcs/sources_1/bd/zusys/zusys.bd] -directory /home/jackson/projects/test1/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/jackson/projects/test1/project_1/project_1.ip_user_files -ipstatic_source_dir /home/jackson/projects/test1/project_1/project_1.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.srcs/sources_1/new/p2_blink_ps.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/test1/project_1/project_1.gen/sources_1/bd/zusys/synth/zusys.vhd:]
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Sep 25 16:57:43 2026] Launched synth_1...
+Run output will be captured here: /home/jackson/projects/test1/project_1/project_1.runs/synth_1/runme.log
+[Fri Sep 25 16:57:43 2026] Launched impl_1...
+Run output will be captured here: /home/jackson/projects/test1/project_1/project_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9793.488 ; gain = 0.000 ; free physical = 13131 ; free virtual = 24145
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9793.488 ; gain = 0.000 ; free physical = 13128 ; free virtual = 24142
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10015.000 ; gain = 0.000 ; free physical = 13037 ; free virtual = 24053
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 10015.000 ; gain = 0.000 ; free physical = 13029 ; free virtual = 24046
+Read PlaceDB: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.29 . Memory (MB): peak = 10015.000 ; gain = 0.000 ; free physical = 13022 ; free virtual = 24038
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10015.000 ; gain = 0.000 ; free physical = 13021 ; free virtual = 24038
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 10435.398 ; gain = 420.398 ; free physical = 12606 ; free virtual = 23623
+Read Physdb Files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 10435.398 ; gain = 420.398 ; free physical = 12606 ; free virtual = 23623
+Restored from archive | CPU: 4.680000 secs | Memory: 402.580490 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 10435.398 ; gain = 420.398 ; free physical = 12606 ; free virtual = 23623
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10435.398 ; gain = 0.000 ; free physical = 12606 ; free virtual = 23623
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 7 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 10832.500 ; gain = 1227.758 ; free physical = 12141 ; free virtual = 23230
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+write_hw_platform -fixed -include_bit -force -file /home/jackson/projects/test1//p2_blink.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: /home/jackson/projects/test1/p2_blink.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: /home/jackson/projects/test1/p2_blink.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (/tools/Xilinx/Vivado/2024.2/data/embeddedsw) loading 0 seconds

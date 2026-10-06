@@ -1,0 +1,6 @@
+set_property PACKAGE_PIN W9 [get_ports ex_io5]
+set_property PACKAGE_PIN C7 [get_ports dir4]
+set_property PACKAGE_PIN G4 [get_ports {dir_unused[0]}]
+set_property PACKAGE_PIN D2 [get_ports {dir_unused[1]}]
+set_property PACKAGE_PIN E7 [get_ports {dir_unused[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {ex_io5 dir4 dir_unused[*]}]

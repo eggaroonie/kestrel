@@ -1,0 +1,30 @@
+17:29:56 INFO  : updated workspace path: 
+17:29:56 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+17:29:58 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson4227786297127233458
+17:29:58 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson18442432831044782307 -r /tmp/rigel_lopper_jackson4227786297127233458/.repo.yaml && deactivate
+17:29:58 INFO  : Embedded Template List generated successfully
+17:29:58 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+17:29:58 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson8438345767647394883
+17:29:58 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson11694883587538550705 -r /tmp/rigel_lopper_jackson8438345767647394883/.repo.yaml && deactivate
+17:29:59 INFO  : Embedded Template List generated successfully
+17:30:08 INFO  : Terminating Vitis C++ Server
+17:30:08 INFO  : Vitis C++ Server terminated
+17:30:22 INFO  : updated workspace path: 
+17:30:23 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+17:30:23 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson6875486684840210649
+17:30:23 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson5488803187397110047 -r /tmp/rigel_lopper_jackson6875486684840210649/.repo.yaml && deactivate
+17:30:23 INFO  : Embedded Template List generated successfully
+17:30:39 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+20:04:05 INFO  : updated workspace path: 
+20:04:06 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson13112481311297544652
+20:04:06 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson8863876852434573246 -r /tmp/rigel_lopper_jackson13112481311297544652/.repo.yaml && deactivate
+20:04:06 INFO  : Embedded Template List generated successfully
+20:04:06 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+20:04:07 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson14845407182567694949
+20:04:07 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson13102358572574946794 -r /tmp/rigel_lopper_jackson14845407182567694949/.repo.yaml && deactivate
+20:04:07 INFO  : Embedded Template List generated successfully
+20:04:33 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+20:04:33 ERROR : Failed to set workspace '/home/jackson/projects/test1/vitis_ws1'. The path is already in use by another Vitis server
+20:04:34 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson11704885854550559597
+20:04:34 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson10149663182902630519 -r /tmp/rigel_lopper_jackson11704885854550559597/.repo.yaml && deactivate
+20:04:34 INFO  : Embedded Template List generated successfully

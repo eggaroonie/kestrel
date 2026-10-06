@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Oct  5 10:28:44 2026
+# Process ID         : 489333
+# Current directory  : /home/jackson/projects/Kestrel/AXItest
+# Command line       : vivado
+# Log file           : /home/jackson/projects/Kestrel/AXItest/vivado.log
+# Journal file       : /home/jackson/projects/Kestrel/AXItest/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 931.073 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 23154 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.xpr
+update_compile_order -fileset sources_1
+save_project_as AXITest_DevTest /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest -exclude_run_results -force
+import_files
+export_ip_user_files -of_objects  [get_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv] -no_script -reset -force -quiet
+remove_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/capture_test.sv
+export_ip_user_files -of_objects  [get_files /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/touch_test.sv] -no_script -reset -force -quiet
+remove_files  /home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sources_1/new/touch_test.sv
+open_bd_design {/home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.srcs/sources_1/bd/zusys/zusys.bd}
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_1_project -directory /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.tmp/AXILite2_v1_1_project /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+close_project
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_1_project -directory /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.tmp/AXILite2_v1_1_project /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+close_project
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_1_projectl -directory /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.tmp/AXILite2_v1_1_projectl /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+set_property source_mgmt_mode All [current_project]
+close_project
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_1_project -directory /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.tmp/AXILite2_v1_1_project /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+close_project
+update_ip_catalog -rebuild
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_1_project -directory /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.tmp/AXILite2_v1_1_project /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+close_project
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_2 -directory /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.tmp/AXILite2_v1_2 /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+ipx::edit_ip_in_project -upgrade true -name AXILite2_v1_2 -directory /home/jackson/projects/Kestrel/AXItest/AXITest_DevTest/AXITest_DevTest.tmp/AXILite2_v1_1_project/AXILite2_v1_2 /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/component.xml
+current_project AXITest_DevTest
+add_files -norecurse {/home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/hdl/AXILite2.v /home/jackson/projects/Kestrel/AXItest/ip_repo/AXILite2_1_0/hdl/AXILite2_slave_lite_v1_0_S00_AXI.v}
+update_compile_order -fileset sources_1

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Sep 24 12:09:58 2026
+# Process ID         : 37310
+# Current directory  : /home/jackson/projects/te0813/te0813-skrd/v_log
+# Command line       : vivado -source ../scripts/script_main.tcl -mode batch -notrace -tclargs --run_board_selection
+# Log file           : /home/jackson/projects/te0813/te0813-skrd/v_log/vivado.log
+# Journal file       : /home/jackson/projects/te0813/te0813-skrd/v_log/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 400.341 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 30252 MB
+#-----------------------------------------------------------
+source ../scripts/script_main.tcl -notrace
+update_compile_order -fileset sources_1

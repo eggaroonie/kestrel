@@ -1,0 +1,169 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Wed Oct  1 15:26:16 2025
+| Host         : runner-t182syjb-project-300-concurrent-0 running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_ip_status
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+IP Status Summary
+
+1. Project IP Status
+--------------------
+Your project uses 30 IP. Some of these IP may have undergone changes in this release of the software. Please review the recommended actions.
+
+More information on the Xilinx versioning policy is available at www.xilinx.com.
+
+Project IP Instances
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| Instance Name             | Status     | Recommendation      | Change    | IP Name            | IP      | New Version   | New        | Original Part        |
+|                           |            |                     | Log       |                    | Version |               | License    |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_RGPIO_Master_CPLD_0 | Up-to-date | No changes required | Change    | RGPIO              | 1.0     | 1.0 (Rev. 2)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     | Log not   |                    | (Rev.   |               |            |                      |
+|                           |            |                     | available |                    | 2)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_RGPIO_Slave_CPLD_0  | Up-to-date | No changes required | Change    | RGPIO              | 1.0     | 1.0 (Rev. 2)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     | Log not   |                    | (Rev.   |               |            |                      |
+|                           |            |                     | available |                    | 2)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_SC0808BF_0_0        | Up-to-date | No changes required | Change    | TEBF0808 Base      | 1.0     | 1.0 (Rev. 15) | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     | Log not   | Control            | (Rev.   |               |            |                      |
+|                           |            |                     | available |                    | 15)     |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_axis_live_audio_0_0 | Up-to-date | No changes required | Change    | AXI4-Stream Live   | 1.0     | 1.0 (Rev. 20) | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     | Log not   | Audio v1.0         | (Rev.   |               |            |                      |
+|                           |            |                     | available |                    | 20)     |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_proc_sys_reset_0_0  | Up-to-date | No changes required |  *(1)     | Processor System   | 5.0     | 5.0 (Rev. 16) | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           | Reset              | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 16)     |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_vio_general_0       | Up-to-date | No changes required |  *(2)     | VIO (Virtual       | 3.0     | 3.0 (Rev. 26) | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           | Input/Output)      | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 26)     |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_vio_rgpio_0         | Up-to-date | No changes required |  *(3)     | VIO (Virtual       | 3.0     | 3.0 (Rev. 26) | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           | Input/Output)      | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 26)     |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlconcat_2_0        | Up-to-date | No changes required |  *(4)     | Concat             | 2.1     | 2.1 (Rev. 6)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 6)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlconcat_3_0        | Up-to-date | No changes required |  *(5)     | Concat             | 2.1     | 2.1 (Rev. 6)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 6)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_0_0         | Up-to-date | No changes required |  *(6)     | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_10_0        | Up-to-date | No changes required |  *(7)     | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_11_0        | Up-to-date | No changes required |  *(8)     | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_12_0        | Up-to-date | No changes required |  *(9)     | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_13_0        | Up-to-date | No changes required |  *(10)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_14_0        | Up-to-date | No changes required |  *(11)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_15_0        | Up-to-date | No changes required |  *(12)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_16_0        | Up-to-date | No changes required |  *(13)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_17_0        | Up-to-date | No changes required |  *(14)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_18_0        | Up-to-date | No changes required |  *(15)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_19_0        | Up-to-date | No changes required |  *(16)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_1_0         | Up-to-date | No changes required |  *(17)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_2_0         | Up-to-date | No changes required |  *(18)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_3_0         | Up-to-date | No changes required |  *(19)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_4_0         | Up-to-date | No changes required |  *(20)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_5_0         | Up-to-date | No changes required |  *(21)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_6_0         | Up-to-date | No changes required |  *(22)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_7_0         | Up-to-date | No changes required |  *(23)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_8_0         | Up-to-date | No changes required |  *(24)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_xlslice_9_0         | Up-to-date | No changes required |  *(25)    | Slice              | 1.0     | 1.0 (Rev. 4)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           |                    | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 4)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| zusys_zynq_ultra_ps_e_0_0 | Up-to-date | No changes required |  *(26)    | Zynq UltraScale+   | 3.5     | 3.5 (Rev. 5)  | Included   | xczu2cg-sfvc784-1-e  |
+|                           |            |                     |           | MPSoC              | (Rev.   |               |            |                      |
+|                           |            |                     |           |                    | 5)      |               |            |                      |
++---------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+*(1) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(2) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/vio_v3_0/doc/vio_v3_0_changelog.txt
+*(3) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/vio_v3_0/doc/vio_v3_0_changelog.txt
+*(4) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlconcat_v2_1/doc/xlconcat_v2_1_changelog.txt
+*(5) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlconcat_v2_1/doc/xlconcat_v2_1_changelog.txt
+*(6) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(7) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(8) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(9) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(10) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(11) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(12) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(13) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(14) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(15) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(16) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(17) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(18) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(19) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(20) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(21) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(22) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(23) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(24) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(25) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/xlslice_v1_0/doc/xlslice_v1_0_changelog.txt
+*(26) /home/vivado/Xilinx/Vivado/2024.2/data/ip/xilinx/zynq_ultra_ps_e_v3_5/doc/zynq_ultra_ps_e_v3_5_changelog.txt
+
+

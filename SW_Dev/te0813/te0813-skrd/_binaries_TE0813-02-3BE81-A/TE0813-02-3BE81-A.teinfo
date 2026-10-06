@@ -1,0 +1,14 @@
+Creation Date:      2026-09-24 12:10:30
+TE::ID:             44           
+TE::PRODID:         TE0813-02-3BE81-A       
+TE::PARTNAME:       xczu3eg-sfvc784-1-e     
+TE::BOARDPART:      trenz.biz:te0813_3eg_1e_tebf0808:part0:4.0    
+TE::SHORTDIR:       3eg_1e_4gb     
+TE::ZYNQFLASHTYP:   qspi-x8-dual_parallel 
+TE::FPGAFLASHTYP:   mt25qu512-qspi-x8-dual_parallel 
+TE::PCB_REV:        REV02      
+TE::DDR_SIZE:       4GB     
+TE::FLASH_SIZE:     128MB   
+TE::EMMC_SIZE:      NA    
+TE::OTHERS:         NA       
+TE::NOTES:          NA        

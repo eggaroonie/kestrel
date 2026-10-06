@@ -1,0 +1,75 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.937008",
+   "Default View_TopLeft":"-92,-18",
+   "ExpandedHierarchyInLayout":"",
+   "comment_0":"Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!!",
+   "comment_1":"Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!!",
+   "commentid":"comment_0|comment_1|",
+   "font_comment_0":"14",
+   "font_comment_1":"14",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port BASE -pg 1 -lvl 5 -x 2050 -y 830 -defaultsOSRD
+preplace port I2S -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace inst RGPIO -pg 1 -lvl 2 -x 740 -y 790 -defaultsOSRD
+preplace inst SC0808BF_0 -pg 1 -lvl 3 -x 1400 -y 850 -defaultsOSRD
+preplace inst axis_live_audio_0 -pg 1 -lvl 1 -x 210 -y 490 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 210 -y 730 -defaultsOSRD
+preplace inst vio_general -pg 1 -lvl 2 -x 740 -y 920 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 740 -y 530 -defaultsOSRD
+preplace inst capture_test1_0 -pg 1 -lvl 3 -x 1400 -y 80 -defaultsOSRD -resize 254 130
+preplace inst touch_test_0 -pg 1 -lvl 3 -x 1400 -y 270 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 3 -x 1400 -y 470 -defaultsOSRD
+preplace inst rst_ps8_0_100M -pg 1 -lvl 2 -x 740 -y 280 -defaultsOSRD
+preplace inst AXILite2_0 -pg 1 -lvl 4 -x 1850 -y 330 -defaultsOSRD
+preplace netloc SC0808BF_0_PS_AUX_DI 1 1 3 430 700 NJ 700 1650
+preplace netloc SC0808BF_0_PS_DP_HPD 1 1 3 420 710 NJ 710 1680
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 1 N 770
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 2 2 1110 390 N
+preplace netloc vio_CAN_0_S 1 2 1 1150 880n
+preplace netloc vio_LED_HD 1 2 1 N 900
+preplace netloc vio_LED_XMOD2 1 2 1 N 920
+preplace netloc zynq_ultra_ps_e_0_dp_audio_ref_clk 1 0 3 30 570 390 390 1070
+preplace netloc zynq_ultra_ps_e_0_dp_aux_data_oe_n 1 2 1 1070 550n
+preplace netloc zynq_ultra_ps_e_0_dp_aux_data_out 1 2 1 1080 530n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 3 20 620 390 690 1050
+preplace netloc zynq_ultra_ps_e_0_pl_clk1 1 1 3 410 680 1100 550 1690
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 3 30 630 400 670 1060
+preplace netloc AXILite2_0_rstn 1 2 3 1130 370 1670J 460 2030
+preplace netloc AXILite2_0_data_ready 1 2 3 1150 360 1680J 450 2010
+preplace netloc AXILite2_0_touch 1 2 3 1120 380 1660J 470 2020
+preplace netloc AXILite2_0_frame_cnt_target 1 2 3 1140 180 NJ 180 2030
+preplace netloc AXILite2_0_cap_enable 1 2 3 1150 170 NJ 170 2010
+preplace netloc capture_test1_0_frame_cnt 1 3 1 1680 90n
+preplace netloc capture_test1_0_cap_status 1 3 1 1690 70n
+preplace netloc touch_test_0_touch_cnt 1 3 1 1670 260n
+preplace netloc touch_test_0_touch_received 1 3 1 1660 280n
+preplace netloc I2S_0_1 1 0 1 N 490
+preplace netloc RGPIO_Master_CPLD_RGPIO_M_EXT 1 2 1 N 780
+preplace netloc RGPIO_Slave_CPLD_RGPIO_M_EXT 1 2 1 N 800
+preplace netloc SC0808BF_0_BASE 1 3 2 NJ 830 NJ
+preplace netloc axi_smc_M00_AXI 1 3 1 1650 270n
+preplace netloc axis_live_audio_0_m_axis 1 1 1 N 490
+preplace netloc zynq_ultra_ps_e_0_CAN_0 1 2 1 1090 470n
+preplace netloc zynq_ultra_ps_e_0_M_AXIS_MIXED_AUDIO 1 0 3 30 380 NJ 380 1060
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 2 1 N 450
+preplace cgraphic comment_1 place left 80 0 textcolor 4 linecolor 3
+preplace cgraphic comment_0 place left 80 0 textcolor 4 linecolor 3
+levelinfo -pg 1 0 210 740 1400 1850 2050
+pagesize -pg 1 -db -bbox -sgen -70 0 2140 1000
+",
+   "linktoobj_comment_0":"",
+   "linktoobj_comment_1":"",
+   "linktotype_comment_0":"bd_design",
+   "linktotype_comment_1":"bd_design"
+}
+{
+   """""da_zynq_ultra_ps_e_cnt""""":"1",
+   """da_axi4_cnt""":"1",
+   ""da_axi4_cnt"":"1"
+}
+{
+   "/comment_0":"comment_0",
+   "/comment_2":"comment_1"
+}

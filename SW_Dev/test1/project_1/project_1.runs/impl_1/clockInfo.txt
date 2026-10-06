@@ -1,0 +1,57 @@
+-------------------------------------
+| Tool Version : Vivado v.2024.2
+| Date         : Fri Sep 25 16:59:40 2026
+| Host         : JLaptop
+| Design       : design_1
+| Device       : xczu3eg-sfvc784-1-E-
+-------------------------------------
+
+For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+
+***********************
+Running Pre-CRP Checker
+***********************
+Number of global clocks: 4
+	Number of BUFGCE: 1
+	Number of BUFGCE_HDIO: 0
+	Number of BUFG_CTRL: 0
+	Number of BUFGCE_DIV: 0
+	Number of BUFG_GT: 0
+	Number of BUFG_PS: 3
+	Number of BUFG_FABRIC: 0
+	Running suboptimal placement checker for 4 clocks (and their loads) which do not have the CLOCK_LOW_FANOUT property but have a fanout less than 2000...
+Pre-CRP Checker took 0 secs
+
+********************************
+Clock Net Route Info (CRP Input)
+********************************
+Clock 1: zusys_i/zynq_ultra_ps_e_0/U0/pl_clk0
+	Clock source type: BUFG_PS
+	Clock source region: X0Y2
+	Clock regions with locked loads: X0Y2 
+	initial rect ((0, 0), (0, 2))
+
+Clock 2: dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i
+	Clock source type: BUFGCE
+	Clock source region: X1Y1
+	initial rect ((0, 0), (1, 1))
+
+Clock 3: zusys_i/zynq_ultra_ps_e_0/U0/pl_clk1
+	Clock source type: BUFG_PS
+	Clock source region: X0Y2
+	initial rect ((0, 0), (0, 2))
+
+Clock 4: zusys_i/zynq_ultra_ps_e_0/U0/dp_audio_ref_clk
+	Clock source type: BUFG_PS
+	Clock source region: X0Y1
+	Clock regions with locked loads: X0Y0 
+	initial rect ((0, 0), (0, 1))
+
+
+
+*****************
+User Constraints:
+*****************
+No user constraints found
+
+

@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Test 1: frame_cnt = 10 (expected 10)
+Test 2: stopped at frame_cnt = 9 (expected about 9)
+$finish called at time : 2245 ns : File "/home/jackson/projects/Kestrel/AXItest/AXITest/AXITest.srcs/sim_1/new/sim_test.sv" Line 56
