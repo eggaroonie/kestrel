@@ -255,3 +255,37 @@ dismissDialog("Open Block Design"); // bh (Open Block Design Progress)
 // HMemoryUtils.trashcanNow. Engine heap size: 1,845 MB. GUI used memory: 117 MB. Current time: 10/6/26, 2:46:20 PM PDT
 // Elapsed time: 51 seconds
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,840 MB. GUI used memory: 117 MB. Current time: 10/6/26, 3:16:20 PM PDT
+// [GUI Memory]: 223 MB (+23605kb) [00:46:26]
+// [GUI Memory]: 235 MB (+499kb) [00:47:44]
+// [GUI Memory]: 258 MB (+11564kb) [00:48:33]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,881 MB. GUI used memory: 105 MB. Current time: 10/6/26, 3:34:15 PM PDT
+// Elapsed time: 2830 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed time: 10 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXI4Lite_CaptureLogic (AXI4Lite_CaptureLogic.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXI4Lite_CaptureLogic (AXI4Lite_CaptureLogic.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXI4Lite_CaptureLogic (AXI4Lite_CaptureLogic.v)]", 2, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // an (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // an (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXI4Lite_CaptureLogic (AXI4Lite_CaptureLogic.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,882 MB. GUI used memory: 91 MB. Current time: 10/6/26, 4:04:15 PM PDT
+// Elapsed time: 2158 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// HMemoryUtils.trashcanNow. Engine heap size: 1,897 MB. GUI used memory: 101 MB. Current time: 10/6/26, 6:29:31 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,893 MB. GUI used memory: 102 MB. Current time: 10/6/26, 6:59:31 PM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  478889 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,893 MB. GUI used memory: 102 MB. Current time: 10/6/26, 7:29:32 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,893 MB. GUI used memory: 101 MB. Current time: 10/6/26, 8:00:11 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,893 MB. GUI used memory: 101 MB. Current time: 10/7/26, 10:23:36 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,891 MB. GUI used memory: 111 MB. Current time: 10/7/26, 10:53:36 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,891 MB. GUI used memory: 112 MB. Current time: 10/7/26, 11:23:36 AM PDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2929197 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,891 MB. GUI used memory: 83 MB. Current time: 10/7/26, 12:41:26 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,891 MB. GUI used memory: 84 MB. Current time: 10/7/26, 1:11:26 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,891 MB. GUI used memory: 84 MB. Current time: 10/7/26, 1:41:27 PM PDT
+// Elapsed time: 78156 seconds
+dismissDialog("Re-customize IP"); // m (dialog1)
