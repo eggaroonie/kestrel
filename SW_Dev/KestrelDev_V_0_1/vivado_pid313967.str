@@ -1,0 +1,154 @@
+/*
+
+AMD Vivado v2024.2 (64-bit) [Major: 2024, Minor: 2]
+SW Build: 5239630 on Fri Nov 08 22:34:34 MST 2024
+IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
+IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
+
+Process ID (PID): 313967
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Oct 09 12:57:27 PDT 2026
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Ubuntu
+OS Version: 7.0.0-38-generic
+OS Architecture: amd64
+Available processors (cores): 16
+LSB Release Description: DISTRIB_ID=Ubuntu
+
+Display: 0
+Screen size: 2880x1800
+Local screen bounds: x = 416, y = 2160, width = 2880, height = 1800
+Screen resolution (DPI): 200
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=24
+Scale size: 48
+OS font scaling: 200%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+
+Java home: 	/tools/Xilinx/Vivado/2024.2/tps/lnx64/jre21.0.1_12
+Java executable: 	/tools/Xilinx/Vivado/2024.2/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	jackson
+User home directory: /home/jackson
+User working directory: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2024.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2024.2/bin
+
+Vivado preferences file: /home/jackson/.Xilinx/Vivado/2024.2/vivado.xml
+Vivado preferences directory: /home/jackson/.Xilinx/Vivado/2024.2/
+Vivado layouts directory: /home/jackson/.Xilinx/Vivado/2024.2/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2024.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/vivado.log
+Vivado journal file: 	/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-313967-JLaptop
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /tools/Xilinx/Vivado/2024.2
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2024.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2024.2/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2024.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /tools/Xilinx/Vivado/2024.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2024.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vitis/2024.2/bin:/tools/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1:JLaptop_1791575782_313897
+RDI_SHARED_DATA: /tools/Xilinx/SharedData/2024.2/data
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2024.2/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /tools/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2024.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis/2024.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2024.2
+XILINX_SDK: /tools/Xilinx/Vitis/2024.2
+XILINX_VITIS: /tools/Xilinx/Vitis/2024.2
+XILINX_VIVADO: /tools/Xilinx/Vivado/2024.2
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,427 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1929 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,438 MB. GUI used memory: 81 MB. Current time: 10/9/26, 12:57:28 PM PDT
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.xpr. Version: Vivado v2024.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: HW_HANDOFF_TARGET_STALE_EVENT
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 95 MB (+96837kb) [00:00:57]
+// [Engine Memory]: 1,483 MB (+1403161kb) [00:00:57]
+// [GUI Memory]: 137 MB (+39048kb) [00:01:00]
+// [Engine Memory]: 1,561 MB (+3928kb) [00:01:00]
+// WARNING: HEventQueue.dispatchEvent() is taking  9998 ms.
+// Tcl Message: open_project /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/jackson/projects/Kestrel/KestrelDev_V_0_1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'. INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,627 MB. GUI used memory: 90 MB. Current time: 10/9/26, 12:57:56 PM PDT
+// Tcl Message: open_project: Time (s): cpu = 00:01:01 ; elapsed = 00:00:25 . Memory (MB): peak = 7741.996 ; gain = 219.984 ; free physical = 8189 ; free virtual = 23906 
+// Project name: KestrelDev_V_0_1; location: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1; part: xczu3eg-sfvc784-1-e
+// Elapsed time: 29 seconds
+dismissDialog("Open Project"); // bh (Open Project Progress)
+// [GUI Memory]: 152 MB (+9255kb) [00:01:10]
+// [Engine Memory]: 1,639 MB (+421kb) [00:01:10]
+// [GUI Memory]: 164 MB (+4229kb) [00:01:10]
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 32s
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 36 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXI4Lite_CaptureLogic (AXI4Lite_CaptureLogic.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+// PAPropertyPanels.initPanels (AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, AXI4Lite_CaptureLogic (AXI4Lite_CaptureLogic.v), AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI_inst : AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI (AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v)]", 3, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)

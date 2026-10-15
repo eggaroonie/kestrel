@@ -37956,8 +37956,12 @@
 #define CRF_APB_RST_FPD_TOP_OFFSET                                                 0XFD1A0100
 #undef CRL_APB_RST_LPD_TOP_OFFSET 
 #define CRL_APB_RST_LPD_TOP_OFFSET                                                 0XFF5E023C
-#undef LPD_SLCR_AFI_FS_OFFSET 
-#define LPD_SLCR_AFI_FS_OFFSET                                                     0XFF419000
+#undef FPD_SLCR_AFI_FS_OFFSET 
+#define FPD_SLCR_AFI_FS_OFFSET                                                     0XFD615000
+#undef AFIFM0_AFIFM_RDCTRL_OFFSET 
+#define AFIFM0_AFIFM_RDCTRL_OFFSET                                                 0XFD360000
+#undef AFIFM0_AFIFM_WRCTRL_OFFSET 
+#define AFIFM0_AFIFM_WRCTRL_OFFSET                                                 0XFD360014
 
 /*
 * AF_FM0 block level reset
@@ -38034,12 +38038,34 @@
     *  AXI data width (default) 01: 64-bit AXI data width 10: 128-bit AXI data
     *  width 11: reserved
 */
-#undef LPD_SLCR_AFI_FS_DW_SS2_SEL_DEFVAL 
-#undef LPD_SLCR_AFI_FS_DW_SS2_SEL_SHIFT 
-#undef LPD_SLCR_AFI_FS_DW_SS2_SEL_MASK 
-#define LPD_SLCR_AFI_FS_DW_SS2_SEL_DEFVAL                      0x00000200
-#define LPD_SLCR_AFI_FS_DW_SS2_SEL_SHIFT                       8
-#define LPD_SLCR_AFI_FS_DW_SS2_SEL_MASK                        0x00000300U
+#undef FPD_SLCR_AFI_FS_DW_SS0_SEL_DEFVAL 
+#undef FPD_SLCR_AFI_FS_DW_SS0_SEL_SHIFT 
+#undef FPD_SLCR_AFI_FS_DW_SS0_SEL_MASK 
+#define FPD_SLCR_AFI_FS_DW_SS0_SEL_DEFVAL                      0x00000A00
+#define FPD_SLCR_AFI_FS_DW_SS0_SEL_SHIFT                       8
+#define FPD_SLCR_AFI_FS_DW_SS0_SEL_MASK                        0x00000300U
+
+/*
+* Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
+    * 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+*/
+#undef AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH_DEFVAL 
+#undef AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH_SHIFT 
+#undef AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH_MASK 
+#define AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH_DEFVAL                0x000003B0
+#define AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH_SHIFT                 0
+#define AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH_MASK                  0x00000003U
+
+/*
+* Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
+    * b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+*/
+#undef AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH_DEFVAL 
+#undef AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH_SHIFT 
+#undef AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH_MASK 
+#define AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH_DEFVAL                0x000003B0
+#define AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH_SHIFT                 0
+#define AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH_MASK                  0x00000003U
 #undef GPIO_MASK_DATA_5_MSW_OFFSET 
 #define GPIO_MASK_DATA_5_MSW_OFFSET                                                0XFF0A002C
 #undef GPIO_DIRM_5_OFFSET 

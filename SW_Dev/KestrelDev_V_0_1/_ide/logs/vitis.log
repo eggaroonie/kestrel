@@ -1,0 +1,7 @@
+15:50:40 INFO  : updated workspace path: 
+15:50:40 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+15:50:41 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson8100046182681293323
+15:50:41 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson4993158663449979339 -r /tmp/rigel_lopper_jackson8100046182681293323/.repo.yaml && deactivate
+15:50:41 INFO  : Embedded Template List generated successfully
+15:50:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+15:50:46 INFO  : created .gitignore file for the project /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1_WS

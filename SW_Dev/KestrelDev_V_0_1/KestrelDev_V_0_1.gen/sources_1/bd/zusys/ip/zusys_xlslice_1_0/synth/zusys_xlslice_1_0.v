@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "xlslice_v1_0_4_xlslice,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "zusys_xlslice_1_0,xlslice_v1_0_4_xlslice,{}" *)
-(* CORE_GENERATION_INFO = "zusys_xlslice_1_0,xlslice_v1_0_4_xlslice,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,DIN_WIDTH=24,DIN_FROM=22,DIN_TO=22}" *)
+(* CORE_GENERATION_INFO = "zusys_xlslice_1_0,xlslice_v1_0_4_xlslice,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=24,DIN_FROM=22,DIN_TO=22}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module zusys_xlslice_1_0 (
   Din,

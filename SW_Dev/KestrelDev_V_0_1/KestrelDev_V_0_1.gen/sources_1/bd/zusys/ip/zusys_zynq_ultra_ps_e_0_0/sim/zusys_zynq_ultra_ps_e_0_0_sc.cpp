@@ -86,7 +86,7 @@ zusys_zynq_ultra_ps_e_0_0_sc::zusys_zynq_ultra_ps_e_0_0_sc(const sc_core::sc_mod
     model_param_props.addLong("C_USE_DEBUG_TEST", "0");
     model_param_props.addLong("C_SD0_INTERNAL_BUS_WIDTH", "8");
     model_param_props.addLong("C_SD1_INTERNAL_BUS_WIDTH", "4");
-    model_param_props.addLong("C_NUM_F2P_0_INTR_INPUTS", "1");
+    model_param_props.addLong("C_NUM_F2P_0_INTR_INPUTS", "2");
     model_param_props.addLong("C_NUM_F2P_1_INTR_INPUTS", "1");
     model_param_props.addLong("C_EMIO_GPIO_WIDTH", "1");
     model_param_props.addLong("C_NUM_FABRIC_RESETS", "1");
@@ -103,8 +103,10 @@ zusys_zynq_ultra_ps_e_0_0_sc::zusys_zynq_ultra_ps_e_0_0_sc(const sc_core::sc_mod
   mp_impl = new zynq_ultra_ps_e_tlm("inst", model_param_props);
 
   // initialize AXI sockets
-  M_AXI_HPM0_LPD_rd_socket = mp_impl->M_AXI_HPM0_LPD_rd_socket;
-  M_AXI_HPM0_LPD_wr_socket = mp_impl->M_AXI_HPM0_LPD_wr_socket;
+  M_AXI_HPM0_FPD_rd_socket = mp_impl->M_AXI_HPM0_FPD_rd_socket;
+  M_AXI_HPM0_FPD_wr_socket = mp_impl->M_AXI_HPM0_FPD_wr_socket;
+  S_AXI_HPC0_FPD_rd_socket = mp_impl->S_AXI_HPC0_FPD_rd_socket;
+  S_AXI_HPC0_FPD_wr_socket = mp_impl->S_AXI_HPC0_FPD_wr_socket;
 }
 
 zusys_zynq_ultra_ps_e_0_0_sc::~zusys_zynq_ultra_ps_e_0_0_sc()

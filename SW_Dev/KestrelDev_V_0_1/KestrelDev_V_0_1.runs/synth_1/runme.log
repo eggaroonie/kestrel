@@ -1,0 +1,598 @@
+
+*** Running vivado
+    with args -log zusys_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source zusys_wrapper.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Oct 14 11:38:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source zusys_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4_Lite_CaptureLogic_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'trenz.biz:user:RGPIO_EXT:1.0' found within IP repository '/home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT.xml
+File ignored: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'trenz.biz:user:RGPIO_EXT_rtl:1.0' found within IP repository '/home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT_rtl.xml
+File ignored: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [Project 1-5578] Found utility IPs instantiated in block design /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994. 
+Command: read_checkpoint -auto_incremental -incremental /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/utils_1/imports/synth_1/zusys_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/utils_1/imports/synth_1/zusys_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top zusys_wrapper -part xczu3eg-sfvc784-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-1-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17701
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2446.980 ; gain = 123.688 ; free physical = 17191 ; free virtual = 29893
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'zusys_wrapper' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:38]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/tools/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391' bound to instance 'BASE_sc10_iobuf' of component 'IOBUF' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:75]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/tools/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/tools/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391]
+INFO: [Synth 8-3491] module 'zusys' declared at '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:198' bound to instance 'zusys_i' of component 'zusys' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:82]
+INFO: [Synth 8-6157] synthesizing module 'zusys' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:198]
+INFO: [Synth 8-6157] synthesizing module 'RGPIO_imp_139ZQEB' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:13]
+INFO: [Synth 8-6157] synthesizing module 'zusys_RGPIO_Master_CPLD_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_RGPIO_Master_CPLD_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_RGPIO_Master_CPLD_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_RGPIO_Master_CPLD_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_RGPIO_Slave_CPLD_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_RGPIO_Slave_CPLD_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_RGPIO_Slave_CPLD_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_RGPIO_Slave_CPLD_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_vio_rgpio_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_vio_rgpio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_vio_rgpio_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_vio_rgpio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlconcat_2_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_2_0/synth/zusys_xlconcat_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlconcat_2_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_2_0/synth/zusys_xlconcat_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlconcat_3_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_3_0/synth/zusys_xlconcat_3_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlconcat_3_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_3_0/synth/zusys_xlconcat_3_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_0_0/synth/zusys_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_0_0/synth/zusys_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_1_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_1_0/synth/zusys_xlslice_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_1_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_1_0/synth/zusys_xlslice_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_10_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_10_0/synth/zusys_xlslice_10_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized1' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_10_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_10_0/synth/zusys_xlslice_10_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_11_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_11_0/synth/zusys_xlslice_11_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized2' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized2' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_11_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_11_0/synth/zusys_xlslice_11_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_12_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_12_0/synth/zusys_xlslice_12_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized3' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized3' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_12_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_12_0/synth/zusys_xlslice_12_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_13_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_13_0/synth/zusys_xlslice_13_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_13_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_13_0/synth/zusys_xlslice_13_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_14_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_14_0/synth/zusys_xlslice_14_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized4' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized4' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_14_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_14_0/synth/zusys_xlslice_14_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_15_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_15_0/synth/zusys_xlslice_15_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized5' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized5' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_15_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_15_0/synth/zusys_xlslice_15_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_16_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_16_0/synth/zusys_xlslice_16_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized6' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized6' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_16_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_16_0/synth/zusys_xlslice_16_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_17_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_17_0/synth/zusys_xlslice_17_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized7' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized7' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_17_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_17_0/synth/zusys_xlslice_17_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_18_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_18_0/synth/zusys_xlslice_18_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized8' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized8' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_18_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_18_0/synth/zusys_xlslice_18_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_19_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_19_0/synth/zusys_xlslice_19_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized9' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized9' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_19_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_19_0/synth/zusys_xlslice_19_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_2_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_2_0/synth/zusys_xlslice_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized10' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized10' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_2_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_2_0/synth/zusys_xlslice_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_3_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_3_0/synth/zusys_xlslice_3_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized11' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized11' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_3_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_3_0/synth/zusys_xlslice_3_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_4_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_4_0/synth/zusys_xlslice_4_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized12' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized12' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_4_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_4_0/synth/zusys_xlslice_4_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_5_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_5_0/synth/zusys_xlslice_5_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized13' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized13' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_5_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_5_0/synth/zusys_xlslice_5_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_6_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_6_0/synth/zusys_xlslice_6_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized14' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized14' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_6_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_6_0/synth/zusys_xlslice_6_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_7_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_7_0/synth/zusys_xlslice_7_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized15' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized15' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_7_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_7_0/synth/zusys_xlslice_7_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_8_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_8_0/synth/zusys_xlslice_8_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized16' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized16' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_8_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_8_0/synth/zusys_xlslice_8_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlslice_9_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_9_0/synth/zusys_xlslice_9_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized17' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized17' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_9_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_9_0/synth/zusys_xlslice_9_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'RGPIO_imp_139ZQEB' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:13]
+INFO: [Synth 8-6157] synthesizing module 'zusys_SC0808BF_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_SC0808BF_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_SC0808BF_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_SC0808BF_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axi_dma_0_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axi_dma_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_dma_0_1' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axi_dma_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'zusys_axi_dma_0_1' is unconnected for instance 'axi_dma_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:492]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'zusys_axi_dma_0_1' is unconnected for instance 'axi_dma_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:492]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'zusys_axi_dma_0_1' is unconnected for instance 'axi_dma_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:492]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'zusys_axi_dma_0_1' has 94 connections declared, but only 91 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:492]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axi_smc_4' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axi_smc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_smc_4' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axi_smc_4_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'zusys_axi_smc_4' is unconnected for instance 'axi_smc' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:584]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'zusys_axi_smc_4' is unconnected for instance 'axi_smc' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:584]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'zusys_axi_smc_4' is unconnected for instance 'axi_smc' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:584]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'zusys_axi_smc_4' has 60 connections declared, but only 57 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:584]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axi_smc_1_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_smc_1_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axis_data_fifo_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axis_data_fifo_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axis_live_audio_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axis_live_audio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axis_live_audio_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_axis_live_audio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_proc_sys_reset_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_proc_sys_reset_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:771]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:771]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:771]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:771]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'zusys_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:771]
+INFO: [Synth 8-6157] synthesizing module 'zusys_rst_ps8_0_100M_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_rst_ps8_0_100M_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_rst_ps8_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:778]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:778]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:778]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:778]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'zusys_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:778]
+INFO: [Synth 8-6157] synthesizing module 'zusys_vio_general_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_vio_general_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_vio_general_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_vio_general_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_xlconcat_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_0_0/synth/zusys_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized1' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_xlconcat_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_0_0/synth/zusys_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'zusys_zynq_ultra_ps_e_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_zynq_ultra_ps_e_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-17613-JLaptop/realtime/zusys_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'saxigp0_bid' of module 'zusys_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:794]
+WARNING: [Synth 8-7071] port 'saxigp0_rid' of module 'zusys_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:794]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'zusys_zynq_ultra_ps_e_0_0' has 101 connections declared, but only 99 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'zusys' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:198]
+INFO: [Synth 8-256] done synthesizing module 'zusys_wrapper' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:38]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_rgpio'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:94]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_2'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:124]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RGPIO_Master_CPLD'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:76]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_3'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:130]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'RGPIO_Slave_CPLD'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:85]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_0'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:134]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_1'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:137]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_2'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:170]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_3'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:173]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_4'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:176]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_5'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:179]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_6'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:182]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_7'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:185]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_8'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:188]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_9'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:191]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_10'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:140]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_11'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:143]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_12'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:146]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_13'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:149]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_14'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:152]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_15'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:155]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_16'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:158]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_17'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:161]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_18'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:164]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlslice_19'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:167]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_general'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:785]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'SC0808BF_0'. This will prevent further optimization [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:460]
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2530.949 ; gain = 207.656 ; free physical = 17093 ; free virtual = 29796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2530.949 ; gain = 207.656 ; free physical = 17093 ; free virtual = 29796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2530.949 ; gain = 207.656 ; free physical = 17093 ; free virtual = 29796
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2538.949 ; gain = 0.000 ; free physical = 17093 ; free virtual = 29796
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_RGPIO_Master_CPLD_0/zusys_RGPIO_Master_CPLD_0/zusys_RGPIO_Slave_CPLD_0_in_context.xdc] for cell 'zusys_i/RGPIO/RGPIO_Master_CPLD'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_RGPIO_Master_CPLD_0/zusys_RGPIO_Master_CPLD_0/zusys_RGPIO_Slave_CPLD_0_in_context.xdc] for cell 'zusys_i/RGPIO/RGPIO_Master_CPLD'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_RGPIO_Slave_CPLD_0/zusys_RGPIO_Slave_CPLD_0/zusys_RGPIO_Slave_CPLD_0_in_context.xdc] for cell 'zusys_i/RGPIO/RGPIO_Slave_CPLD'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_RGPIO_Slave_CPLD_0/zusys_RGPIO_Slave_CPLD_0/zusys_RGPIO_Slave_CPLD_0_in_context.xdc] for cell 'zusys_i/RGPIO/RGPIO_Slave_CPLD'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_vio_rgpio_0/zusys_vio_rgpio_0/zusys_vio_rgpio_0_in_context.xdc] for cell 'zusys_i/RGPIO/vio_rgpio'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_vio_rgpio_0/zusys_vio_rgpio_0/zusys_vio_rgpio_0_in_context.xdc] for cell 'zusys_i/RGPIO/vio_rgpio'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_SC0808BF_0_0/zusys_SC0808BF_0_0/zusys_SC0808BF_0_0_in_context.xdc] for cell 'zusys_i/SC0808BF_0'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_SC0808BF_0_0/zusys_SC0808BF_0_0/zusys_SC0808BF_0_0_in_context.xdc] for cell 'zusys_i/SC0808BF_0'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axis_live_audio_0_0/zusys_axis_live_audio_0_0/zusys_axis_live_audio_0_0_in_context.xdc] for cell 'zusys_i/axis_live_audio_0'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axis_live_audio_0_0/zusys_axis_live_audio_0_0/zusys_axis_live_audio_0_0_in_context.xdc] for cell 'zusys_i/axis_live_audio_0'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_proc_sys_reset_0_0/zusys_proc_sys_reset_0_0/zusys_proc_sys_reset_0_0_in_context.xdc] for cell 'zusys_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_proc_sys_reset_0_0/zusys_proc_sys_reset_0_0/zusys_proc_sys_reset_0_0_in_context.xdc] for cell 'zusys_i/proc_sys_reset_0'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_vio_general_0/zusys_vio_general_0/zusys_vio_general_0_in_context.xdc] for cell 'zusys_i/vio_general'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_vio_general_0/zusys_vio_general_0/zusys_vio_general_0_in_context.xdc] for cell 'zusys_i/vio_general'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_zynq_ultra_ps_e_0_0/zusys_zynq_ultra_ps_e_0_0/zusys_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'zusys_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_zynq_ultra_ps_e_0_0/zusys_zynq_ultra_ps_e_0_0/zusys_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'zusys_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_rst_ps8_0_100M_0/zusys_rst_ps8_0_100M_0/zusys_rst_ps8_0_100M_0_in_context.xdc] for cell 'zusys_i/rst_ps8_0_100M'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_rst_ps8_0_100M_0/zusys_rst_ps8_0_100M_0/zusys_rst_ps8_0_100M_0_in_context.xdc] for cell 'zusys_i/rst_ps8_0_100M'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_dma_0_1/zusys_axi_dma_0_1/zusys_axi_dma_0_1_in_context.xdc] for cell 'zusys_i/axi_dma_0'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_dma_0_1/zusys_axi_dma_0_1/zusys_axi_dma_0_1_in_context.xdc] for cell 'zusys_i/axi_dma_0'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4/zusys_axi_smc_4_in_context.xdc] for cell 'zusys_i/axi_smc'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4/zusys_axi_smc_4_in_context.xdc] for cell 'zusys_i/axi_smc'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0/zusys_axi_smc_1_0_in_context.xdc] for cell 'zusys_i/axi_smc_1'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0/zusys_axi_smc_1_0_in_context.xdc] for cell 'zusys_i/axi_smc_1'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axis_data_fifo_0_0/zusys_axis_data_fifo_0_0/zusys_axis_data_fifo_0_0_in_context.xdc] for cell 'zusys_i/axis_data_fifo_0'
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axis_data_fifo_0_0/zusys_axis_data_fifo_0_0/zusys_axis_data_fifo_0_0_in_context.xdc] for cell 'zusys_i/axis_data_fifo_0'
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/constrs_1/imports/constraints/vivado_target.xdc]
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/constrs_1/imports/constraints/vivado_target.xdc]
+Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2578.969 ; gain = 0.000 ; free physical = 17099 ; free virtual = 29802
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2578.969 ; gain = 0.000 ; free physical = 17099 ; free virtual = 29802
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2578.969 ; gain = 255.676 ; free physical = 17128 ; free virtual = 29831
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2586.973 ; gain = 263.680 ; free physical = 17128 ; free virtual = 29831
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/RGPIO_Master_CPLD. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/RGPIO_Slave_CPLD. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/vio_rgpio. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlconcat_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlconcat_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_8. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_9. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_11. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_12. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_13. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_14. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_15. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_16. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_17. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_18. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/RGPIO/xlslice_19. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/SC0808BF_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/axis_live_audio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/proc_sys_reset_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/vio_general. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/rst_ps8_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/axi_smc_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/axis_data_fifo_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/xlconcat_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2586.973 ; gain = 263.680 ; free physical = 17128 ; free virtual = 29831
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2586.973 ; gain = 263.680 ; free physical = 17120 ; free virtual = 29824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2586.973 ; gain = 263.680 ; free physical = 17128 ; free virtual = 29837
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3212.789 ; gain = 889.496 ; free physical = 16457 ; free virtual = 29172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3212.789 ; gain = 889.496 ; free physical = 16457 ; free virtual = 29172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3223.805 ; gain = 900.512 ; free physical = 16449 ; free virtual = 29164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16347 ; free virtual = 29062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16347 ; free virtual = 29062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16347 ; free virtual = 29062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16347 ; free virtual = 29062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16348 ; free virtual = 29063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16348 ; free virtual = 29063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------+----------+
+|      |BlackBox name             |Instances |
++------+--------------------------+----------+
+|1     |zusys_SC0808BF_0_0        |         1|
+|2     |zusys_axi_dma_0_1         |         1|
+|3     |zusys_axi_smc_4           |         1|
+|4     |zusys_axi_smc_1_0         |         1|
+|5     |zusys_axis_data_fifo_0_0  |         1|
+|6     |zusys_axis_live_audio_0_0 |         1|
+|7     |zusys_proc_sys_reset_0_0  |         1|
+|8     |zusys_rst_ps8_0_100M_0    |         1|
+|9     |zusys_vio_general_0       |         1|
+|10    |zusys_zynq_ultra_ps_e_0_0 |         1|
+|11    |zusys_RGPIO_Master_CPLD_0 |         1|
+|12    |zusys_RGPIO_Slave_CPLD_0  |         1|
+|13    |zusys_vio_rgpio_0         |         1|
++------+--------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------+------+
+|      |Cell                    |Count |
++------+------------------------+------+
+|1     |zusys_RGPIO_Master_CPLD |     1|
+|2     |zusys_RGPIO_Slave_CPLD  |     1|
+|3     |zusys_SC0808BF_0        |     1|
+|4     |zusys_axi_dma_0         |     1|
+|5     |zusys_axi_smc_1         |     1|
+|6     |zusys_axi_smc           |     1|
+|7     |zusys_axis_data_fifo_0  |     1|
+|8     |zusys_axis_live_audio_0 |     1|
+|9     |zusys_proc_sys_reset_0  |     1|
+|10    |zusys_rst_ps8_0_100M    |     1|
+|11    |zusys_vio_general       |     1|
+|12    |zusys_vio_rgpio         |     1|
+|13    |zusys_zynq_ultra_ps_e_0 |     1|
+|14    |IBUF                    |     7|
+|15    |IOBUF                   |     1|
+|16    |OBUF                    |    10|
++------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16346 ; free virtual = 29061
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 433 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3383.617 ; gain = 1012.305 ; free physical = 16350 ; free virtual = 29064
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3383.617 ; gain = 1060.324 ; free physical = 16350 ; free virtual = 29064
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3383.617 ; gain = 0.000 ; free physical = 16489 ; free virtual = 29203
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3383.617 ; gain = 0.000 ; free physical = 16346 ; free virtual = 29077
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 7 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
+
+Synth Design complete | Checksum: 338193d
+INFO: [Common 17-83] Releasing license: Synthesis
+182 Infos, 125 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 3383.617 ; gain = 1907.324 ; free physical = 16337 ; free virtual = 29068
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2514.860; main = 2514.860; forked = 268.009
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3683.148; main = 3309.789; forked = 917.746
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3383.617 ; gain = 0.000 ; free physical = 16325 ; free virtual = 29057
+INFO: [Common 17-1381] The checkpoint '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/zusys_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file zusys_wrapper_utilization_synth.rpt -pb zusys_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 11:39:20 2026...
