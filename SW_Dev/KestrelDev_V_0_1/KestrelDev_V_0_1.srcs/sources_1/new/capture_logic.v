@@ -21,6 +21,16 @@
 
 
 module capture_logic(
-
+    (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
+    (* X_INTERFACE_PARAMETER = "ASSOCIATED_RESET rstn" *)
+    (* X_INTERFACE_IGNORE = "true" *)
+    input wire [31:0] ctrl,
+    input wire  [31:0] frame_cnt_target,
+    input wire  cap_enable,
+    input wire clk_in,
+    output reg cap_status,
+    output reg [31:0] frame_cnt
     );
+    
+    
 endmodule
