@@ -2112,6 +2112,11 @@
         "xci_name": "zusys_axis_data_fifo_0_0",
         "xci_path": "ip/zusys_axis_data_fifo_0_0/zusys_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          }
+        },
         "interface_ports": {
           "S_AXIS": {
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",

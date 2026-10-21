@@ -35,6 +35,7 @@ set_property IOSTANDARD LVCMOS18 [get_ports BASE_sc17]
 set_property IOSTANDARD LVCMOS18 [get_ports BASE_sc18]
 set_property IOSTANDARD LVCMOS18 [get_ports BASE_sc19]
 
+
 # Audio Codec
 #LRCLK      J3:D22 
 #BCLK       J3:D23 
