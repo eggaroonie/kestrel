@@ -36,10 +36,10 @@ module capture_logic_test(
     
     input   wire        mux_data_valid_o,
     input   wire [3:0]  gpio,
-    input wire [7:0] mux0_data_o,
-    input wire [7:0] mux1_data_o,
-    input wire [7:0] mux2_data_o,
-    input wire [7:0] mux3_data_o
+    input wire [7:0] s_mux0_data_o,
+    input wire [7:0] s_mux1_data_o,
+    input wire [7:0] s_mux2_data_o,
+    input wire [7:0] s_mux3_data_o
     );
 //    reg [7:0] mux0_data_o;
 //    reg [7:0] mux1_data_o;
@@ -48,7 +48,7 @@ module capture_logic_test(
     reg [31:0] clk_cnt;
     reg [7:0] line_cnt;
     wire [31:0] data_in;
-    assign data_in = {mux0_data_o, mux1_data_o, mux2_data_o, mux3_data_o};
+    assign data_in = {s_mux0_data_o, s_mux1_data_o, s_mux2_data_o, s_mux3_data_o};
     assign m_axis_tdata = data_in;
 
     assign capture_enable = ctrl[2];
@@ -59,28 +59,13 @@ module capture_logic_test(
         if (capture_enable) begin
             frame_cnt <=0;
             if (mux_data_valid_o) begin
-                clk_cnt = clk_cnt + 1;
-                if (frame_sync) line_cnt = line_cnt +1;
+                clk_cnt <= clk_cnt + 1;
+                if (frame_sync) line_cnt <= line_cnt +1;
                 m_axis_tvalid <= 1'b1;
-                
             end
         end
      end
-     
      always @(negedge m_axis_tready) begin
-        m_axis_tvalid = 1'b0;
+        m_axis_tvalid <= 1'b0;
      end
-     
-        
-            
-        
-     
-     always @(posedge clk_in) begin
-        if (capture_enable) begin
-            
-        
-     end
-            
-end
-    
 endmodule

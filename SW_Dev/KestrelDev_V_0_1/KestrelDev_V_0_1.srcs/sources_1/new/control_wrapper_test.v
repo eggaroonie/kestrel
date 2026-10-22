@@ -21,7 +21,11 @@
 
 
 module control_wrapper_test(
-    
+    output wire [7:0] m_mux0_data_o,
+    output wire [7:0] m_mux1_data_o,
+    output wire [7:0] m_mux2_data_o,
+    output wire [7:0] m_mux3_data_o,
+    output wire 
     );
     
 endmodule
