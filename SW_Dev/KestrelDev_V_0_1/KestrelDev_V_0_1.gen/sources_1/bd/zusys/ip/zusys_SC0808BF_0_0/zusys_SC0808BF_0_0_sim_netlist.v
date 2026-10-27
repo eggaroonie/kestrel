@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Fri Oct  9 14:02:59 2026
+// Date        : Fri Oct  9 14:02:58 2026
 // Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_SC0808BF_0_0/zusys_SC0808BF_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top zusys_SC0808BF_0_0 -prefix
+//               zusys_SC0808BF_0_0_ zusys_SC0808BF_0_0_sim_netlist.v
 // Design      : zusys_SC0808BF_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

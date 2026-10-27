@@ -80,8 +80,8 @@ module zusys_axi_smc_4 (
   input bit [15 : 0] S00_AXI_awuser,
   input bit_as_bool S00_AXI_awvalid,
   output bit_as_bool S00_AXI_awready,
-  input bit [127 : 0] S00_AXI_wdata,
-  input bit [15 : 0] S00_AXI_wstrb,
+  input bit [63 : 0] S00_AXI_wdata,
+  input bit [7 : 0] S00_AXI_wstrb,
   input bit_as_bool S00_AXI_wlast,
   input bit_as_bool S00_AXI_wvalid,
   output bit_as_bool S00_AXI_wready,
@@ -102,7 +102,7 @@ module zusys_axi_smc_4 (
   input bit_as_bool S00_AXI_arvalid,
   output bit_as_bool S00_AXI_arready,
   output bit [15 : 0] S00_AXI_rid,
-  output bit [127 : 0] S00_AXI_rdata,
+  output bit [63 : 0] S00_AXI_rdata,
   output bit [1 : 0] S00_AXI_rresp,
   output bit_as_bool S00_AXI_rlast,
   output bit_as_bool S00_AXI_rvalid,
@@ -149,8 +149,8 @@ module zusys_axi_smc_4 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_awlen,S
   input bit [15 : 0] S00_AXI_awuser;
   input bit S00_AXI_awvalid;
   output wire S00_AXI_awready;
-  input bit [127 : 0] S00_AXI_wdata;
-  input bit [15 : 0] S00_AXI_wstrb;
+  input bit [63 : 0] S00_AXI_wdata;
+  input bit [7 : 0] S00_AXI_wstrb;
   input bit S00_AXI_wlast;
   input bit S00_AXI_wvalid;
   output wire S00_AXI_wready;
@@ -171,7 +171,7 @@ module zusys_axi_smc_4 (aclk,aresetn,S00_AXI_awid,S00_AXI_awaddr,S00_AXI_awlen,S
   input bit S00_AXI_arvalid;
   output wire S00_AXI_arready;
   output wire [15 : 0] S00_AXI_rid;
-  output wire [127 : 0] S00_AXI_rdata;
+  output wire [63 : 0] S00_AXI_rdata;
   output wire [1 : 0] S00_AXI_rresp;
   output wire S00_AXI_rlast;
   output wire S00_AXI_rvalid;

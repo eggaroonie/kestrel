@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 -- Date        : Fri Oct  9 14:02:58 2026
 -- Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_SC0808BF_0_0/zusys_SC0808BF_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top zusys_SC0808BF_0_0 -prefix
+--               zusys_SC0808BF_0_0_ zusys_SC0808BF_0_0_stub.vhdl
 -- Design      : zusys_SC0808BF_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu3eg-sfvc784-1-e

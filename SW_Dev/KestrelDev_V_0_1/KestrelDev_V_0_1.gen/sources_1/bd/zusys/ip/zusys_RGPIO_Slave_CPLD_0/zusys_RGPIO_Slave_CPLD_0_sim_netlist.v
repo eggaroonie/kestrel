@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 // Date        : Fri Oct  9 14:02:59 2026
 // Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_RGPIO_Slave_CPLD_0/zusys_RGPIO_Slave_CPLD_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top zusys_RGPIO_Slave_CPLD_0 -prefix
+//               zusys_RGPIO_Slave_CPLD_0_ zusys_RGPIO_Slave_CPLD_0_sim_netlist.v
 // Design      : zusys_RGPIO_Slave_CPLD_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,46 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "zusys_RGPIO_Slave_CPLD_0,RGPIO_top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "package_project" *) 
-(* x_core_info = "RGPIO_top,Vivado 2024.2" *) 
-(* NotValidForBitStream *)
-module zusys_RGPIO_Slave_CPLD_0
-   (RGPIO_M_CLK,
-    RGPIO_M_RX,
-    RGPIO_M_TX,
-    RGPIO_M_OUT,
-    RGPIO_M_IN,
-    RGPIO_M_ENABLE,
-    RGPIO_M_USRCLK,
-    RGPIO_M_RESET_N);
-  (* x_interface_info = "trenz.biz:user:RGPIO_EXT:1.0 RGPIO_M_EXT CLK" *) (* x_interface_mode = "master RGPIO_M_EXT" *) output RGPIO_M_CLK;
-  (* x_interface_info = "trenz.biz:user:RGPIO_EXT:1.0 RGPIO_M_EXT RX" *) input RGPIO_M_RX;
-  (* x_interface_info = "trenz.biz:user:RGPIO_EXT:1.0 RGPIO_M_EXT TX" *) output RGPIO_M_TX;
-  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR DATA_OUT" *) (* x_interface_mode = "slave RGPIO_M_USR" *) output [23:0]RGPIO_M_OUT;
-  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR DATA_IN" *) input [23:0]RGPIO_M_IN;
-  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR ENABLE" *) input RGPIO_M_ENABLE;
-  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR CLK" *) input RGPIO_M_USRCLK;
-  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR RESET_N" *) input RGPIO_M_RESET_N;
-
-  wire RGPIO_M_CLK;
-  wire RGPIO_M_ENABLE;
-  wire [23:0]RGPIO_M_IN;
-  wire [23:0]RGPIO_M_OUT;
-  wire RGPIO_M_RX;
-  wire RGPIO_M_TX;
-  wire RGPIO_M_USRCLK;
-
-  zusys_RGPIO_Slave_CPLD_0_RGPIO_top U0
-       (.RGPIO_M_CLK(RGPIO_M_CLK),
-        .RGPIO_M_ENABLE(RGPIO_M_ENABLE),
-        .RGPIO_M_IN(RGPIO_M_IN),
-        .RGPIO_M_OUT(RGPIO_M_OUT),
-        .RGPIO_M_RX(RGPIO_M_RX),
-        .RGPIO_M_TX(RGPIO_M_TX),
-        .RGPIO_M_USRCLK(RGPIO_M_USRCLK));
-endmodule
-
-(* ORIG_REF_NAME = "RGPIO_top" *) 
 module zusys_RGPIO_Slave_CPLD_0_RGPIO_top
    (RGPIO_M_CLK,
     RGPIO_M_OUT,
@@ -87,7 +47,6 @@ module zusys_RGPIO_Slave_CPLD_0_RGPIO_top
         .RGPIO_M_USRCLK(RGPIO_M_USRCLK));
 endmodule
 
-(* ORIG_REF_NAME = "ddrspi_master" *) 
 module zusys_RGPIO_Slave_CPLD_0_ddrspi_master
    (RGPIO_M_CLK,
     RGPIO_M_OUT,
@@ -1201,6 +1160,45 @@ module zusys_RGPIO_Slave_CPLD_0_ddrspi_master
         .D(p_1_in[9]),
         .Q(\sr_reg_n_0_[9] ),
         .R(1'b0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "zusys_RGPIO_Slave_CPLD_0,RGPIO_top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "package_project" *) 
+(* x_core_info = "RGPIO_top,Vivado 2024.2" *) 
+(* NotValidForBitStream *)
+module zusys_RGPIO_Slave_CPLD_0
+   (RGPIO_M_CLK,
+    RGPIO_M_RX,
+    RGPIO_M_TX,
+    RGPIO_M_OUT,
+    RGPIO_M_IN,
+    RGPIO_M_ENABLE,
+    RGPIO_M_USRCLK,
+    RGPIO_M_RESET_N);
+  (* x_interface_info = "trenz.biz:user:RGPIO_EXT:1.0 RGPIO_M_EXT CLK" *) (* x_interface_mode = "master RGPIO_M_EXT" *) output RGPIO_M_CLK;
+  (* x_interface_info = "trenz.biz:user:RGPIO_EXT:1.0 RGPIO_M_EXT RX" *) input RGPIO_M_RX;
+  (* x_interface_info = "trenz.biz:user:RGPIO_EXT:1.0 RGPIO_M_EXT TX" *) output RGPIO_M_TX;
+  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR DATA_OUT" *) (* x_interface_mode = "slave RGPIO_M_USR" *) output [23:0]RGPIO_M_OUT;
+  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR DATA_IN" *) input [23:0]RGPIO_M_IN;
+  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR ENABLE" *) input RGPIO_M_ENABLE;
+  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR CLK" *) input RGPIO_M_USRCLK;
+  (* x_interface_info = "trenz.biz:user:RGPIO_M_USR:1.0 RGPIO_M_USR RESET_N" *) input RGPIO_M_RESET_N;
+
+  wire RGPIO_M_CLK;
+  wire RGPIO_M_ENABLE;
+  wire [23:0]RGPIO_M_IN;
+  wire [23:0]RGPIO_M_OUT;
+  wire RGPIO_M_RX;
+  wire RGPIO_M_TX;
+  wire RGPIO_M_USRCLK;
+
+  zusys_RGPIO_Slave_CPLD_0_RGPIO_top U0
+       (.RGPIO_M_CLK(RGPIO_M_CLK),
+        .RGPIO_M_ENABLE(RGPIO_M_ENABLE),
+        .RGPIO_M_IN(RGPIO_M_IN),
+        .RGPIO_M_OUT(RGPIO_M_OUT),
+        .RGPIO_M_RX(RGPIO_M_RX),
+        .RGPIO_M_TX(RGPIO_M_TX),
+        .RGPIO_M_USRCLK(RGPIO_M_USRCLK));
 endmodule
 `ifndef GLBL
 `define GLBL

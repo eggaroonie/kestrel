@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Oct  9 14:02:18 2026
-# Process ID         : 21245
+# Start of session at: Fri Oct 23 17:41:30 2026
+# Process ID         : 81783
 # Current directory  : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/zusys_axis_data_fifo_0_0_synth_1
 # Command line       : vivado -log zusys_axis_data_fifo_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zusys_axis_data_fifo_0_0.tcl
 # Log file           : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/zusys_axis_data_fifo_0_0_synth_1/zusys_axis_data_fifo_0_0.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04.1 LTS
 # Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
-# CPU Frequency      : 4393.038 MHz
+# CPU Frequency      : 4125.469 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 16
 # Host memory        : 32688 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 41278 MB
-# Available Virtual  : 29888 MB
+# Available Virtual  : 22195 MB
 #-----------------------------------------------------------
 source zusys_axis_data_fifo_0_0.tcl -notrace

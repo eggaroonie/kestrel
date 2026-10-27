@@ -1,0 +1,88 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/814a/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/1017/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/4506/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/ec67/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6f8f/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/f0b6/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/0127/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/434f/hdl" \
+"../../../bd/zusys/ip/zusys_vio_rgpio_0/sim/zusys_vio_rgpio_0.v" \
+"../../../bd/zusys/ip/zusys_xlconcat_2_0/sim/zusys_xlconcat_2_0.v" \
+"../../../bd/zusys/ip/zusys_xlconcat_3_0/sim/zusys_xlconcat_3_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_0_0/sim/zusys_xlslice_0_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_1_0/sim/zusys_xlslice_1_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_2_0/sim/zusys_xlslice_2_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_3_0/sim/zusys_xlslice_3_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_4_0/sim/zusys_xlslice_4_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_5_0/sim/zusys_xlslice_5_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_6_0/sim/zusys_xlslice_6_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_7_0/sim/zusys_xlslice_7_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_8_0/sim/zusys_xlslice_8_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_9_0/sim/zusys_xlslice_9_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_10_0/sim/zusys_xlslice_10_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_11_0/sim/zusys_xlslice_11_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_12_0/sim/zusys_xlslice_12_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_13_0/sim/zusys_xlslice_13_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_14_0/sim/zusys_xlslice_14_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_15_0/sim/zusys_xlslice_15_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_16_0/sim/zusys_xlslice_16_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_17_0/sim/zusys_xlslice_17_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_18_0/sim/zusys_xlslice_18_0.v" \
+"../../../bd/zusys/ip/zusys_xlslice_19_0/sim/zusys_xlslice_19_0.v" \
+"../../../bd/zusys/ip/zusys_vio_general_0/sim/zusys_vio_general_0.v" \
+"../../../bd/zusys/ip/zusys_zynq_ultra_ps_e_0_0/sim/zusys_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/sim/bd_1578.v" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_0/sim/bd_1578_one_0.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/814a/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/1017/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/4506/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/ec67/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6f8f/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/f0b6/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/0127/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/434f/hdl" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_2/sim/bd_1578_s00mmu_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_3/sim/bd_1578_s00tr_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_4/sim/bd_1578_s00sic_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_5/sim/bd_1578_s00a2s_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_6/sim/bd_1578_sarn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_7/sim/bd_1578_srn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_8/sim/bd_1578_sawn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_9/sim/bd_1578_swn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_10/sim/bd_1578_sbn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_11/sim/bd_1578_m00s2a_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/bd_0/ip/ip_12/sim/bd_1578_m00e_0.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/814a/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/1017/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/4506/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/ec67/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6f8f/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/f0b6/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/0127/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/434f/hdl" \
+"../../../bd/zusys/ip/zusys_axi_smc_4/sim/zusys_axi_smc_4.v" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/sim/bd_2aca.v" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_0/sim/bd_2aca_one_0.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/814a/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/1017/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/4506/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/ec67/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6f8f/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/f0b6/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/0127/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/434f/hdl" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_2/sim/bd_2aca_arsw_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_3/sim/bd_2aca_rsw_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_4/sim/bd_2aca_awsw_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_5/sim/bd_2aca_wsw_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_6/sim/bd_2aca_bsw_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_7/sim/bd_2aca_s01mmu_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_8/sim/bd_2aca_s01tr_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_9/sim/bd_2aca_s01sic_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_10/sim/bd_2aca_s01a2s_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_11/sim/bd_2aca_sawn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_12/sim/bd_2aca_swn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_13/sim/bd_2aca_sbn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_14/sim/bd_2aca_s02mmu_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_15/sim/bd_2aca_s02tr_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_16/sim/bd_2aca_s02sic_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_17/sim/bd_2aca_s02a2s_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_18/sim/bd_2aca_sarn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_19/sim/bd_2aca_srn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_20/sim/bd_2aca_sawn_1.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_21/sim/bd_2aca_swn_1.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_22/sim/bd_2aca_sbn_1.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_23/sim/bd_2aca_m00s2a_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_24/sim/bd_2aca_m00arn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_25/sim/bd_2aca_m00rn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_26/sim/bd_2aca_m00awn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_27/sim/bd_2aca_m00wn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_28/sim/bd_2aca_m00bn_0.sv" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/bd_0/ip/ip_29/sim/bd_2aca_m00e_0.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/814a/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/1017/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/4506/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/ec67/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6f8f/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/f0b6/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/0127/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/434f/hdl" \
+"../../../bd/zusys/ip/zusys_axi_smc_1_0/sim/zusys_axi_smc_1_0.v" \
+"../../../bd/zusys/ip/zusys_axis_data_fifo_0_0/sim/zusys_axis_data_fifo_0_0.v" \
+"../../../bd/zusys/ip/zusys_xlconcat_0_0/sim/zusys_xlconcat_0_0.v" \
+"../../../bd/zusys/ip/zusys_capture_logic_test_0_0/sim/zusys_capture_logic_test_0_0.v" \
+"../../../bd/zusys/sim/zusys.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

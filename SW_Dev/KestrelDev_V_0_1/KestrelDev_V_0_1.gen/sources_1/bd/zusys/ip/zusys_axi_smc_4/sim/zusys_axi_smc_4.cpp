@@ -88,7 +88,7 @@ void zusys_axi_smc_4::before_end_of_elaboration()
 
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -121,7 +121,7 @@ void zusys_axi_smc_4::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<128,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
     // S00_AXI' transactor ports
 
@@ -293,7 +293,7 @@ void zusys_axi_smc_4::before_end_of_elaboration()
 
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -326,7 +326,7 @@ void zusys_axi_smc_4::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<128,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
     // S00_AXI' transactor ports
 
@@ -498,7 +498,7 @@ void zusys_axi_smc_4::before_end_of_elaboration()
 
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -531,7 +531,7 @@ void zusys_axi_smc_4::before_end_of_elaboration()
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<128,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
 
     // S00_AXI' transactor ports
 
@@ -692,7 +692,7 @@ zusys_axi_smc_4::zusys_axi_smc_4(const sc_core::sc_module_name& nm) : zusys_axi_
 
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -725,7 +725,7 @@ zusys_axi_smc_4::zusys_axi_smc_4(const sc_core::sc_module_name& nm) : zusys_axi_
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<128,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
   mp_S00_AXI_transactor->AWID(S00_AXI_awid);
   mp_S00_AXI_transactor->AWADDR(S00_AXI_awaddr);
   mp_S00_AXI_transactor->AWLEN(S00_AXI_awlen);
@@ -897,7 +897,7 @@ zusys_axi_smc_4::zusys_axi_smc_4(const sc_core::sc_module_name& nm) : zusys_axi_
 
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
-    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "64");
     S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -930,7 +930,7 @@ zusys_axi_smc_4::zusys_axi_smc_4(const sc_core::sc_module_name& nm) : zusys_axi_
     S00_AXI_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S00_AXI_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<128,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
+    mp_S00_AXI_transactor = new xtlm::xaximm_pin2xtlm_t<64,40,16,16,1,1,16,1>("S00_AXI_transactor", S00_AXI_transactor_param_props);
   mp_S00_AXI_transactor->AWID(S00_AXI_awid);
   mp_S00_AXI_transactor->AWADDR(S00_AXI_awaddr);
   mp_S00_AXI_transactor->AWLEN(S00_AXI_awlen);
@@ -1105,6 +1105,6 @@ XMSC_MODULE_EXPORT(zusys_axi_smc_4);
 
 #ifdef RIVIERA
 SC_MODULE_EXPORT(zusys_axi_smc_4);
-SC_REGISTER_BV(128);
+SC_REGISTER_BV(64);
 #endif
 

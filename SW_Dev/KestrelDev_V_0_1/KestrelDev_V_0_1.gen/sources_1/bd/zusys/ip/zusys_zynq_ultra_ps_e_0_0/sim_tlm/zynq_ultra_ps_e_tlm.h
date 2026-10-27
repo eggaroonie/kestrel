@@ -188,7 +188,7 @@ class zynq_ultra_ps_e_tlm : public sc_core::sc_module   {
     // Bridge's Xtlm wr/rd target sockets binds with 
     // xtlm initiator sockets of zynq_ultra_ps_e_tlm and tlm simple initiator 
     // socket with xilinx_zynqmp's target socket
-    xtlm::xaximm_xtlm2tlm_t<128,32> S_AXI_HPC0_FPD_xtlm_brdg;
+    xtlm::xaximm_xtlm2tlm_t<64,32> S_AXI_HPC0_FPD_xtlm_brdg;
     xtlm::xtlm_aximm_fifo *S_AXI_HPC0_FPD_buff;
 
     // This Bridges converts b_transport to nb_transports and also
@@ -196,7 +196,7 @@ class zynq_ultra_ps_e_tlm : public sc_core::sc_module   {
     // Bridge's tlm simple target socket binds with 
     // simple initiator socket of xilinx_zynqmp and xtlm 
     // socket with xilinx_zynqmp's simple target socket
-    rptlm2xtlm_converter<32, 128 > m_rp_bridge_M_AXI_HPM0_FPD;     
+    rptlm2xtlm_converter<32, 64 > m_rp_bridge_M_AXI_HPM0_FPD;     
     
 
     // sc_clocks for generating pl clocks

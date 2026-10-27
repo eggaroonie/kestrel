@@ -107,7 +107,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties M_AXI_HPM0_FPD_transactor_param_props;
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -138,7 +138,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_HPM0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
+    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
 
     // M_AXI_HPM0_FPD' transactor ports
 
@@ -204,7 +204,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_HPC0_FPD_transactor_param_props;
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
-    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
@@ -235,7 +235,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     S_AXI_HPC0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HPC0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
+    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
 
     // S_AXI_HPC0_FPD' transactor ports
 
@@ -443,7 +443,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties M_AXI_HPM0_FPD_transactor_param_props;
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -474,7 +474,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_HPM0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
+    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
 
     // M_AXI_HPM0_FPD' transactor ports
 
@@ -540,7 +540,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_HPC0_FPD_transactor_param_props;
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
-    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
@@ -571,7 +571,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     S_AXI_HPC0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HPC0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
+    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
 
     // S_AXI_HPC0_FPD' transactor ports
 
@@ -779,7 +779,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties M_AXI_HPM0_FPD_transactor_param_props;
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -810,7 +810,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_HPM0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
+    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
 
     // M_AXI_HPM0_FPD' transactor ports
 
@@ -876,7 +876,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     xsc::common_cpp::properties S_AXI_HPC0_FPD_transactor_param_props;
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
-    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
@@ -907,7 +907,7 @@ void zusys_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     S_AXI_HPC0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HPC0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
+    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
 
     // S_AXI_HPC0_FPD' transactor ports
 
@@ -1104,7 +1104,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     xsc::common_cpp::properties M_AXI_HPM0_FPD_transactor_param_props;
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -1135,7 +1135,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     M_AXI_HPM0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_HPM0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
+    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
   mp_M_AXI_HPM0_FPD_transactor->AWID(maxigp0_awid);
   mp_M_AXI_HPM0_FPD_transactor->AWADDR(maxigp0_awaddr);
   mp_M_AXI_HPM0_FPD_transactor->AWLEN(maxigp0_awlen);
@@ -1182,7 +1182,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     xsc::common_cpp::properties S_AXI_HPC0_FPD_transactor_param_props;
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
-    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
@@ -1213,7 +1213,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     S_AXI_HPC0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HPC0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
+    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
   mp_saxigp0_aruser_converter = new xsc::common::scalar2vectorN_converter<1>("saxigp0_aruser_converter");
   mp_saxigp0_aruser_converter->scalar_in(saxigp0_aruser);
   mp_saxigp0_aruser_converter->vector_out(m_saxigp0_aruser_converter_signal);
@@ -1432,7 +1432,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     xsc::common_cpp::properties M_AXI_HPM0_FPD_transactor_param_props;
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
@@ -1463,7 +1463,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     M_AXI_HPM0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     M_AXI_HPM0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
+    mp_M_AXI_HPM0_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>("M_AXI_HPM0_FPD_transactor", M_AXI_HPM0_FPD_transactor_param_props);
   mp_M_AXI_HPM0_FPD_transactor->AWID(maxigp0_awid);
   mp_M_AXI_HPM0_FPD_transactor->AWADDR(maxigp0_awaddr);
   mp_M_AXI_HPM0_FPD_transactor->AWLEN(maxigp0_awlen);
@@ -1510,7 +1510,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     xsc::common_cpp::properties S_AXI_HPC0_FPD_transactor_param_props;
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
-    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    S_AXI_HPC0_FPD_transactor_param_props.addLong("DATA_WIDTH", "64");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HPC0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
@@ -1541,7 +1541,7 @@ zusys_zynq_ultra_ps_e_0_0::zusys_zynq_ultra_ps_e_0_0(const sc_core::sc_module_na
     S_AXI_HPC0_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
     S_AXI_HPC0_FPD_transactor_param_props.addString("CLK_DOMAIN", "zusys_zynq_ultra_ps_e_0_0_pl_clk0");
 
-    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
+    mp_S_AXI_HPC0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HPC0_FPD_transactor", S_AXI_HPC0_FPD_transactor_param_props);
   mp_saxigp0_aruser_converter = new xsc::common::scalar2vectorN_converter<1>("saxigp0_aruser_converter");
   mp_saxigp0_aruser_converter->scalar_in(saxigp0_aruser);
   mp_saxigp0_aruser_converter->vector_out(m_saxigp0_aruser_converter_signal);
@@ -1750,6 +1750,6 @@ XMSC_MODULE_EXPORT(zusys_zynq_ultra_ps_e_0_0);
 
 #ifdef RIVIERA
 SC_MODULE_EXPORT(zusys_zynq_ultra_ps_e_0_0);
-SC_REGISTER_BV(128);
+SC_REGISTER_BV(64);
 #endif
 

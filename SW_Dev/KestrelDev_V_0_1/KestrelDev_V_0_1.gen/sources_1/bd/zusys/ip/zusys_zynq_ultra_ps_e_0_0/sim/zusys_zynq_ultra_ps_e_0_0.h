@@ -92,8 +92,8 @@ public:
   sc_core::sc_out< bool > maxigp0_awvalid;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_awuser;
   sc_core::sc_in< bool > maxigp0_awready;
-  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp0_wdata;
-  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_wstrb;
+  sc_core::sc_out< sc_dt::sc_bv<64> > maxigp0_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp0_wstrb;
   sc_core::sc_out< bool > maxigp0_wlast;
   sc_core::sc_out< bool > maxigp0_wvalid;
   sc_core::sc_in< bool > maxigp0_wready;
@@ -113,7 +113,7 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_aruser;
   sc_core::sc_in< bool > maxigp0_arready;
   sc_core::sc_in< sc_dt::sc_bv<16> > maxigp0_rid;
-  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp0_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<64> > maxigp0_rdata;
   sc_core::sc_in< sc_dt::sc_bv<2> > maxigp0_rresp;
   sc_core::sc_in< bool > maxigp0_rlast;
   sc_core::sc_in< bool > maxigp0_rvalid;
@@ -133,8 +133,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp0_awprot;
   sc_core::sc_in< bool > saxigp0_awvalid;
   sc_core::sc_out< bool > saxigp0_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp0_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp0_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<64> > saxigp0_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<8> > saxigp0_wstrb;
   sc_core::sc_in< bool > saxigp0_wlast;
   sc_core::sc_in< bool > saxigp0_wvalid;
   sc_core::sc_out< bool > saxigp0_wready;
@@ -153,7 +153,7 @@ public:
   sc_core::sc_in< bool > saxigp0_arvalid;
   sc_core::sc_out< bool > saxigp0_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp0_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp0_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<64> > saxigp0_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp0_rresp;
   sc_core::sc_out< bool > saxigp0_rlast;
   sc_core::sc_out< bool > saxigp0_rvalid;
@@ -191,9 +191,9 @@ protected:
 
 private:
 
-  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
+  xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp0_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_awuser_converter;
@@ -236,8 +236,8 @@ public:
   sc_core::sc_out< bool > maxigp0_awvalid;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_awuser;
   sc_core::sc_in< bool > maxigp0_awready;
-  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp0_wdata;
-  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_wstrb;
+  sc_core::sc_out< sc_dt::sc_bv<64> > maxigp0_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp0_wstrb;
   sc_core::sc_out< bool > maxigp0_wlast;
   sc_core::sc_out< bool > maxigp0_wvalid;
   sc_core::sc_in< bool > maxigp0_wready;
@@ -257,7 +257,7 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_aruser;
   sc_core::sc_in< bool > maxigp0_arready;
   sc_core::sc_in< sc_dt::sc_bv<16> > maxigp0_rid;
-  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp0_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<64> > maxigp0_rdata;
   sc_core::sc_in< sc_dt::sc_bv<2> > maxigp0_rresp;
   sc_core::sc_in< bool > maxigp0_rlast;
   sc_core::sc_in< bool > maxigp0_rvalid;
@@ -277,8 +277,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp0_awprot;
   sc_core::sc_in< bool > saxigp0_awvalid;
   sc_core::sc_out< bool > saxigp0_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp0_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp0_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<64> > saxigp0_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<8> > saxigp0_wstrb;
   sc_core::sc_in< bool > saxigp0_wlast;
   sc_core::sc_in< bool > saxigp0_wvalid;
   sc_core::sc_out< bool > saxigp0_wready;
@@ -297,7 +297,7 @@ public:
   sc_core::sc_in< bool > saxigp0_arvalid;
   sc_core::sc_out< bool > saxigp0_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp0_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp0_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<64> > saxigp0_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp0_rresp;
   sc_core::sc_out< bool > saxigp0_rlast;
   sc_core::sc_out< bool > saxigp0_rvalid;
@@ -335,9 +335,9 @@ protected:
 
 private:
 
-  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
+  xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp0_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_awuser_converter;
@@ -380,8 +380,8 @@ public:
   sc_core::sc_out< bool > maxigp0_awvalid;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_awuser;
   sc_core::sc_in< bool > maxigp0_awready;
-  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp0_wdata;
-  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_wstrb;
+  sc_core::sc_out< sc_dt::sc_bv<64> > maxigp0_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp0_wstrb;
   sc_core::sc_out< bool > maxigp0_wlast;
   sc_core::sc_out< bool > maxigp0_wvalid;
   sc_core::sc_in< bool > maxigp0_wready;
@@ -401,7 +401,7 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_aruser;
   sc_core::sc_in< bool > maxigp0_arready;
   sc_core::sc_in< sc_dt::sc_bv<16> > maxigp0_rid;
-  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp0_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<64> > maxigp0_rdata;
   sc_core::sc_in< sc_dt::sc_bv<2> > maxigp0_rresp;
   sc_core::sc_in< bool > maxigp0_rlast;
   sc_core::sc_in< bool > maxigp0_rvalid;
@@ -421,8 +421,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp0_awprot;
   sc_core::sc_in< bool > saxigp0_awvalid;
   sc_core::sc_out< bool > saxigp0_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp0_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp0_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<64> > saxigp0_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<8> > saxigp0_wstrb;
   sc_core::sc_in< bool > saxigp0_wlast;
   sc_core::sc_in< bool > saxigp0_wvalid;
   sc_core::sc_out< bool > saxigp0_wready;
@@ -441,7 +441,7 @@ public:
   sc_core::sc_in< bool > saxigp0_arvalid;
   sc_core::sc_out< bool > saxigp0_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp0_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp0_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<64> > saxigp0_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp0_rresp;
   sc_core::sc_out< bool > saxigp0_rlast;
   sc_core::sc_out< bool > saxigp0_rvalid;
@@ -479,9 +479,9 @@ protected:
 
 private:
 
-  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
+  xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp0_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_awuser_converter;
@@ -532,8 +532,8 @@ public:
   sc_core::sc_out< bool > maxigp0_awvalid;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_awuser;
   sc_core::sc_in< bool > maxigp0_awready;
-  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp0_wdata;
-  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_wstrb;
+  sc_core::sc_out< sc_dt::sc_bv<64> > maxigp0_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp0_wstrb;
   sc_core::sc_out< bool > maxigp0_wlast;
   sc_core::sc_out< bool > maxigp0_wvalid;
   sc_core::sc_in< bool > maxigp0_wready;
@@ -553,7 +553,7 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_aruser;
   sc_core::sc_in< bool > maxigp0_arready;
   sc_core::sc_in< sc_dt::sc_bv<16> > maxigp0_rid;
-  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp0_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<64> > maxigp0_rdata;
   sc_core::sc_in< sc_dt::sc_bv<2> > maxigp0_rresp;
   sc_core::sc_in< bool > maxigp0_rlast;
   sc_core::sc_in< bool > maxigp0_rvalid;
@@ -573,8 +573,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp0_awprot;
   sc_core::sc_in< bool > saxigp0_awvalid;
   sc_core::sc_out< bool > saxigp0_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp0_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp0_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<64> > saxigp0_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<8> > saxigp0_wstrb;
   sc_core::sc_in< bool > saxigp0_wlast;
   sc_core::sc_in< bool > saxigp0_wvalid;
   sc_core::sc_out< bool > saxigp0_wready;
@@ -593,7 +593,7 @@ public:
   sc_core::sc_in< bool > saxigp0_arvalid;
   sc_core::sc_out< bool > saxigp0_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp0_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp0_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<64> > saxigp0_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp0_rresp;
   sc_core::sc_out< bool > saxigp0_rlast;
   sc_core::sc_out< bool > saxigp0_rvalid;
@@ -631,9 +631,9 @@ protected:
 
 private:
 
-  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
+  xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp0_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_awuser_converter;
@@ -694,8 +694,8 @@ public:
   sc_core::sc_out< bool > maxigp0_awvalid;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_awuser;
   sc_core::sc_in< bool > maxigp0_awready;
-  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp0_wdata;
-  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_wstrb;
+  sc_core::sc_out< sc_dt::sc_bv<64> > maxigp0_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp0_wstrb;
   sc_core::sc_out< bool > maxigp0_wlast;
   sc_core::sc_out< bool > maxigp0_wvalid;
   sc_core::sc_in< bool > maxigp0_wready;
@@ -715,7 +715,7 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp0_aruser;
   sc_core::sc_in< bool > maxigp0_arready;
   sc_core::sc_in< sc_dt::sc_bv<16> > maxigp0_rid;
-  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp0_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<64> > maxigp0_rdata;
   sc_core::sc_in< sc_dt::sc_bv<2> > maxigp0_rresp;
   sc_core::sc_in< bool > maxigp0_rlast;
   sc_core::sc_in< bool > maxigp0_rvalid;
@@ -735,8 +735,8 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<3> > saxigp0_awprot;
   sc_core::sc_in< bool > saxigp0_awvalid;
   sc_core::sc_out< bool > saxigp0_awready;
-  sc_core::sc_in< sc_dt::sc_bv<128> > saxigp0_wdata;
-  sc_core::sc_in< sc_dt::sc_bv<16> > saxigp0_wstrb;
+  sc_core::sc_in< sc_dt::sc_bv<64> > saxigp0_wdata;
+  sc_core::sc_in< sc_dt::sc_bv<8> > saxigp0_wstrb;
   sc_core::sc_in< bool > saxigp0_wlast;
   sc_core::sc_in< bool > saxigp0_wvalid;
   sc_core::sc_out< bool > saxigp0_wready;
@@ -755,7 +755,7 @@ public:
   sc_core::sc_in< bool > saxigp0_arvalid;
   sc_core::sc_out< bool > saxigp0_arready;
   sc_core::sc_out< sc_dt::sc_bv<6> > saxigp0_rid;
-  sc_core::sc_out< sc_dt::sc_bv<128> > saxigp0_rdata;
+  sc_core::sc_out< sc_dt::sc_bv<64> > saxigp0_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > saxigp0_rresp;
   sc_core::sc_out< bool > saxigp0_rlast;
   sc_core::sc_out< bool > saxigp0_rvalid;
@@ -793,9 +793,9 @@ protected:
 
 private:
 
-  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
+  xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_FPD_transactor_rst_signal;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HPC0_FPD_transactor;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_aruser_converter;
   sc_signal< sc_bv<1> > m_saxigp0_aruser_converter_signal;
   xsc::common::scalar2vectorN_converter<1>* mp_saxigp0_awuser_converter;

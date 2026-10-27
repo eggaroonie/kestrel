@@ -63,10 +63,10 @@ zusys_zynq_ultra_ps_e_0_0_sc::zusys_zynq_ultra_ps_e_0_0_sc(const sc_core::sc_mod
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_DP_USE_AUDIO", "1");
     model_param_props.addLong("C_DP_USE_VIDEO", "0");
-    model_param_props.addLong("C_MAXIGP0_DATA_WIDTH", "128");
+    model_param_props.addLong("C_MAXIGP0_DATA_WIDTH", "64");
     model_param_props.addLong("C_MAXIGP1_DATA_WIDTH", "128");
     model_param_props.addLong("C_MAXIGP2_DATA_WIDTH", "32");
-    model_param_props.addLong("C_SAXIGP0_DATA_WIDTH", "128");
+    model_param_props.addLong("C_SAXIGP0_DATA_WIDTH", "64");
     model_param_props.addLong("C_SAXIGP1_DATA_WIDTH", "128");
     model_param_props.addLong("C_SAXIGP2_DATA_WIDTH", "128");
     model_param_props.addLong("C_SAXIGP3_DATA_WIDTH", "128");

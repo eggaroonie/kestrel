@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Fri Oct  9 14:03:00 2026
+-- Date        : Fri Oct  9 14:02:59 2026
 -- Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_RGPIO_Slave_CPLD_0/zusys_RGPIO_Slave_CPLD_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top zusys_RGPIO_Slave_CPLD_0 -prefix
+--               zusys_RGPIO_Slave_CPLD_0_ zusys_RGPIO_Slave_CPLD_0_sim_netlist.vhdl
 -- Design      : zusys_RGPIO_Slave_CPLD_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity zusys_RGPIO_Slave_CPLD_0_ddrspi_master is
     RGPIO_M_ENABLE : in STD_LOGIC;
     RGPIO_M_IN : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zusys_RGPIO_Slave_CPLD_0_ddrspi_master : entity is "ddrspi_master";
 end zusys_RGPIO_Slave_CPLD_0_ddrspi_master;
 
 architecture STRUCTURE of zusys_RGPIO_Slave_CPLD_0_ddrspi_master is
@@ -1507,8 +1505,6 @@ entity zusys_RGPIO_Slave_CPLD_0_RGPIO_top is
     RGPIO_M_ENABLE : in STD_LOGIC;
     RGPIO_M_IN : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of zusys_RGPIO_Slave_CPLD_0_RGPIO_top : entity is "RGPIO_top";
 end zusys_RGPIO_Slave_CPLD_0_RGPIO_top;
 
 architecture STRUCTURE of zusys_RGPIO_Slave_CPLD_0_RGPIO_top is

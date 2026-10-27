@@ -88,8 +88,8 @@ input wire [2 : 0] s_sc_send;
 input wire [2 : 0] s_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S00_SC INFO [0:0] [0:0], xilinx.com:interface:sc:1.0 S01_SC INFO [0:0] [1:1], xilinx.com:interface:sc:1.0 S02_SC INFO [0:0] [2:2]" *)
 input wire [2 : 0] s_sc_info;
-(* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S00_SC PAYLD [159:0] [159:0], xilinx.com:interface:sc:1.0 S01_SC PAYLD [159:0] [319:160], xilinx.com:interface:sc:1.0 S02_SC PAYLD [159:0] [479:320]" *)
-input wire [479 : 0] s_sc_payld;
+(* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S00_SC PAYLD [87:0] [87:0], xilinx.com:interface:sc:1.0 S01_SC PAYLD [87:0] [175:88], xilinx.com:interface:sc:1.0 S02_SC PAYLD [87:0] [263:176]" *)
+input wire [263 : 0] s_sc_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S00_SC RECV [0:0] [0:0], xilinx.com:interface:sc:1.0 S01_SC RECV [0:0] [1:1], xilinx.com:interface:sc:1.0 S02_SC RECV [0:0] [2:2]" *)
 output wire [2 : 0] s_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M00_SC RECV" *)
@@ -102,10 +102,10 @@ output wire [2 : 0] m_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M00_SC INFO" *)
 output wire [2 : 0] m_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M00_SC PAYLD" *)
-output wire [159 : 0] m_sc_payld;
+output wire [87 : 0] m_sc_payld;
 
   sc_switchboard_v1_0_8_top #(
-    .C_PAYLD_WIDTH(160),
+    .C_PAYLD_WIDTH(88),
     .K_MAX_INFO_WIDTH(1),
     .C_S_PIPELINES(0),
     .C_M_PIPELINES(1),
@@ -113,11 +113,11 @@ output wire [159 : 0] m_sc_payld;
     .C_NUM_SI(3),
     .C_NUM_MI(1),
     .C_TESTING_MODE(0),
-    .C_CONNECTIVITY(3'B111)
+    .C_CONNECTIVITY(3'B110)
   ) inst (
     .aclk(aclk),
     .aclken(aclken),
-    .connectivity(3'B111),
+    .connectivity(3'B110),
     .s_sc_send(s_sc_send),
     .s_sc_req(s_sc_req),
     .s_sc_info(s_sc_info),

@@ -78,8 +78,8 @@ module zusys_zynq_ultra_ps_e_0_0 (
   output bit_as_bool maxigp0_awvalid,
   output bit [15 : 0] maxigp0_awuser,
   input bit_as_bool maxigp0_awready,
-  output bit [127 : 0] maxigp0_wdata,
-  output bit [15 : 0] maxigp0_wstrb,
+  output bit [63 : 0] maxigp0_wdata,
+  output bit [7 : 0] maxigp0_wstrb,
   output bit_as_bool maxigp0_wlast,
   output bit_as_bool maxigp0_wvalid,
   input bit_as_bool maxigp0_wready,
@@ -99,7 +99,7 @@ module zusys_zynq_ultra_ps_e_0_0 (
   output bit [15 : 0] maxigp0_aruser,
   input bit_as_bool maxigp0_arready,
   input bit [15 : 0] maxigp0_rid,
-  input bit [127 : 0] maxigp0_rdata,
+  input bit [63 : 0] maxigp0_rdata,
   input bit [1 : 0] maxigp0_rresp,
   input bit_as_bool maxigp0_rlast,
   input bit_as_bool maxigp0_rvalid,
@@ -119,8 +119,8 @@ module zusys_zynq_ultra_ps_e_0_0 (
   input bit [2 : 0] saxigp0_awprot,
   input bit_as_bool saxigp0_awvalid,
   output bit_as_bool saxigp0_awready,
-  input bit [127 : 0] saxigp0_wdata,
-  input bit [15 : 0] saxigp0_wstrb,
+  input bit [63 : 0] saxigp0_wdata,
+  input bit [7 : 0] saxigp0_wstrb,
   input bit_as_bool saxigp0_wlast,
   input bit_as_bool saxigp0_wvalid,
   output bit_as_bool saxigp0_wready,
@@ -139,7 +139,7 @@ module zusys_zynq_ultra_ps_e_0_0 (
   input bit_as_bool saxigp0_arvalid,
   output bit_as_bool saxigp0_arready,
   output bit [5 : 0] saxigp0_rid,
-  output bit [127 : 0] saxigp0_rdata,
+  output bit [63 : 0] saxigp0_rdata,
   output bit [1 : 0] saxigp0_rresp,
   output bit_as_bool saxigp0_rlast,
   output bit_as_bool saxigp0_rvalid,
@@ -188,8 +188,8 @@ module zusys_zynq_ultra_ps_e_0_0 (maxihpm0_fpd_aclk,maxigp0_awid,maxigp0_awaddr,
   output wire maxigp0_awvalid;
   output wire [15 : 0] maxigp0_awuser;
   input bit maxigp0_awready;
-  output wire [127 : 0] maxigp0_wdata;
-  output wire [15 : 0] maxigp0_wstrb;
+  output wire [63 : 0] maxigp0_wdata;
+  output wire [7 : 0] maxigp0_wstrb;
   output wire maxigp0_wlast;
   output wire maxigp0_wvalid;
   input bit maxigp0_wready;
@@ -209,7 +209,7 @@ module zusys_zynq_ultra_ps_e_0_0 (maxihpm0_fpd_aclk,maxigp0_awid,maxigp0_awaddr,
   output wire [15 : 0] maxigp0_aruser;
   input bit maxigp0_arready;
   input bit [15 : 0] maxigp0_rid;
-  input bit [127 : 0] maxigp0_rdata;
+  input bit [63 : 0] maxigp0_rdata;
   input bit [1 : 0] maxigp0_rresp;
   input bit maxigp0_rlast;
   input bit maxigp0_rvalid;
@@ -229,8 +229,8 @@ module zusys_zynq_ultra_ps_e_0_0 (maxihpm0_fpd_aclk,maxigp0_awid,maxigp0_awaddr,
   input bit [2 : 0] saxigp0_awprot;
   input bit saxigp0_awvalid;
   output wire saxigp0_awready;
-  input bit [127 : 0] saxigp0_wdata;
-  input bit [15 : 0] saxigp0_wstrb;
+  input bit [63 : 0] saxigp0_wdata;
+  input bit [7 : 0] saxigp0_wstrb;
   input bit saxigp0_wlast;
   input bit saxigp0_wvalid;
   output wire saxigp0_wready;
@@ -249,7 +249,7 @@ module zusys_zynq_ultra_ps_e_0_0 (maxihpm0_fpd_aclk,maxigp0_awid,maxigp0_awaddr,
   input bit saxigp0_arvalid;
   output wire saxigp0_arready;
   output wire [5 : 0] saxigp0_rid;
-  output wire [127 : 0] saxigp0_rdata;
+  output wire [63 : 0] saxigp0_rdata;
   output wire [1 : 0] saxigp0_rresp;
   output wire saxigp0_rlast;
   output wire saxigp0_rvalid;

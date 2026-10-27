@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test_sim

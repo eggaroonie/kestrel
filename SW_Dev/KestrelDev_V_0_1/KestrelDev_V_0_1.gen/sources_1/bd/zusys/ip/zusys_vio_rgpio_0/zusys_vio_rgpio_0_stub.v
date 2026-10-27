@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 // Date        : Fri Oct  9 14:03:06 2026
 // Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_vio_rgpio_0/zusys_vio_rgpio_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top zusys_vio_rgpio_0 -prefix
+//               zusys_vio_rgpio_0_ zusys_vio_rgpio_0_stub.v
 // Design      : zusys_vio_rgpio_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu3eg-sfvc784-1-e

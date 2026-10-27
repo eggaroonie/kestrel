@@ -172,8 +172,8 @@ output [2 : 0] maxigp0_awprot;
 output maxigp0_awvalid;
 output [15 : 0] maxigp0_awuser;
 input maxigp0_awready;
-output [127 : 0] maxigp0_wdata;
-output [15 : 0] maxigp0_wstrb;
+output [63 : 0] maxigp0_wdata;
+output [7 : 0] maxigp0_wstrb;
 output maxigp0_wlast;
 output maxigp0_wvalid;
 input maxigp0_wready;
@@ -193,7 +193,7 @@ output maxigp0_arvalid;
 output [15 : 0] maxigp0_aruser;
 input maxigp0_arready;
 input [15 : 0] maxigp0_rid;
-input [127 : 0] maxigp0_rdata;
+input [63 : 0] maxigp0_rdata;
 input [1 : 0] maxigp0_rresp;
 input maxigp0_rlast;
 input maxigp0_rvalid;
@@ -213,8 +213,8 @@ input [3 : 0] saxigp0_awcache;
 input [2 : 0] saxigp0_awprot;
 input saxigp0_awvalid;
 output saxigp0_awready;
-input [127 : 0] saxigp0_wdata;
-input [15 : 0] saxigp0_wstrb;
+input [63 : 0] saxigp0_wdata;
+input [7 : 0] saxigp0_wstrb;
 input saxigp0_wlast;
 input saxigp0_wvalid;
 output saxigp0_wready;
@@ -233,7 +233,7 @@ input [2 : 0] saxigp0_arprot;
 input saxigp0_arvalid;
 output saxigp0_arready;
 output [5 : 0] saxigp0_rid;
-output [127 : 0] saxigp0_rdata;
+output [63 : 0] saxigp0_rdata;
 output [1 : 0] saxigp0_rresp;
 output saxigp0_rlast;
 output saxigp0_rvalid;
@@ -313,10 +313,10 @@ assign pl_clk0 = pl_clk_t[0] ;
     .C_USE_S_AXI_GP6(0),
     .C_USE_S_AXI_ACP(0),
     .C_USE_S_AXI_ACE(0),
-    .C_M_AXI_GP0_DATA_WIDTH(128),
+    .C_M_AXI_GP0_DATA_WIDTH(64),
     .C_M_AXI_GP1_DATA_WIDTH(128),
     .C_M_AXI_GP2_DATA_WIDTH(32),
-    .C_S_AXI_GP0_DATA_WIDTH(128),
+    .C_S_AXI_GP0_DATA_WIDTH(64),
     .C_S_AXI_GP1_DATA_WIDTH(128),
     .C_S_AXI_GP2_DATA_WIDTH(128),
     .C_S_AXI_GP3_DATA_WIDTH(128),

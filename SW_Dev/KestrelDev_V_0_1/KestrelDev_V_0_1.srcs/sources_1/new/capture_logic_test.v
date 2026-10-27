@@ -4,10 +4,10 @@
 // Engineer: 
 // 
 // Create Date: 10/20/2026 02:08:57 PM
-// Design Name: 
+// Design Name: Kestrel 0.1
 // Module Name: capture_logic_test
 // Project Name: 
-// Target Devices: 
+// Target Devices: ZU3EG
 // Tool Versions: 
 // Description: 
 // 
@@ -21,18 +21,22 @@
 
 
 module capture_logic_test(
-    input wire [31:0] ctrl,
+    input wire [31:0] ctrl, 
     input wire  [31:0] frame_cnt_target,
     input wire  cap_enable,
-    input wire clk_in,
+    input wire clk_in, // must be sensor clock
+    
     output reg cap_status,
     output reg [31:0] frame_cnt,
     
-    output  wire [31:0] m_axis_tdata,
+    output  reg [31:0] m_axis_tdata,
     output  wire [3:0]  m_axis_tkeep,
-    output  wire        m_axci_tlast,
-    input   wire        m_axis_tready,
+    output  reg        m_axis_tlast,
     output  reg        m_axis_tvalid,
+    output  wire        m_axis_aclk,
+    input   wire        m_axis_tready,
+    input   wire        m_axis_aresetn,
+
     
     input   wire        mux_data_valid_o,
     input   wire [3:0]  gpio,
@@ -46,26 +50,88 @@ module capture_logic_test(
 //    reg [7:0] mux2_data_o;
 //    reg [7:0] mux3_data_o;
     reg [31:0] clk_cnt;
-    reg [7:0] line_cnt;
+    reg [31:0] line_cnt;
     wire [31:0] data_in;
-    assign data_in = {s_mux0_data_o, s_mux1_data_o, s_mux2_data_o, s_mux3_data_o};
-    assign m_axis_tdata = data_in;
-
-    assign capture_enable = ctrl[2];
-    assign frame_sync = gpio[0];
+    assign m_axis_aclk = clk_in;
+    assign m_axis_tkeep = 4'hF; // Keep all data
     
+    //assign m_axis_tdata = {s_mux0_data_o, s_mux1_data_o, s_mux2_data_o, s_mux3_data_o};
+    
+    //assign capture_enable = ctrl[2];
+    
+    assign frame_sync = gpio[0];
+    //assign frame_cnt_target = 100;
+    
+    //assign m_axci_tlast = cap_status & !capture_enable;
+    reg [31:0]  last_line;
+    reg [5:0]   word_cnt;
+    reg         running;
+    reg         last_frame;
     always @(posedge clk_in) begin
-        
-        if (capture_enable) begin
-            frame_cnt <=0;
-            if (mux_data_valid_o) begin
-                clk_cnt <= clk_cnt + 1;
-                if (frame_sync) line_cnt <= line_cnt +1;
-                m_axis_tvalid <= 1'b1;
+        if (!m_axis_aresetn) begin
+            cap_status      <= 0;
+            line_cnt        <= 1'b0;
+            frame_cnt       <= 32'b0;
+            m_axis_tvalid   <= 1'b0;
+            m_axis_tlast    <= 1'b0;
+            m_axis_tdata    <= 32'd0;
+            running         <= 0;
+            last_frame      <= 0;
+            word_cnt        <= 5'b0;
+            
+        end else if (running) begin
+            if (mux_data_valid_o && frame_sync) begin
+                line_cnt <= line_cnt + 1;
+                if (line_cnt == 119) begin
+                    frame_cnt   <= frame_cnt + 1'b1;
+                    line_cnt    <= 0;
+                end 
+                if (frame_cnt == (frame_cnt_target - 1)) begin
+                    last_frame <= 1'b1;
+                end
             end
+
+            if (mux_data_valid_o) begin
+                if (frame_sync) begin
+                    word_cnt <= 5'b0;
+                end else begin
+                    word_cnt <= word_cnt + 1'b1;
+                end
+            end
+
+            if (mux_data_valid_o && !frame_sync && word_cnt == 5'd18 && frame_cnt == frame_cnt_target) begin
+                m_axis_tlast <= 1'b1;
+                running      <= 1'b0;
+            end
+            
+            m_axis_tvalid <= cap_status && mux_data_valid_o;
+            m_axis_tdata  <= {s_mux0_data_o, s_mux1_data_o,
+                            s_mux2_data_o, s_mux3_data_o};
+
+        end else if (cap_enable && !last_frame) begin
+            running         <= 1;
+            cap_status      <= 1;
+            m_axis_tlast    <= 1'b0;
+            line_cnt        <= 32'b0;
+            frame_cnt       <= 32'b0;
+            last_frame      <= 1'b0;
+            word_cnt        <= 5'b0;
+        end else begin
+            running         <= 0;
+            cap_status      <= 0;
+            line_cnt        <= 1'b0;
+            m_axis_tvalid   <= 1'b0;
+            m_axis_tlast    <= 1'b0;
+            m_axis_tdata    <= 32'd0;
+            if (!cap_enable) last_frame <= 1'b0;
+            word_cnt        <= 5'b0;
         end
-     end
-     always @(negedge m_axis_tready) begin
-        m_axis_tvalid <= 1'b0;
-     end
+    end
+
+
+    //     output  wire [31:0] m_axis_tdata,    Our data
+    //    output  wire [3:0]  m_axis_tkeep,     not really used but can select which bytes of tdata to stream
+    //    output  wire        m_axci_tlast,     Inidicates last packet
+    //    input   wire        m_axis_tready     slave (FIFO) is ready
+    //    output  reg        m_axis_tvalid,     Master says we are ready to send
 endmodule

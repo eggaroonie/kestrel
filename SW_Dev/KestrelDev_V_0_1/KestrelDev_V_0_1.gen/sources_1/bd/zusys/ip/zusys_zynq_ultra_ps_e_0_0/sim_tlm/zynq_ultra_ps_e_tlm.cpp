@@ -168,12 +168,12 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
         ,pl_clk1_clk("pl_clk1_clk", sc_time(40.0,sc_core::SC_NS))//clock period in nanoseconds = 1000/freq(in MZ)
     {
         //creating instances of xtlm slave sockets
-        S_AXI_HPC0_FPD_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HPC0_FPD_wr_socket", 128);
-        S_AXI_HPC0_FPD_rd_socket =  new xtlm::xtlm_aximm_target_socket("S_AXI_HPC0_FPD_rd_socket", 128);
+        S_AXI_HPC0_FPD_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HPC0_FPD_wr_socket", 64);
+        S_AXI_HPC0_FPD_rd_socket =  new xtlm::xtlm_aximm_target_socket("S_AXI_HPC0_FPD_rd_socket", 64);
 
         //creating instances of xtlm master sockets
-        M_AXI_HPM0_FPD_wr_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_FPD_wr_socket", 128);
-        M_AXI_HPM0_FPD_rd_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_FPD_rd_socket", 128);
+        M_AXI_HPM0_FPD_wr_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_FPD_wr_socket", 64);
+        M_AXI_HPM0_FPD_rd_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_FPD_rd_socket", 64);
 
         char* tcpip_addr = getenv("COSIM_MACHINE_TCPIP_ADDRESS");
         char* unix_addr = getenv("COSIM_MACHINE_PATH");
