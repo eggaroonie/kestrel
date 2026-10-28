@@ -61,6 +61,8 @@ module zusys_capture_logic_test_0_0 (
   clk_in,
   cap_status,
   frame_cnt,
+  fifo_aresetn,
+  missed_words,
   m_axis_tdata,
   m_axis_tkeep,
   m_axis_tlast,
@@ -82,6 +84,11 @@ input wire cap_enable;
 input wire clk_in;
 output wire cap_status;
 output wire [31 : 0] frame_cnt;
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 fifo_aresetn RST" *)
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME fifo_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+output wire fifo_aresetn;
+output wire [31 : 0] missed_words;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN zusys_capture_logic_test_0_0_m_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
@@ -116,6 +123,8 @@ input wire [7 : 0] s_mux3_data_o;
     .clk_in(clk_in),
     .cap_status(cap_status),
     .frame_cnt(frame_cnt),
+    .fifo_aresetn(fifo_aresetn),
+    .missed_words(missed_words),
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tkeep(m_axis_tkeep),
     .m_axis_tlast(m_axis_tlast),

@@ -7,7 +7,8 @@
       "name": "zusys",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
       "RGPIO": {
@@ -49,7 +50,8 @@
       "axis_data_fifo_0": "",
       "xlconcat_0": "",
       "capture_logic_test_0": "",
-      "AXI4Lite_CaptureLogic_0": ""
+      "AXI4Lite_CaptureLogic_0": "",
+      "dummy_AISC110C_0": ""
     },
     "interface_ports": {
       "BASE": {
@@ -1972,6 +1974,14 @@
             "mode": "Slave",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              }
+            },
             "bridges": [
               "M00_AXI",
               "M01_AXI"
@@ -1980,12 +1990,52 @@
           "M00_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
           },
           "M01_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
           }
         }
       },
@@ -2219,6 +2269,21 @@
             "left": "31",
             "right": "0"
           },
+          "fifo_aresetn": {
+            "type": "rst",
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "missed_words": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
           "m_axis_aclk": {
             "type": "clk",
             "direction": "O",
@@ -2297,6 +2362,10 @@
               "PROTOCOL": {
                 "value": "AXI4LITE",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
               },
               "ID_WIDTH": {
                 "value": "0",
@@ -2381,6 +2450,26 @@
               "MAX_BURST_LENGTH": {
                 "value": "1",
                 "value_src": "auto"
+              },
+              "CLK_DOMAIN": {
+                "value": "zusys_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1",
+                "value_src": "user_prop"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0",
+                "value_src": "user_prop"
               }
             },
             "memory_map_ref": "s00_axi",
@@ -2511,7 +2600,12 @@
           },
           "dummy_data": {
             "direction": "O",
-            "left": "7",
+            "left": "31",
+            "right": "0"
+          },
+          "missed_words": {
+            "direction": "I",
+            "left": "31",
             "right": "0"
           },
           "s00_axi_aclk": {
@@ -2525,6 +2619,14 @@
               "ASSOCIATED_RESET": {
                 "value": "s00_axi_aresetn",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "zusys_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
               }
             }
           },
@@ -2537,6 +2639,86 @@
                 "value_src": "constant"
               }
             }
+          }
+        }
+      },
+      "dummy_AISC110C_0": {
+        "vlnv": "xilinx.com:module_ref:dummy_AISC110C:1.0",
+        "ip_revision": "1",
+        "xci_name": "zusys_dummy_AISC110C_0_0",
+        "xci_path": "ip/zusys_dummy_AISC110C_0_0/zusys_dummy_AISC110C_0_0.xci",
+        "inst_hier_path": "dummy_AISC110C_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dummy_AISC110C",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "zusys_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "cap_enable": {
+            "direction": "I"
+          },
+          "rstn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "dummy_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "gpio": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "mux_data_valid_o": {
+            "direction": "O"
+          },
+          "m_mux0_data_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "m_mux1_data_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "m_mux2_data_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "m_mux3_data_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "clk_out": {
+            "direction": "O"
           }
         }
       }
@@ -2631,16 +2813,14 @@
       "AXI4Lite_CaptureLogic_0_cap_enable": {
         "ports": [
           "AXI4Lite_CaptureLogic_0/cap_enable",
+          "dummy_AISC110C_0/cap_enable",
           "capture_logic_test_0/cap_enable"
         ]
       },
       "AXI4Lite_CaptureLogic_0_dummy_data": {
         "ports": [
           "AXI4Lite_CaptureLogic_0/dummy_data",
-          "capture_logic_test_0/s_mux3_data_o",
-          "capture_logic_test_0/s_mux2_data_o",
-          "capture_logic_test_0/s_mux1_data_o",
-          "capture_logic_test_0/s_mux0_data_o"
+          "dummy_AISC110C_0/dummy_data"
         ]
       },
       "AXI4Lite_CaptureLogic_0_frame_cnt_target": {
@@ -2652,6 +2832,7 @@
       "AXI4Lite_CaptureLogic_0_rstn": {
         "ports": [
           "AXI4Lite_CaptureLogic_0/rstn",
+          "dummy_AISC110C_0/rstn",
           "capture_logic_test_0/m_axis_aresetn"
         ]
       },
@@ -2685,6 +2866,12 @@
           "AXI4Lite_CaptureLogic_0/cap_status"
         ]
       },
+      "capture_logic_test_0_fifo_arestn": {
+        "ports": [
+          "capture_logic_test_0/fifo_aresetn",
+          "axis_data_fifo_0/s_axis_aresetn"
+        ]
+      },
       "capture_logic_test_0_frame_cnt": {
         "ports": [
           "capture_logic_test_0/frame_cnt",
@@ -2715,6 +2902,54 @@
           "axis_data_fifo_0/s_axis_tvalid"
         ]
       },
+      "capture_logic_test_0_missed_words": {
+        "ports": [
+          "capture_logic_test_0/missed_words",
+          "AXI4Lite_CaptureLogic_0/missed_words"
+        ]
+      },
+      "dummy_AISC110C_0_clk_out": {
+        "ports": [
+          "dummy_AISC110C_0/clk_out",
+          "capture_logic_test_0/clk_in"
+        ]
+      },
+      "dummy_AISC110C_0_gpio": {
+        "ports": [
+          "dummy_AISC110C_0/gpio",
+          "capture_logic_test_0/gpio"
+        ]
+      },
+      "dummy_AISC110C_0_m_mux0_data_o": {
+        "ports": [
+          "dummy_AISC110C_0/m_mux0_data_o",
+          "capture_logic_test_0/s_mux0_data_o"
+        ]
+      },
+      "dummy_AISC110C_0_m_mux1_data_o": {
+        "ports": [
+          "dummy_AISC110C_0/m_mux1_data_o",
+          "capture_logic_test_0/s_mux1_data_o"
+        ]
+      },
+      "dummy_AISC110C_0_m_mux2_data_o": {
+        "ports": [
+          "dummy_AISC110C_0/m_mux2_data_o",
+          "capture_logic_test_0/s_mux2_data_o"
+        ]
+      },
+      "dummy_AISC110C_0_m_mux3_data_o": {
+        "ports": [
+          "dummy_AISC110C_0/m_mux3_data_o",
+          "capture_logic_test_0/s_mux3_data_o"
+        ]
+      },
+      "dummy_AISC110C_0_mux_data_valid_o": {
+        "ports": [
+          "dummy_AISC110C_0/mux_data_valid_o",
+          "capture_logic_test_0/mux_data_valid_o"
+        ]
+      },
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
@@ -2727,7 +2962,6 @@
           "axi_dma_0/axi_resetn",
           "axi_smc/aresetn",
           "axi_smc_1/aresetn",
-          "axis_data_fifo_0/s_axis_aresetn",
           "AXI4Lite_CaptureLogic_0/s00_axi_aresetn"
         ]
       },
@@ -2795,6 +3029,7 @@
           "axi_dma_0/m_axi_sg_aclk",
           "axi_dma_0/m_axi_s2mm_aclk",
           "axis_data_fifo_0/m_axis_aclk",
+          "dummy_AISC110C_0/clk_in",
           "AXI4Lite_CaptureLogic_0/s00_axi_aclk"
         ]
       },

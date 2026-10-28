@@ -1,0 +1,1253 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Oct 27 15:27:18 2026
+# Process ID         : 34024
+# Current directory  : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1
+# Command line       : vivado
+# Log file           : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/vivado.log
+# Journal file       : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/vivado.jou
+# Running On         : JLaptop
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
+# CPU Frequency      : 400.000 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 32688 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41278 MB
+# Available Virtual  : 30455 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-91] Board repository path '/home/jackson/projects/te0813/te0813-skrd/board_files' does not exist, it will not be used to search board files.
+open_project /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.xpr
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4_Lite_CaptureLogic_1_0'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4_Lite_CaptureLogic_1_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'trenz.biz:user:RGPIO_EXT:1.0' found within IP repository '/home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT.xml
+File ignored: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'trenz.biz:user:RGPIO_EXT_rtl:1.0' found within IP repository '/home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib'.
+File in use: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/SC0808BF/RGPIO_EXT_rtl.xml
+File ignored: /home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib/rgpio/RGPIO_EXT_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jackson/projects/kestrel/SW_Dev/te0813/te0813-skrd/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'zusys_capture_logic_test_0_0' generated file not found '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'zusys_capture_logic_test_0_0' generated file not found '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'zusys_capture_logic_test_0_0' generated file not found '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'zusys_capture_logic_test_0_0' generated file not found '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'zusys_capture_logic_test_0_0' generated file not found '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'capture_logic_test_sim'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'capture_logic_test_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/sc_xtlm_zusys_axi_smc_1_0.mem'
+INFO: [SIM-utils-43] Exported '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/sc_xtlm_zusys_axi_smc_4.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip -prj capture_logic_test_sim_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test_sim
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.capture_logic_test
+Compiling module xil_defaultlib.capture_logic_test_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot capture_logic_test_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "capture_logic_test_sim_behav -key {Behavioral:sim_1:Functional:capture_logic_test_sim} -tclbatch {capture_logic_test_sim.tcl} -protoinst "protoinst_files/bd_1578.protoinst" -protoinst "protoinst_files/bd_2aca.protoinst" -protoinst "protoinst_files/zusys.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_1578.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_1578.protoinst for the following reason(s):
+There are no instances of module "bd_1578" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_2aca.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_2aca.protoinst for the following reason(s):
+There are no instances of module "bd_2aca" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/zusys.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/zusys.protoinst for the following reason(s):
+There are no instances of module "zusys" in the design.
+
+Time resolution is 1 ps
+source capture_logic_test_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'capture_logic_test_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8376.051 ; gain = 0.000 ; free physical = 13296 ; free virtual = 27989
+run all
+1100 ns  frame_cnt = 0
+1460 ns  sensor started
+25680 ns  frame_cnt = 1
+50640 ns  frame_cnt = 2
+75600 ns  frame_cnt = 3
+100560 ns  frame_cnt = 4
+125520 ns  frame_cnt = 5
+150480 ns  frame_cnt = 6
+175440 ns  frame_cnt = 7
+200400 ns  frame_cnt = 8
+225360 ns  frame_cnt = 9
+250320 ns  frame_cnt = 10
+275280 ns  frame_cnt = 11
+300240 ns  frame_cnt = 12
+325200 ns  frame_cnt = 13
+350160 ns  frame_cnt = 14
+375120 ns  frame_cnt = 15
+400080 ns  frame_cnt = 16
+425040 ns  frame_cnt = 17
+450000 ns  frame_cnt = 18
+474960 ns  frame_cnt = 19
+499920 ns  frame_cnt = 20
+524880 ns  frame_cnt = 21
+549840 ns  frame_cnt = 22
+574800 ns  frame_cnt = 23
+599760 ns  frame_cnt = 24
+624720 ns  frame_cnt = 25
+649680 ns  frame_cnt = 26
+674640 ns  frame_cnt = 27
+699600 ns  frame_cnt = 28
+724560 ns  frame_cnt = 29
+749520 ns  frame_cnt = 30
+774480 ns  frame_cnt = 31
+799440 ns  frame_cnt = 32
+824400 ns  frame_cnt = 33
+849360 ns  frame_cnt = 34
+874320 ns  frame_cnt = 35
+899280 ns  frame_cnt = 36
+924240 ns  frame_cnt = 37
+949200 ns  frame_cnt = 38
+974160 ns  frame_cnt = 39
+999120 ns  frame_cnt = 40
+1024080 ns  frame_cnt = 41
+1049040 ns  frame_cnt = 42
+1074000 ns  frame_cnt = 43
+1098960 ns  frame_cnt = 44
+1123920 ns  frame_cnt = 45
+1148880 ns  frame_cnt = 46
+1173840 ns  frame_cnt = 47
+1198800 ns  frame_cnt = 48
+1223760 ns  frame_cnt = 49
+1248720 ns  frame_cnt = 50
+1273680 ns  frame_cnt = 51
+1298640 ns  frame_cnt = 52
+1323600 ns  frame_cnt = 53
+1348560 ns  frame_cnt = 54
+1373520 ns  frame_cnt = 55
+1398480 ns  frame_cnt = 56
+1423440 ns  frame_cnt = 57
+1448400 ns  frame_cnt = 58
+1473360 ns  frame_cnt = 59
+1498320 ns  frame_cnt = 60
+1523280 ns  frame_cnt = 61
+1548240 ns  frame_cnt = 62
+1573200 ns  frame_cnt = 63
+1598160 ns  frame_cnt = 64
+1623120 ns  frame_cnt = 65
+1648080 ns  frame_cnt = 66
+1673040 ns  frame_cnt = 67
+1698000 ns  frame_cnt = 68
+1722960 ns  frame_cnt = 69
+1747920 ns  frame_cnt = 70
+1772880 ns  frame_cnt = 71
+1797840 ns  frame_cnt = 72
+1822800 ns  frame_cnt = 73
+1847760 ns  frame_cnt = 74
+1872720 ns  frame_cnt = 75
+1897680 ns  frame_cnt = 76
+1922640 ns  frame_cnt = 77
+1947600 ns  frame_cnt = 78
+1972560 ns  frame_cnt = 79
+1997520 ns  frame_cnt = 80
+2022480 ns  frame_cnt = 81
+2047440 ns  frame_cnt = 82
+2072400 ns  frame_cnt = 83
+2097360 ns  frame_cnt = 84
+2122320 ns  frame_cnt = 85
+2147280 ns  frame_cnt = 86
+2172240 ns  frame_cnt = 87
+2197200 ns  frame_cnt = 88
+2222160 ns  frame_cnt = 89
+2247120 ns  frame_cnt = 90
+2272080 ns  frame_cnt = 91
+2297040 ns  frame_cnt = 92
+2322000 ns  frame_cnt = 93
+2346960 ns  frame_cnt = 94
+2371920 ns  frame_cnt = 95
+2396880 ns  frame_cnt = 96
+2421840 ns  frame_cnt = 97
+2446800 ns  frame_cnt = 98
+2471760 ns  frame_cnt = 99
+2496720 ns  frame_cnt = 100
+--------------------------------------------------
+frames sent by sensor : 100
+frame_cnt at end      : 100 (target 100)
+beats received        : 240000 (expected 240000)
+data mismatches       : 0
+tlast pulses          : 1 (expected 1)
+first tlast on beat   : 240000 (expected 240000)
+RESULT: PASS
+--------------------------------------------------
+$finish called at time : 2522080 ns : File "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" Line 219
+open_bd_design {/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd}
+Reading block design file </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd>...
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Master_CPLD
+Adding component instance block -- trenz.biz:user:RGPIO:1.0 - RGPIO_Slave_CPLD
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_rgpio
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_2
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_1
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_2
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_3
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_4
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_5
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_6
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_7
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_8
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_9
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_10
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_11
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_12
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_13
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_14
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_15
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_16
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_17
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_18
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_19
+Adding component instance block -- trenz.biz:user:SC0808BF:1.0 - SC0808BF_0
+Adding component instance block -- trenz.biz:user:axis_live_audio:1.0 - axis_live_audio_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_general
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.5 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc_1
+Adding component instance block -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:module_ref:capture_logic_test:1.0 - capture_logic_test_0
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_MM2S.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+Successfully read diagram <zusys> from block design file </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd>
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+report_ip_status -name ip_status 
+update_module_reference [get_ips  zusys_capture_logic_test_0_0]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'm_axis_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'm_axis_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'm_axis_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'm_axis_aresetn'.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'm_axis_aclk': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axis_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'm_axis_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'm_axis_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axis'.
+INFO: [IP_Flow 19-4728] Bus Interface 'm_axis_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 'm_axis_aresetn'.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'm_axis_aclk': FREQ_HZ bus parameter is missing for output clock interface.
+Upgrading '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd'
+INFO: [IP_Flow 19-3420] Updated zusys_capture_logic_test_0_0 to use current project options
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_9e0a6af.ui> 
+generate_target all [get_files  /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd]
+WARNING: [BD 41-1629] Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH> is excluded from all addressing paths.
+WARNING: [BD 41-1629] Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM> is excluded from all addressing paths.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(64) on '/axi_dma_0' with propagated value(32). Command ignored
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(64) on '/axi_dma_0' with propagated value(32). Command ignored
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+INFO: [BD 5-943] Reserving offset range <0xA000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] zusys_axi_smc_4: SmartConnect zusys_axi_smc_4 is in Low-Area Mode.
+WARNING: [xilinx.com:ip:smartconnect:1.0-1] zusys_axi_smc_4: IP zusys_axi_smc_4 is configured in Low-area mode as all propagated traffic is low-bandwidth (AXI4LITE). SI S00_AXI has property HAS_BURST == 1. WRAP bursts are not supported in Low-area mode and will result in DECERR if received.
+WARNING: [xilinx.com:ip:smartconnect:1.0-1] zusys_axi_smc_4: If WRAP transactions are required then turn off Low-area mode using ADVANCED_PROPERTIES. Execute following: set_property CONFIG.ADVANCED_PROPERTIES {__experimental_features__ {disable_low_area_mode 1}} [get_bd_cells /zusys_axi_smc_4]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 2G ]> from slave interface '/axi_smc_1/S01_AXI' to master interface '/axi_smc_1/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 768M ]> from slave interface '/axi_smc_1/S01_AXI' to master interface '/axi_smc_1/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 2G ]> from slave interface '/axi_smc_1/S02_AXI' to master interface '/axi_smc_1/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 768M ]> from slave interface '/axi_smc_1/S02_AXI' to master interface '/axi_smc_1/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] zusys_axi_smc_1_0: SmartConnect zusys_axi_smc_1_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter C_M_AXI_S2MM_DATA_WIDTH(64) on '/axi_dma_0' with propagated value(32). Command ignored
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_HIGH from address space /axi_dma_0/Data_SG.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG.
+CRITICAL WARNING: [BD 41-1343] Reset pin /axis_data_fifo_0/s_axis_aresetn (associated clock /axis_data_fifo_0/s_axis_aclk) is connected to reset source /rst_ps8_0_100M/peripheral_aresetn (synchronous to clock source /zynq_ultra_ps_e_0/pl_clk0).
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /capture_logic_test_0/m_axis_aclk.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc_1/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HPC0_FPD(1) and /axi_smc_1/M00_AXI(0)
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/capture_logic_test_0/ctrl
+/capture_logic_test_0/frame_cnt_target
+/capture_logic_test_0/cap_enable
+/capture_logic_test_0/clk_in
+/capture_logic_test_0/m_axis_aresetn
+/capture_logic_test_0/mux_data_valid_o
+/capture_logic_test_0/gpio
+/capture_logic_test_0/s_mux0_data_o
+/capture_logic_test_0/s_mux1_data_o
+/capture_logic_test_0/s_mux2_data_o
+/capture_logic_test_0/s_mux3_data_o
+
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_9e0a6af.ui> 
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+Verilog Output written to : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v
+WARNING: [BD 41-3256] Drive strength cannot be preserved for ports connected to net clk1_1 as it connected to debug IP /RGPIO/vio_rgpio 
+Verilog Output written to : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/sim/zusys.v
+Verilog Output written to : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.v
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_9e0a6af.ui> 
+Exporting to file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/bd_0/hw_handoff/zusys_axi_smc_4.hwh
+Generated Hardware Definition File /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/bd_0/synth/zusys_axi_smc_4.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/bd_0/hw_handoff/zusys_axi_smc_1_0.hwh
+Generated Hardware Definition File /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/bd_0/synth/zusys_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block capture_logic_test_0 .
+Exporting to file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hw_handoff/zusys.hwh
+Generated Hardware Definition File /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.hwdef
+generate_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 9003.047 ; gain = 0.000 ; free physical = 11240 ; free virtual = 26915
+catch { config_ip_cache -export [get_ips -all zusys_axi_smc_4] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_axi_smc_4
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 1d123aed8f98207d to dir: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/1/d/1d123aed8f98207d/zusys_axi_smc_4_sim_netlist.vhdl to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/1/d/1d123aed8f98207d/zusys_axi_smc_4.dcp to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/1/d/1d123aed8f98207d/zusys_axi_smc_4_stub.vhdl to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/1/d/1d123aed8f98207d/zusys_axi_smc_4_stub.v to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/1/d/1d123aed8f98207d/zusys_axi_smc_4_sim_netlist.v to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_4/zusys_axi_smc_4_sim_netlist.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP zusys_axi_smc_4, cache-ID = 1d123aed8f98207d; cache size = 132.706 MB.
+catch { config_ip_cache -export [get_ips -all zusys_axi_smc_1_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: zusys_axi_smc_1_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 03b53a872da83b0e to dir: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/0/3/03b53a872da83b0e/zusys_axi_smc_1_0_sim_netlist.v to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/0/3/03b53a872da83b0e/zusys_axi_smc_1_0_stub.v to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/0/3/03b53a872da83b0e/zusys_axi_smc_1_0_stub.vhdl to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/0/3/03b53a872da83b0e/zusys_axi_smc_1_0.dcp to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/ip/2024.2/0/3/03b53a872da83b0e/zusys_axi_smc_1_0_sim_netlist.vhdl to /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_axi_smc_1_0/zusys_axi_smc_1_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP zusys_axi_smc_1_0, cache-ID = 03b53a872da83b0e; cache size = 132.706 MB.
+catch { [ delete_ip_run [get_ips -all zusys_axi_smc_1_0] ] }
+export_ip_user_files -of_objects [get_files /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd]
+launch_runs zusys_capture_logic_test_0_0_synth_1 -jobs 16
+[Tue Oct 27 15:42:38 2026] Launched zusys_capture_logic_test_0_0_synth_1...
+Run output will be captured here: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/zusys_capture_logic_test_0_0_synth_1/runme.log
+export_simulation -lib_map_path [list {modelsim=/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/compile_simlib/modelsim} {questa=/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/compile_simlib/questa} {xcelium=/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/compile_simlib/xcelium} {vcs=/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/compile_simlib/vcs} {riviera=/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.cache/compile_simlib/riviera}] -of_objects [get_files /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd] -directory /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.ip_user_files/sim_scripts -ip_user_files_dir /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.ip_user_files -ipstatic_source_dir /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+create_bd_cell -type module -reference AXI4Lite_CaptureLogic AXI4Lite_CaptureLogic_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/AXI4Lite_CaptureLogic_0/s00_axi} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins AXI4Lite_CaptureLogic_0/s00_axi]
+Slave segment '/AXI4Lite_CaptureLogic_0/s00_axi/reg0' is being assigned into address space '/zynq_ultra_ps_e_0/Data' at <0xA001_0000 [ 4K ]>.
+connect_bd_net [get_bd_pins capture_logic_test_0/cap_status] [get_bd_pins AXI4Lite_CaptureLogic_0/cap_status]
+connect_bd_net [get_bd_pins capture_logic_test_0/frame_cnt] [get_bd_pins AXI4Lite_CaptureLogic_0/frame_cnt]
+connect_bd_net [get_bd_pins AXI4Lite_CaptureLogic_0/cap_enable] [get_bd_pins capture_logic_test_0/cap_enable]
+connect_bd_net [get_bd_pins AXI4Lite_CaptureLogic_0/frame_cnt_target] [get_bd_pins capture_logic_test_0/frame_cnt_target]
+connect_bd_net [get_bd_pins AXI4Lite_CaptureLogic_0/rstn] [get_bd_pins capture_logic_test_0/m_axis_aresetn]
+set_property location {2 653 146} [get_bd_cells axis_data_fifo_0]
+startgroup
+connect_bd_net [get_bd_pins capture_logic_test_0/mux_data_valid_o] [get_bd_pins rst_ps8_0_100M/peripheral_aresetn]
+endgroup
+delete_bd_objs [get_bd_nets AXI4Lite_CaptureLogic_0_rstn]
+connect_bd_net [get_bd_pins capture_logic_test_0/m_axis_aresetn] [get_bd_pins rst_ps8_0_100M/peripheral_aresetn]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins capture_logic_test_0/m_axis_aresetn] [get_bd_pins rst_ps8_0_100M/peripheral_aresetn]'
+delete_bd_objs [get_bd_nets rst_ps8_0_100M_peripheral_aresetn]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets rst_ps8_0_100M_peripheral_aresetn]'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets AXI4Lite_CaptureLogic_0_rstn]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins capture_logic_test_0/mux_data_valid_o] [get_bd_pins rst_ps8_0_100M/peripheral_aresetn]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'set_property location {2 653 146} [get_bd_cells axis_data_fifo_0]'
+connect_bd_net [get_bd_pins capture_logic_test_0/mux_data_valid_o] [get_bd_pins AXI4Lite_CaptureLogic_0/frame_cnt_target]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins capture_logic_test_0/mux_data_valid_o] [get_bd_pins AXI4Lite_CaptureLogic_0/frame_cnt_target]'
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+report_ip_status -name ip_status 
+update_module_reference [get_ips  zusys_AXI4Lite_CaptureLogic_0_0]
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rstn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aresetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's00_axi_aclk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rstn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aresetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's00_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 's00_axi_aclk': Added interface parameter 'ASSOCIATED_RESET' with value 's00_axi_aresetn'.
+WARNING: [IP_Flow 19-11770] Clock interface 's00_axi_aclk' has no FREQ_HZ parameter.
+Upgrading '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd'
+INFO: [IP_Flow 19-3420] Updated zusys_AXI4Lite_CaptureLogic_0_0 to use current project options
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'dummy_data'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'zusys_AXI4Lite_CaptureLogic_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'zusys_AXI4Lite_CaptureLogic_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_9e0a6af.ui> 
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+connect_bd_net [get_bd_pins AXI4Lite_CaptureLogic_0/dummy_data] [get_bd_pins capture_logic_test_0/s_mux3_data_o]
+connect_bd_net [get_bd_pins capture_logic_test_0/s_mux2_data_o] [get_bd_pins AXI4Lite_CaptureLogic_0/dummy_data]
+connect_bd_net [get_bd_pins capture_logic_test_0/s_mux1_data_o] [get_bd_pins AXI4Lite_CaptureLogic_0/dummy_data]
+connect_bd_net [get_bd_pins capture_logic_test_0/s_mux0_data_o] [get_bd_pins AXI4Lite_CaptureLogic_0/dummy_data]
+connect_bd_net [get_bd_pins capture_logic_test_0/gpio] [get_bd_pins AXI4Lite_CaptureLogic_0/dummy_data]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins capture_logic_test_0/gpio] [get_bd_pins AXI4Lite_CaptureLogic_0/dummy_data]'
+save_bd_design
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_ec7575b2.ui> 
+Wrote  : </home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/ui/bd_9e0a6af.ui> 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'capture_logic_test_sim'
+INFO: [Vivado 12-12490] The selected simulation model for 'zusys_AXI4Lite_CaptureLogic_0_0' IP changed to 'rtl' from '', the simulation run directory will be deleted.
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'capture_logic_test_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/sc_xtlm_zusys_axi_smc_1_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip -prj capture_logic_test_sim_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.capture_logic_test
+Compiling module xil_defaultlib.capture_logic_test_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot capture_logic_test_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "capture_logic_test_sim_behav -key {Behavioral:sim_1:Functional:capture_logic_test_sim} -tclbatch {capture_logic_test_sim.tcl} -protoinst "protoinst_files/bd_2aca.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_2aca.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_2aca.protoinst for the following reason(s):
+There are no instances of module "bd_2aca" in the design.
+
+Time resolution is 1 ps
+source capture_logic_test_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'capture_logic_test_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 9212.617 ; gain = 0.000 ; free physical = 10226 ; free virtual = 25988
+run all
+1100 ns  frame_cnt = 0
+1460 ns  sensor started
+25680 ns  frame_cnt = 1
+50640 ns  frame_cnt = 2
+75600 ns  frame_cnt = 3
+100560 ns  frame_cnt = 4
+125520 ns  frame_cnt = 5
+150480 ns  frame_cnt = 6
+175440 ns  frame_cnt = 7
+200400 ns  frame_cnt = 8
+225360 ns  frame_cnt = 9
+250320 ns  frame_cnt = 10
+275280 ns  frame_cnt = 11
+300240 ns  frame_cnt = 12
+325200 ns  frame_cnt = 13
+350160 ns  frame_cnt = 14
+375120 ns  frame_cnt = 15
+400080 ns  frame_cnt = 16
+425040 ns  frame_cnt = 17
+450000 ns  frame_cnt = 18
+474960 ns  frame_cnt = 19
+499920 ns  frame_cnt = 20
+524880 ns  frame_cnt = 21
+549840 ns  frame_cnt = 22
+574800 ns  frame_cnt = 23
+599760 ns  frame_cnt = 24
+624720 ns  frame_cnt = 25
+649680 ns  frame_cnt = 26
+674640 ns  frame_cnt = 27
+699600 ns  frame_cnt = 28
+724560 ns  frame_cnt = 29
+749520 ns  frame_cnt = 30
+774480 ns  frame_cnt = 31
+799440 ns  frame_cnt = 32
+824400 ns  frame_cnt = 33
+849360 ns  frame_cnt = 34
+874320 ns  frame_cnt = 35
+899280 ns  frame_cnt = 36
+924240 ns  frame_cnt = 37
+949200 ns  frame_cnt = 38
+974160 ns  frame_cnt = 39
+999120 ns  frame_cnt = 40
+1024080 ns  frame_cnt = 41
+1049040 ns  frame_cnt = 42
+1074000 ns  frame_cnt = 43
+1098960 ns  frame_cnt = 44
+1123920 ns  frame_cnt = 45
+1148880 ns  frame_cnt = 46
+1173840 ns  frame_cnt = 47
+1198800 ns  frame_cnt = 48
+1223760 ns  frame_cnt = 49
+1248720 ns  frame_cnt = 50
+1273680 ns  frame_cnt = 51
+1298640 ns  frame_cnt = 52
+1323600 ns  frame_cnt = 53
+1348560 ns  frame_cnt = 54
+1373520 ns  frame_cnt = 55
+1398480 ns  frame_cnt = 56
+1423440 ns  frame_cnt = 57
+1448400 ns  frame_cnt = 58
+1473360 ns  frame_cnt = 59
+1498320 ns  frame_cnt = 60
+1523280 ns  frame_cnt = 61
+1548240 ns  frame_cnt = 62
+1573200 ns  frame_cnt = 63
+1598160 ns  frame_cnt = 64
+1623120 ns  frame_cnt = 65
+1648080 ns  frame_cnt = 66
+1673040 ns  frame_cnt = 67
+1698000 ns  frame_cnt = 68
+1722960 ns  frame_cnt = 69
+1747920 ns  frame_cnt = 70
+1772880 ns  frame_cnt = 71
+1797840 ns  frame_cnt = 72
+1822800 ns  frame_cnt = 73
+1847760 ns  frame_cnt = 74
+1872720 ns  frame_cnt = 75
+1897680 ns  frame_cnt = 76
+1922640 ns  frame_cnt = 77
+1947600 ns  frame_cnt = 78
+1972560 ns  frame_cnt = 79
+1997520 ns  frame_cnt = 80
+2022480 ns  frame_cnt = 81
+2047440 ns  frame_cnt = 82
+2072400 ns  frame_cnt = 83
+2097360 ns  frame_cnt = 84
+2122320 ns  frame_cnt = 85
+2147280 ns  frame_cnt = 86
+2172240 ns  frame_cnt = 87
+2197200 ns  frame_cnt = 88
+2222160 ns  frame_cnt = 89
+2247120 ns  frame_cnt = 90
+2272080 ns  frame_cnt = 91
+2297040 ns  frame_cnt = 92
+2322000 ns  frame_cnt = 93
+2346960 ns  frame_cnt = 94
+2371920 ns  frame_cnt = 95
+2396880 ns  frame_cnt = 96
+2421840 ns  frame_cnt = 97
+2446800 ns  frame_cnt = 98
+2471760 ns  frame_cnt = 99
+2496720 ns  frame_cnt = 100
+--------------------------------------------------
+frames sent by sensor : 100
+frame_cnt at end      : 100 (target 100)
+beats received        : 240000 (expected 240000)
+data mismatches       : 0
+tlast pulses          : 1 (expected 1)
+first tlast on beat   : 240000 (expected 240000)
+RESULT: PASS
+--------------------------------------------------
+$finish called at time : 2522080 ns : File "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" Line 219
+open_bd_design {/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/bd/zusys/zusys.bd}
+report_ip_status -name ip_status 
+set_property location {0.5 -414 172} [get_bd_cells AXI4Lite_CaptureLogic_0]
+set_property location {1.5 -168 149} [get_bd_cells AXI4Lite_CaptureLogic_0]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'capture_logic_test_sim'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'capture_logic_test_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/sc_xtlm_zusys_axi_smc_1_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip -prj capture_logic_test_sim_vlog.prj
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test_sim
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [Common 17-344] 'execute_script' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'capture_logic_test_sim'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'capture_logic_test_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/sc_xtlm_zusys_axi_smc_1_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip -prj capture_logic_test_sim_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <zusys_axis_data_fifo_0_0> not found while processing module instance <fifo> [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:112]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'capture_logic_test_sim'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'capture_logic_test_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/sc_xtlm_zusys_axi_smc_1_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip -prj capture_logic_test_sim_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <zusys_axis_data_fifo_0_0> not found while processing module instance <fifo> [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:112]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'capture_logic_test_sim'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'capture_logic_test_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim/sc_xtlm_zusys_axi_smc_1_0.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip -prj capture_logic_test_sim_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module capture_logic_test_sim
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot capture_logic_test_sim_behav xil_defaultlib.capture_logic_test_sim xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.capture_logic_test
+Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=3,...
+Compiling module xpm.xpm_fifo_rst(COMMON_CLOCK=0,CDC_...
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=3,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=9)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=5,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=10)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=3,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_axis(CLOCKING_MODE="ind...
+Compiling module xil_defaultlib.capture_logic_test_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot capture_logic_test_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "capture_logic_test_sim_behav -key {Behavioral:sim_1:Functional:capture_logic_test_sim} -tclbatch {capture_logic_test_sim.tcl} -protoinst "protoinst_files/bd_2aca.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_2aca.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_2aca.protoinst for the following reason(s):
+There are no instances of module "bd_2aca" in the design.
+
+Time resolution is 1 ps
+source capture_logic_test_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. capture_logic_test_sim.fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /capture_logic_test_sim/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial302_35  Scope: capture_logic_test_sim.fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 514
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'capture_logic_test_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 9286.395 ; gain = 0.000 ; free physical = 9516 ; free virtual = 25361
+run all
+1100 ns  frame_cnt = 0
+1460 ns  sensor started
+25680 ns  frame_cnt = 1
+50640 ns  frame_cnt = 2
+75600 ns  frame_cnt = 3
+100560 ns  frame_cnt = 4
+125520 ns  frame_cnt = 5
+150480 ns  frame_cnt = 6
+175440 ns  frame_cnt = 7
+200400 ns  frame_cnt = 8
+225360 ns  frame_cnt = 9
+250320 ns  frame_cnt = 10
+275280 ns  frame_cnt = 11
+300240 ns  frame_cnt = 12
+325200 ns  frame_cnt = 13
+350160 ns  frame_cnt = 14
+375120 ns  frame_cnt = 15
+400080 ns  frame_cnt = 16
+425040 ns  frame_cnt = 17
+450000 ns  frame_cnt = 18
+474960 ns  frame_cnt = 19
+499920 ns  frame_cnt = 20
+524880 ns  frame_cnt = 21
+549840 ns  frame_cnt = 22
+574800 ns  frame_cnt = 23
+599760 ns  frame_cnt = 24
+624720 ns  frame_cnt = 25
+649680 ns  frame_cnt = 26
+674640 ns  frame_cnt = 27
+699600 ns  frame_cnt = 28
+724560 ns  frame_cnt = 29
+749520 ns  frame_cnt = 30
+774480 ns  frame_cnt = 31
+799440 ns  frame_cnt = 32
+824400 ns  frame_cnt = 33
+849360 ns  frame_cnt = 34
+874320 ns  frame_cnt = 35
+899280 ns  frame_cnt = 36
+924240 ns  frame_cnt = 37
+949200 ns  frame_cnt = 38
+974160 ns  frame_cnt = 39
+999120 ns  frame_cnt = 40
+1024080 ns  frame_cnt = 41
+1049040 ns  frame_cnt = 42
+1074000 ns  frame_cnt = 43
+1098960 ns  frame_cnt = 44
+1123920 ns  frame_cnt = 45
+1148880 ns  frame_cnt = 46
+1173840 ns  frame_cnt = 47
+1198800 ns  frame_cnt = 48
+1223760 ns  frame_cnt = 49
+1248720 ns  frame_cnt = 50
+1273680 ns  frame_cnt = 51
+1298640 ns  frame_cnt = 52
+1323600 ns  frame_cnt = 53
+1348560 ns  frame_cnt = 54
+1373520 ns  frame_cnt = 55
+1398480 ns  frame_cnt = 56
+1423440 ns  frame_cnt = 57
+1448400 ns  frame_cnt = 58
+1473360 ns  frame_cnt = 59
+1498320 ns  frame_cnt = 60
+1523280 ns  frame_cnt = 61
+1548240 ns  frame_cnt = 62
+1573200 ns  frame_cnt = 63
+1598160 ns  frame_cnt = 64
+1623120 ns  frame_cnt = 65
+1648080 ns  frame_cnt = 66
+1673040 ns  frame_cnt = 67
+1698000 ns  frame_cnt = 68
+1722960 ns  frame_cnt = 69
+1747920 ns  frame_cnt = 70
+1772880 ns  frame_cnt = 71
+1797840 ns  frame_cnt = 72
+1822800 ns  frame_cnt = 73
+1847760 ns  frame_cnt = 74
+1872720 ns  frame_cnt = 75
+1897680 ns  frame_cnt = 76
+1922640 ns  frame_cnt = 77
+1947600 ns  frame_cnt = 78
+1972560 ns  frame_cnt = 79
+1997520 ns  frame_cnt = 80
+2022480 ns  frame_cnt = 81
+2047440 ns  frame_cnt = 82
+2072400 ns  frame_cnt = 83
+2097360 ns  frame_cnt = 84
+2122320 ns  frame_cnt = 85
+2147280 ns  frame_cnt = 86
+2172240 ns  frame_cnt = 87
+2197200 ns  frame_cnt = 88
+2222160 ns  frame_cnt = 89
+2247120 ns  frame_cnt = 90
+2272080 ns  frame_cnt = 91
+2297040 ns  frame_cnt = 92
+2322000 ns  frame_cnt = 93
+2346960 ns  frame_cnt = 94
+2371920 ns  frame_cnt = 95
+2396880 ns  frame_cnt = 96
+2421840 ns  frame_cnt = 97
+2446800 ns  frame_cnt = 98
+2471760 ns  frame_cnt = 99
+2496720 ns  frame_cnt = 100
+--------------------------------------------------
+frames sent by sensor : 102
+frame_cnt at end      : 100 (target 100)
+words into FIFO       : 240000 (expected 240000)
+words lost, FIFO full : 0
+words out of FIFO     : 240000 (expected 240000)
+data mismatches       : 0
+tlast pulses          : 1 (expected 1)
+first tlast on word   : 240000 (expected 240000)
+RESULT: PASS
+--------------------------------------------------
+$finish called at time : 2572100 ns : File "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" Line 299
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/ip_repo/AXI4Lite_CaptureLogic_1_0/hdl/AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 27 16:26:05 2026...

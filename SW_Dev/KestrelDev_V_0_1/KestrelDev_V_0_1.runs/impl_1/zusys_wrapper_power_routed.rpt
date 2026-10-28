@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Wed Oct 14 11:41:22 2026
+| Date             : Wed Oct 28 14:54:20 2026
 | Host             : JLaptop running 64-bit Ubuntu 26.04.1 LTS
 | Command          : report_power -file zusys_wrapper_power_routed.rpt -pb zusys_wrapper_power_summary_routed.pb -rpx zusys_wrapper_power_routed.rpx
 | Design           : zusys_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.312        |
+| Total On-Chip Power (W)  | 3.293        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.990        |
+| Dynamic (W)              | 2.971        |
 | Device Static (W)        | 0.322        |
 | Effective TJA (C/W)      | 2.4          |
 | Max Ambient (C)          | 92.2         |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.027 |        5 |       --- |             --- |
-| CLB Logic                |     0.040 |    23053 |       --- |             --- |
-|   LUT as Distributed RAM |     0.028 |      912 |     28800 |            3.17 |
-|   LUT as Logic           |     0.010 |     6053 |     70560 |            8.58 |
-|   Register               |     0.001 |    12105 |    141120 |            8.58 |
-|   LUT as Shift Register  |    <0.001 |      167 |     28800 |            0.58 |
-|   CARRY8                 |    <0.001 |       27 |      8820 |            0.31 |
+| Clocks                   |     0.024 |        5 |       --- |             --- |
+| CLB Logic                |     0.028 |    21340 |       --- |             --- |
+|   LUT as Distributed RAM |     0.018 |      578 |     28800 |            2.01 |
+|   LUT as Logic           |     0.008 |     5785 |     70560 |            8.20 |
+|   Register               |     0.001 |    11491 |    141120 |            8.14 |
+|   LUT as Shift Register  |    <0.001 |      126 |     28800 |            0.44 |
+|   CARRY8                 |    <0.001 |       44 |      8820 |            0.50 |
 |   BUFG                   |    <0.001 |        1 |        24 |            4.17 |
-|   Others                 |     0.000 |      806 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |        2 |     70560 |           <0.01 |
-| Signals                  |     0.014 |    16027 |       --- |             --- |
-| Block RAM                |     0.003 |      4.5 |       216 |            2.08 |
+|   Others                 |     0.000 |      805 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      385 |     70560 |            0.55 |
+| Signals                  |     0.012 |    15068 |       --- |             --- |
+| Block RAM                |    <0.001 |        2 |       216 |            0.93 |
 | I/O                      |     0.002 |       18 |       252 |            7.14 |
 | PS8                      |     2.904 |        1 |       --- |             --- |
 | Static Power             |     0.322 |          |           |                 |
 |   PS Static              |     0.103 |          |           |                 |
 |   PL Static              |     0.219 |          |           |                 |
-| Total                    |     3.312 |          |           |                 |
+| Total                    |     3.293 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +79,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.850 |     0.159 |       0.100 |      0.059 |       NA    | Unspecified | NA         |
+| Vccint          |       0.850 |     0.135 |       0.077 |      0.059 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.028 |       0.000 |      0.028 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.047 |       0.000 |      0.047 |       NA    | Unspecified | NA         |
@@ -162,24 +162,26 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------+-----------+
-| Name                     | Power (W) |
-+--------------------------+-----------+
-| zusys_wrapper            |     2.990 |
-|   dbg_hub                |     0.002 |
-|     inst                 |     0.002 |
-|       BSCANID.u_xsdbm_id |     0.002 |
-|   zusys_i                |     2.987 |
-|     RGPIO                |     0.002 |
-|       vio_rgpio          |     0.002 |
-|     axi_dma_0            |     0.013 |
-|       U0                 |     0.013 |
-|     axi_smc              |     0.004 |
-|       inst               |     0.004 |
-|     axi_smc_1            |     0.061 |
-|       inst               |     0.061 |
-|     zynq_ultra_ps_e_0    |     2.905 |
-|       inst               |     2.905 |
-+--------------------------+-----------+
++-----------------------------+-----------+
+| Name                        | Power (W) |
++-----------------------------+-----------+
+| zusys_wrapper               |     2.971 |
+|   dbg_hub                   |     0.002 |
+|     inst                    |     0.002 |
+|       BSCANID.u_xsdbm_id    |     0.002 |
+|   zusys_i                   |     2.967 |
+|     AXI4Lite_CaptureLogic_0 |     0.004 |
+|       inst                  |     0.004 |
+|     RGPIO                   |     0.002 |
+|       vio_rgpio             |     0.002 |
+|     axi_dma_0               |     0.006 |
+|       U0                    |     0.006 |
+|     axi_smc                 |     0.005 |
+|       inst                  |     0.005 |
+|     axi_smc_1               |     0.041 |
+|       inst                  |     0.041 |
+|     zynq_ultra_ps_e_0       |     2.905 |
+|       inst                  |     2.905 |
++-----------------------------+-----------+
 
 

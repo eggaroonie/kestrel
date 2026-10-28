@@ -28,6 +28,8 @@ module capture_logic_test(
     
     output reg cap_status,
     output reg [31:0] frame_cnt,
+    output wire fifo_aresetn,
+    output reg  [31:0] missed_words,
     
     output  reg [31:0] m_axis_tdata,
     output  wire [3:0]  m_axis_tkeep,
@@ -45,6 +47,7 @@ module capture_logic_test(
     input wire [7:0] s_mux2_data_o,
     input wire [7:0] s_mux3_data_o
     );
+
 //    reg [7:0] mux0_data_o;
 //    reg [7:0] mux1_data_o;
 //    reg [7:0] mux2_data_o;
@@ -54,21 +57,28 @@ module capture_logic_test(
     wire [31:0] data_in;
     assign m_axis_aclk = clk_in;
     assign m_axis_tkeep = 4'hF; // Keep all data
+    wire frame_sync = gpio[0];
     
-    //assign m_axis_tdata = {s_mux0_data_o, s_mux1_data_o, s_mux2_data_o, s_mux3_data_o};
-    
-    //assign capture_enable = ctrl[2];
-    
-    assign frame_sync = gpio[0];
-    //assign frame_cnt_target = 100;
     
     //assign m_axci_tlast = cap_status & !capture_enable;
     reg [31:0]  last_line;
-    reg [5:0]   word_cnt;
+    reg [4:0]   word_cnt;
     reg         running;
     reg         last_frame;
+    wire rstn_sync;
+    assign fifo_arestn = rstn_sync;
+    xpm_cdc_async_rst #(
+       .DEST_SYNC_FF(4),    // DECIMAL; range: 2-10
+       .INIT_SYNC_FF(0),    // DECIMAL; 0=disable simulation init values, 1=enable simulation init values
+       .RST_ACTIVE_HIGH(0)  // DECIMAL; 0=active-Low reset, 1=active-High reset
+    ) rstn_sync_inst (
+       .src_arst   (m_axis_aresetn),    // 1-bit input: Source asynchronous reset signal.
+       .dest_clk   (clk_in),            // 1-bit input: Destination clock.
+       .dest_arst  (rstn_sync)         // 1-bit output: This registered output synchronizes the src_arst asynchronous reset signal to the destination clock
+    );
+    
     always @(posedge clk_in) begin
-        if (!m_axis_aresetn) begin
+        if (!rstn_sync) begin
             cap_status      <= 0;
             line_cnt        <= 1'b0;
             frame_cnt       <= 32'b0;
@@ -78,6 +88,7 @@ module capture_logic_test(
             running         <= 0;
             last_frame      <= 0;
             word_cnt        <= 5'b0;
+            missed_words    <= 32'b0;
             
         end else if (running) begin
             if (mux_data_valid_o && frame_sync) begin
@@ -103,7 +114,9 @@ module capture_logic_test(
                 m_axis_tlast <= 1'b1;
                 running      <= 1'b0;
             end
-            
+            if (cap_status && mux_data_valid_o && !m_axis_tready) begin
+                missed_words <= missed_words + 1;
+            end
             m_axis_tvalid <= cap_status && mux_data_valid_o;
             m_axis_tdata  <= {s_mux0_data_o, s_mux1_data_o,
                             s_mux2_data_o, s_mux3_data_o};
@@ -116,6 +129,7 @@ module capture_logic_test(
             frame_cnt       <= 32'b0;
             last_frame      <= 1'b0;
             word_cnt        <= 5'b0;
+            missed_words    <= 32'b0;
         end else begin
             running         <= 0;
             cap_status      <= 0;

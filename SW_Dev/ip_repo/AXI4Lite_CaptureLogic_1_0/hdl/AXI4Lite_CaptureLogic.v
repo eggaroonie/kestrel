@@ -15,7 +15,16 @@
 	)
 	(
 		// Users to add ports here
-
+        output wire         cap_enable,         
+        output wire [31:0]  frame_cnt_target,
+        output wire         rstn,
+        input wire          cap_status,
+        input wire  [31:0]  frame_cnt,
+        output wire  [31:0]  dummy_data,
+        input wire [31:0]   missed_words,
+        
+        
+        
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -48,6 +57,14 @@
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) AXI4Lite_CaptureLogic_slave_lite_v1_0_S00_AXI_inst (
+	    .cap_enable(cap_enable),
+	    .frame_cnt_target(frame_cnt_target),
+	    .cap_status(cap_status),
+		.frame_cnt(frame_cnt),
+        .rstn(rstn),
+        .dummy_data(dummy_data),
+        .missed_words(missed_words),
+
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -72,7 +89,7 @@
 	);
 
 	// Add user logic here
-
+    
 	// User logic ends
 
 	endmodule

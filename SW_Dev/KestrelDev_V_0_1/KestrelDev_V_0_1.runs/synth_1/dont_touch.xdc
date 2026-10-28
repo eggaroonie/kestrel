@@ -118,4 +118,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zusys_axis_
 # IP: bd/zusys/ip/zusys_xlconcat_0_0/zusys_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zusys_xlconcat_0_0 || ORIG_REF_NAME==zusys_xlconcat_0_0} -quiet] -quiet
 
+# IP: bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zusys_capture_logic_test_0_0 || ORIG_REF_NAME==zusys_capture_logic_test_0_0} -quiet] -quiet
+
+# IP: bd/zusys/ip/zusys_AXI4Lite_CaptureLogic_0_0/zusys_AXI4Lite_CaptureLogic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zusys_AXI4Lite_CaptureLogic_0_0 || ORIG_REF_NAME==zusys_AXI4Lite_CaptureLogic_0_0} -quiet] -quiet
+
+# IP: bd/zusys/ip/zusys_dummy_AISC110C_0_0/zusys_dummy_AISC110C_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==zusys_dummy_AISC110C_0_0 || ORIG_REF_NAME==zusys_dummy_AISC110C_0_0} -quiet] -quiet
+
 # XDC: /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/zusys_ooc.xdc

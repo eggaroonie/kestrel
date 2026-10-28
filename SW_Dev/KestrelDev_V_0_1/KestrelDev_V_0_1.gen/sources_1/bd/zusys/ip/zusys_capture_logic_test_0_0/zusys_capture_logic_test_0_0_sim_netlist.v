@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Tue Oct 27 15:43:01 2026
+// Date        : Wed Oct 28 14:51:59 2026
 // Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0_sim_netlist.v
@@ -23,6 +23,8 @@ module zusys_capture_logic_test_0_0
     clk_in,
     cap_status,
     frame_cnt,
+    fifo_aresetn,
+    missed_words,
     m_axis_tdata,
     m_axis_tkeep,
     m_axis_tlast,
@@ -42,6 +44,8 @@ module zusys_capture_logic_test_0_0
   input clk_in;
   output cap_status;
   output [31:0]frame_cnt;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 fifo_aresetn RST" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME fifo_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output fifo_aresetn;
+  output [31:0]missed_words;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) (* X_INTERFACE_MODE = "master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN zusys_capture_logic_test_0_0_m_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *) output [31:0]m_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TKEEP" *) output [3:0]m_axis_tkeep;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *) output m_axis_tlast;
@@ -56,6 +60,7 @@ module zusys_capture_logic_test_0_0
   input [7:0]s_mux2_data_o;
   input [7:0]s_mux3_data_o;
 
+  wire \<const0> ;
   wire \<const1> ;
   wire cap_enable;
   wire cap_status;
@@ -66,23 +71,28 @@ module zusys_capture_logic_test_0_0
   wire m_axis_aresetn;
   wire [31:0]m_axis_tdata;
   wire m_axis_tlast;
+  wire m_axis_tready;
   wire m_axis_tvalid;
+  wire [31:0]missed_words;
   wire mux_data_valid_o;
   wire [7:0]s_mux0_data_o;
   wire [7:0]s_mux1_data_o;
   wire [7:0]s_mux2_data_o;
   wire [7:0]s_mux3_data_o;
 
+  assign fifo_aresetn = \<const0> ;
   assign m_axis_aclk = clk_in;
   assign m_axis_tkeep[3] = \<const1> ;
   assign m_axis_tkeep[2] = \<const1> ;
   assign m_axis_tkeep[1] = \<const1> ;
   assign m_axis_tkeep[0] = \<const1> ;
+  GND GND
+       (.G(\<const0> ));
   VCC VCC
        (.P(\<const1> ));
   zusys_capture_logic_test_0_0_capture_logic_test inst
        (.cap_enable(cap_enable),
-        .cap_status(cap_status),
+        .cap_status_reg_0(cap_status),
         .clk_in(clk_in),
         .frame_cnt(frame_cnt),
         .frame_cnt_target(frame_cnt_target),
@@ -90,7 +100,9 @@ module zusys_capture_logic_test_0_0
         .m_axis_aresetn(m_axis_aresetn),
         .m_axis_tdata(m_axis_tdata),
         .m_axis_tlast(m_axis_tlast),
+        .m_axis_tready(m_axis_tready),
         .m_axis_tvalid(m_axis_tvalid),
+        .missed_words(missed_words),
         .mux_data_valid_o(mux_data_valid_o),
         .s_mux0_data_o(s_mux0_data_o),
         .s_mux1_data_o(s_mux1_data_o),
@@ -103,13 +115,15 @@ module zusys_capture_logic_test_0_0_capture_logic_test
    (m_axis_tdata,
     m_axis_tlast,
     frame_cnt,
-    cap_status,
+    missed_words,
+    cap_status_reg_0,
     m_axis_tvalid,
     cap_enable,
-    m_axis_aresetn,
-    gpio,
-    clk_in,
     mux_data_valid_o,
+    m_axis_aresetn,
+    clk_in,
+    gpio,
+    m_axis_tready,
     frame_cnt_target,
     s_mux0_data_o,
     s_mux1_data_o,
@@ -118,13 +132,15 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   output [31:0]m_axis_tdata;
   output m_axis_tlast;
   output [31:0]frame_cnt;
-  output cap_status;
+  output [31:0]missed_words;
+  output cap_status_reg_0;
   output m_axis_tvalid;
   input cap_enable;
-  input m_axis_aresetn;
-  input [0:0]gpio;
-  input clk_in;
   input mux_data_valid_o;
+  input m_axis_aresetn;
+  input clk_in;
+  input [0:0]gpio;
+  input m_axis_tready;
   input [31:0]frame_cnt_target;
   input [7:0]s_mux0_data_o;
   input [7:0]s_mux1_data_o;
@@ -132,10 +148,10 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   input [7:0]s_mux3_data_o;
 
   wire cap_enable;
-  wire cap_status;
   wire cap_status0;
   wire cap_status_i_1_n_0;
   wire cap_status_i_2_n_0;
+  wire cap_status_reg_0;
   wire clk_in;
   wire [31:1]data0;
   wire [31:0]frame_cnt;
@@ -364,21 +380,87 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   wire m_axis_tlast_i_1_n_0;
   wire m_axis_tlast_i_2_n_0;
   wire m_axis_tlast_i_3_n_0;
-  wire m_axis_tlast_i_4_n_0;
+  wire m_axis_tready;
   wire m_axis_tvalid;
   wire m_axis_tvalid_i_1_n_0;
+  wire [31:0]missed_words;
+  wire \missed_words[31]_i_1_n_0 ;
+  wire \missed_words[7]_i_2_n_0 ;
+  wire \missed_words_reg[15]_i_1_n_0 ;
+  wire \missed_words_reg[15]_i_1_n_1 ;
+  wire \missed_words_reg[15]_i_1_n_10 ;
+  wire \missed_words_reg[15]_i_1_n_11 ;
+  wire \missed_words_reg[15]_i_1_n_12 ;
+  wire \missed_words_reg[15]_i_1_n_13 ;
+  wire \missed_words_reg[15]_i_1_n_14 ;
+  wire \missed_words_reg[15]_i_1_n_15 ;
+  wire \missed_words_reg[15]_i_1_n_2 ;
+  wire \missed_words_reg[15]_i_1_n_3 ;
+  wire \missed_words_reg[15]_i_1_n_4 ;
+  wire \missed_words_reg[15]_i_1_n_5 ;
+  wire \missed_words_reg[15]_i_1_n_6 ;
+  wire \missed_words_reg[15]_i_1_n_7 ;
+  wire \missed_words_reg[15]_i_1_n_8 ;
+  wire \missed_words_reg[15]_i_1_n_9 ;
+  wire \missed_words_reg[23]_i_1_n_0 ;
+  wire \missed_words_reg[23]_i_1_n_1 ;
+  wire \missed_words_reg[23]_i_1_n_10 ;
+  wire \missed_words_reg[23]_i_1_n_11 ;
+  wire \missed_words_reg[23]_i_1_n_12 ;
+  wire \missed_words_reg[23]_i_1_n_13 ;
+  wire \missed_words_reg[23]_i_1_n_14 ;
+  wire \missed_words_reg[23]_i_1_n_15 ;
+  wire \missed_words_reg[23]_i_1_n_2 ;
+  wire \missed_words_reg[23]_i_1_n_3 ;
+  wire \missed_words_reg[23]_i_1_n_4 ;
+  wire \missed_words_reg[23]_i_1_n_5 ;
+  wire \missed_words_reg[23]_i_1_n_6 ;
+  wire \missed_words_reg[23]_i_1_n_7 ;
+  wire \missed_words_reg[23]_i_1_n_8 ;
+  wire \missed_words_reg[23]_i_1_n_9 ;
+  wire \missed_words_reg[31]_i_2_n_1 ;
+  wire \missed_words_reg[31]_i_2_n_10 ;
+  wire \missed_words_reg[31]_i_2_n_11 ;
+  wire \missed_words_reg[31]_i_2_n_12 ;
+  wire \missed_words_reg[31]_i_2_n_13 ;
+  wire \missed_words_reg[31]_i_2_n_14 ;
+  wire \missed_words_reg[31]_i_2_n_15 ;
+  wire \missed_words_reg[31]_i_2_n_2 ;
+  wire \missed_words_reg[31]_i_2_n_3 ;
+  wire \missed_words_reg[31]_i_2_n_4 ;
+  wire \missed_words_reg[31]_i_2_n_5 ;
+  wire \missed_words_reg[31]_i_2_n_6 ;
+  wire \missed_words_reg[31]_i_2_n_7 ;
+  wire \missed_words_reg[31]_i_2_n_8 ;
+  wire \missed_words_reg[31]_i_2_n_9 ;
+  wire \missed_words_reg[7]_i_1_n_0 ;
+  wire \missed_words_reg[7]_i_1_n_1 ;
+  wire \missed_words_reg[7]_i_1_n_10 ;
+  wire \missed_words_reg[7]_i_1_n_11 ;
+  wire \missed_words_reg[7]_i_1_n_12 ;
+  wire \missed_words_reg[7]_i_1_n_13 ;
+  wire \missed_words_reg[7]_i_1_n_14 ;
+  wire \missed_words_reg[7]_i_1_n_15 ;
+  wire \missed_words_reg[7]_i_1_n_2 ;
+  wire \missed_words_reg[7]_i_1_n_3 ;
+  wire \missed_words_reg[7]_i_1_n_4 ;
+  wire \missed_words_reg[7]_i_1_n_5 ;
+  wire \missed_words_reg[7]_i_1_n_6 ;
+  wire \missed_words_reg[7]_i_1_n_7 ;
+  wire \missed_words_reg[7]_i_1_n_8 ;
+  wire \missed_words_reg[7]_i_1_n_9 ;
   wire mux_data_valid_o;
-  wire [5:0]p_0_in;
+  wire [4:0]p_0_in;
   wire [31:0]p_2_in;
-  wire running4_out;
+  wire rstn_sync;
+  wire running5_out;
   wire running_reg_n_0;
   wire [7:0]s_mux0_data_o;
   wire [7:0]s_mux1_data_o;
   wire [7:0]s_mux2_data_o;
   wire [7:0]s_mux3_data_o;
-  wire \word_cnt[2]_i_1_n_0 ;
-  wire \word_cnt[5]_i_1_n_0 ;
-  wire [5:0]word_cnt_reg;
+  wire \word_cnt[4]_i_1_n_0 ;
+  wire [4:0]word_cnt_reg;
   wire [7:7]\NLW_frame_cnt_reg[31]_i_3_CO_UNCONNECTED ;
   wire [7:0]NLW_last_frame0_carry_O_UNCONNECTED;
   wire [7:3]NLW_last_frame0_carry__0_CO_UNCONNECTED;
@@ -390,17 +472,18 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   wire [7:0]NLW_m_axis_tlast1_carry_O_UNCONNECTED;
   wire [7:3]NLW_m_axis_tlast1_carry__0_CO_UNCONNECTED;
   wire [7:0]NLW_m_axis_tlast1_carry__0_O_UNCONNECTED;
+  wire [7:7]\NLW_missed_words_reg[31]_i_2_CO_UNCONNECTED ;
 
   LUT1 #(
     .INIT(2'h1)) 
     cap_status_i_1
-       (.I0(m_axis_aresetn),
+       (.I0(rstn_sync),
         .O(cap_status_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h88B8)) 
     cap_status_i_2
-       (.I0(cap_status),
+       (.I0(cap_status_reg_0),
         .I1(running_reg_n_0),
         .I2(cap_enable),
         .I3(last_frame_reg_n_0),
@@ -409,7 +492,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
        (.C(clk_in),
         .CE(1'b1),
         .D(cap_status_i_2_n_0),
-        .Q(cap_status),
+        .Q(cap_status_reg_0),
         .R(cap_status_i_1_n_0));
   LUT4 #(
     .INIT(16'h04FF)) 
@@ -417,23 +500,24 @@ module zusys_capture_logic_test_0_0_capture_logic_test
        (.I0(running_reg_n_0),
         .I1(cap_enable),
         .I2(last_frame_reg_n_0),
-        .I3(m_axis_aresetn),
+        .I3(rstn_sync),
         .O(\frame_cnt[31]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFFDF)) 
     \frame_cnt[31]_i_10 
-       (.I0(line_cnt[25]),
-        .I1(line_cnt[27]),
-        .I2(line_cnt[5]),
-        .I3(line_cnt[23]),
+       (.I0(line_cnt[1]),
+        .I1(line_cnt[9]),
+        .I2(line_cnt[0]),
+        .I3(line_cnt[14]),
         .O(\frame_cnt[31]_i_10_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFD)) 
+    .INIT(16'hFFFE)) 
     \frame_cnt[31]_i_11 
-       (.I0(line_cnt[6]),
-        .I1(line_cnt[3]),
-        .I2(line_cnt[19]),
-        .I3(line_cnt[13]),
+       (.I0(line_cnt[20]),
+        .I1(line_cnt[17]),
+        .I2(line_cnt[22]),
+        .I3(line_cnt[19]),
         .O(\frame_cnt[31]_i_11_n_0 ));
   LUT6 #(
     .INIT(64'h0010000000000000)) 
@@ -446,56 +530,56 @@ module zusys_capture_logic_test_0_0_capture_logic_test
         .I5(running_reg_n_0),
         .O(\frame_cnt[31]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+    .INIT(32'hFFFFFEFF)) 
     \frame_cnt[31]_i_4 
-       (.I0(line_cnt[29]),
-        .I1(line_cnt[16]),
-        .I2(line_cnt[28]),
-        .I3(line_cnt[30]),
+       (.I0(line_cnt[28]),
+        .I1(line_cnt[7]),
+        .I2(line_cnt[30]),
+        .I3(line_cnt[6]),
         .I4(\frame_cnt[31]_i_8_n_0 ),
         .O(\frame_cnt[31]_i_4_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFFFFB)) 
+    .INIT(32'hFFFFFEFF)) 
     \frame_cnt[31]_i_5 
-       (.I0(line_cnt[26]),
-        .I1(line_cnt[4]),
-        .I2(line_cnt[11]),
-        .I3(line_cnt[15]),
+       (.I0(line_cnt[12]),
+        .I1(line_cnt[13]),
+        .I2(line_cnt[15]),
+        .I3(line_cnt[4]),
         .I4(\frame_cnt[31]_i_9_n_0 ),
         .O(\frame_cnt[31]_i_5_n_0 ));
   LUT5 #(
-    .INIT(32'h00000001)) 
+    .INIT(32'h00000004)) 
     \frame_cnt[31]_i_6 
-       (.I0(line_cnt[21]),
-        .I1(line_cnt[24]),
-        .I2(line_cnt[31]),
-        .I3(line_cnt[22]),
+       (.I0(line_cnt[10]),
+        .I1(line_cnt[2]),
+        .I2(line_cnt[8]),
+        .I3(line_cnt[11]),
         .I4(\frame_cnt[31]_i_10_n_0 ),
         .O(\frame_cnt[31]_i_6_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFFBFF)) 
+    .INIT(32'hFFFFFFFE)) 
     \frame_cnt[31]_i_7 
-       (.I0(line_cnt[12]),
-        .I1(line_cnt[2]),
-        .I2(line_cnt[14]),
-        .I3(line_cnt[0]),
+       (.I0(line_cnt[31]),
+        .I1(line_cnt[29]),
+        .I2(line_cnt[3]),
+        .I3(line_cnt[24]),
         .I4(\frame_cnt[31]_i_11_n_0 ),
         .O(\frame_cnt[31]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \frame_cnt[31]_i_8 
-       (.I0(line_cnt[17]),
-        .I1(line_cnt[7]),
-        .I2(line_cnt[20]),
-        .I3(line_cnt[18]),
+       (.I0(line_cnt[23]),
+        .I1(line_cnt[21]),
+        .I2(line_cnt[18]),
+        .I3(line_cnt[16]),
         .O(\frame_cnt[31]_i_8_n_0 ));
   LUT4 #(
     .INIT(16'hFFEF)) 
     \frame_cnt[31]_i_9 
-       (.I0(line_cnt[9]),
-        .I1(line_cnt[8]),
-        .I2(line_cnt[1]),
-        .I3(line_cnt[10]),
+       (.I0(line_cnt[26]),
+        .I1(line_cnt[27]),
+        .I2(line_cnt[5]),
+        .I3(line_cnt[25]),
         .O(\frame_cnt[31]_i_9_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -761,22 +845,22 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     last_frame0_carry__0_i_2
-       (.I0(frame_cnt[29]),
-        .I1(last_frame1[29]),
+       (.I0(frame_cnt[28]),
+        .I1(last_frame1[28]),
         .I2(frame_cnt[27]),
         .I3(last_frame1[27]),
-        .I4(last_frame1[28]),
-        .I5(frame_cnt[28]),
+        .I4(last_frame1[29]),
+        .I5(frame_cnt[29]),
         .O(last_frame0_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     last_frame0_carry__0_i_3
-       (.I0(last_frame1[25]),
-        .I1(frame_cnt[25]),
-        .I2(frame_cnt[26]),
-        .I3(last_frame1[26]),
-        .I4(frame_cnt[24]),
-        .I5(last_frame1[24]),
+       (.I0(frame_cnt[26]),
+        .I1(last_frame1[26]),
+        .I2(frame_cnt[24]),
+        .I3(last_frame1[24]),
+        .I4(last_frame1[25]),
+        .I5(frame_cnt[25]),
         .O(last_frame0_carry__0_i_3_n_0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY8 last_frame0_carry__0_i_4
@@ -980,10 +1064,10 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     last_frame0_carry_i_4
-       (.I0(frame_cnt[13]),
-        .I1(last_frame1[13]),
-        .I2(frame_cnt[12]),
-        .I3(last_frame1[12]),
+       (.I0(frame_cnt[12]),
+        .I1(last_frame1[12]),
+        .I2(frame_cnt[13]),
+        .I3(last_frame1[13]),
         .I4(last_frame1[14]),
         .I5(frame_cnt[14]),
         .O(last_frame0_carry_i_4_n_0));
@@ -1000,12 +1084,12 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     last_frame0_carry_i_6
-       (.I0(frame_cnt[8]),
-        .I1(last_frame1[8]),
-        .I2(frame_cnt[6]),
-        .I3(last_frame1[6]),
-        .I4(last_frame1[7]),
-        .I5(frame_cnt[7]),
+       (.I0(frame_cnt[6]),
+        .I1(last_frame1[6]),
+        .I2(frame_cnt[7]),
+        .I3(last_frame1[7]),
+        .I4(last_frame1[8]),
+        .I5(frame_cnt[8]),
         .O(last_frame0_carry_i_6_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
@@ -1020,10 +1104,10 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   LUT6 #(
     .INIT(64'h0000900990090000)) 
     last_frame0_carry_i_8
-       (.I0(frame_cnt[2]),
-        .I1(last_frame1[2]),
-        .I2(frame_cnt[1]),
-        .I3(last_frame1[1]),
+       (.I0(frame_cnt[1]),
+        .I1(last_frame1[1]),
+        .I2(frame_cnt[2]),
+        .I3(last_frame1[2]),
         .I4(frame_cnt_target[0]),
         .I5(frame_cnt[0]),
         .O(last_frame0_carry_i_8_n_0));
@@ -1051,6 +1135,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
         .D(last_frame_i_1_n_0),
         .Q(last_frame_reg_n_0),
         .R(cap_status_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \line_cnt[0]_i_1 
@@ -1267,7 +1352,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
     .INIT(4'h7)) 
     \line_cnt[31]_i_1 
        (.I0(running_reg_n_0),
-        .I1(m_axis_aresetn),
+        .I1(rstn_sync),
         .O(\line_cnt[31]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
@@ -1745,7 +1830,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
         .I1(cap_enable),
         .I2(last_frame_reg_n_0),
         .O(\m_axis_tdata[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \m_axis_tdata[31]_i_2 
@@ -2018,52 +2103,52 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     m_axis_tlast1_carry__0_i_2
-       (.I0(frame_cnt_target[27]),
-        .I1(frame_cnt[27]),
+       (.I0(frame_cnt_target[28]),
+        .I1(frame_cnt[28]),
         .I2(frame_cnt[29]),
         .I3(frame_cnt_target[29]),
-        .I4(frame_cnt[28]),
-        .I5(frame_cnt_target[28]),
+        .I4(frame_cnt[27]),
+        .I5(frame_cnt_target[27]),
         .O(m_axis_tlast1_carry__0_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     m_axis_tlast1_carry__0_i_3
-       (.I0(frame_cnt_target[25]),
-        .I1(frame_cnt[25]),
+       (.I0(frame_cnt_target[24]),
+        .I1(frame_cnt[24]),
         .I2(frame_cnt[26]),
         .I3(frame_cnt_target[26]),
-        .I4(frame_cnt[24]),
-        .I5(frame_cnt_target[24]),
+        .I4(frame_cnt[25]),
+        .I5(frame_cnt_target[25]),
         .O(m_axis_tlast1_carry__0_i_3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     m_axis_tlast1_carry_i_1
-       (.I0(frame_cnt_target[21]),
-        .I1(frame_cnt[21]),
+       (.I0(frame_cnt_target[22]),
+        .I1(frame_cnt[22]),
         .I2(frame_cnt[23]),
         .I3(frame_cnt_target[23]),
-        .I4(frame_cnt[22]),
-        .I5(frame_cnt_target[22]),
+        .I4(frame_cnt[21]),
+        .I5(frame_cnt_target[21]),
         .O(m_axis_tlast1_carry_i_1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     m_axis_tlast1_carry_i_2
-       (.I0(frame_cnt_target[18]),
-        .I1(frame_cnt[18]),
+       (.I0(frame_cnt_target[19]),
+        .I1(frame_cnt[19]),
         .I2(frame_cnt[20]),
         .I3(frame_cnt_target[20]),
-        .I4(frame_cnt[19]),
-        .I5(frame_cnt_target[19]),
+        .I4(frame_cnt[18]),
+        .I5(frame_cnt_target[18]),
         .O(m_axis_tlast1_carry_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     m_axis_tlast1_carry_i_3
-       (.I0(frame_cnt_target[15]),
-        .I1(frame_cnt[15]),
+       (.I0(frame_cnt_target[16]),
+        .I1(frame_cnt[16]),
         .I2(frame_cnt[17]),
         .I3(frame_cnt_target[17]),
-        .I4(frame_cnt[16]),
-        .I5(frame_cnt_target[16]),
+        .I4(frame_cnt[15]),
+        .I5(frame_cnt_target[15]),
         .O(m_axis_tlast1_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
@@ -2098,12 +2183,12 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     m_axis_tlast1_carry_i_7
-       (.I0(frame_cnt_target[3]),
-        .I1(frame_cnt[3]),
+       (.I0(frame_cnt_target[4]),
+        .I1(frame_cnt[4]),
         .I2(frame_cnt[5]),
         .I3(frame_cnt_target[5]),
-        .I4(frame_cnt[4]),
-        .I5(frame_cnt_target[4]),
+        .I4(frame_cnt[3]),
+        .I5(frame_cnt_target[3]),
         .O(m_axis_tlast1_carry_i_7_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
@@ -2115,41 +2200,34 @@ module zusys_capture_logic_test_0_0_capture_logic_test
         .I4(frame_cnt[1]),
         .I5(frame_cnt_target[1]),
         .O(m_axis_tlast1_carry_i_8_n_0));
-  LUT5 #(
-    .INIT(32'h0200FFFF)) 
+  LUT6 #(
+    .INIT(64'h20000000FFFFFFFF)) 
     m_axis_tlast_i_1
-       (.I0(m_axis_tlast1),
-        .I1(word_cnt_reg[0]),
-        .I2(m_axis_tlast_i_3_n_0),
-        .I3(m_axis_tlast_i_4_n_0),
-        .I4(running_reg_n_0),
-        .O(m_axis_tlast_i_1_n_0));
-  LUT5 #(
-    .INIT(32'h02000000)) 
-    m_axis_tlast_i_2
-       (.I0(m_axis_tlast1),
-        .I1(word_cnt_reg[0]),
-        .I2(m_axis_tlast_i_3_n_0),
-        .I3(m_axis_tlast_i_4_n_0),
-        .I4(running_reg_n_0),
-        .O(m_axis_tlast_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    m_axis_tlast_i_3
        (.I0(word_cnt_reg[1]),
-        .I1(word_cnt_reg[3]),
-        .I2(mux_data_valid_o),
-        .I3(word_cnt_reg[5]),
-        .O(m_axis_tlast_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h04)) 
-    m_axis_tlast_i_4
-       (.I0(word_cnt_reg[2]),
+        .I1(word_cnt_reg[0]),
+        .I2(m_axis_tlast1),
+        .I3(mux_data_valid_o),
+        .I4(m_axis_tlast_i_3_n_0),
+        .I5(running_reg_n_0),
+        .O(m_axis_tlast_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h2000000000000000)) 
+    m_axis_tlast_i_2
+       (.I0(word_cnt_reg[1]),
+        .I1(word_cnt_reg[0]),
+        .I2(m_axis_tlast1),
+        .I3(mux_data_valid_o),
+        .I4(m_axis_tlast_i_3_n_0),
+        .I5(running_reg_n_0),
+        .O(m_axis_tlast_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h0004)) 
+    m_axis_tlast_i_3
+       (.I0(gpio),
         .I1(word_cnt_reg[4]),
-        .I2(gpio),
-        .O(m_axis_tlast_i_4_n_0));
+        .I2(word_cnt_reg[3]),
+        .I3(word_cnt_reg[2]),
+        .O(m_axis_tlast_i_3_n_0));
   FDRE m_axis_tlast_reg
        (.C(clk_in),
         .CE(m_axis_tlast_i_1_n_0),
@@ -2161,10 +2239,10 @@ module zusys_capture_logic_test_0_0_capture_logic_test
     m_axis_tvalid_i_1
        (.I0(cap_status0),
         .I1(mux_data_valid_o),
-        .I2(cap_status),
+        .I2(cap_status_reg_0),
         .I3(running_reg_n_0),
         .I4(m_axis_tvalid),
-        .I5(m_axis_aresetn),
+        .I5(rstn_sync),
         .O(m_axis_tvalid_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
@@ -2179,18 +2257,267 @@ module zusys_capture_logic_test_0_0_capture_logic_test
         .D(m_axis_tvalid_i_1_n_0),
         .Q(m_axis_tvalid),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'h0080)) 
+    \missed_words[31]_i_1 
+       (.I0(cap_status_reg_0),
+        .I1(mux_data_valid_o),
+        .I2(running_reg_n_0),
+        .I3(m_axis_tready),
+        .O(\missed_words[31]_i_1_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \missed_words[7]_i_2 
+       (.I0(missed_words[0]),
+        .O(\missed_words[7]_i_2_n_0 ));
+  FDRE \missed_words_reg[0] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_15 ),
+        .Q(missed_words[0]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[10] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_13 ),
+        .Q(missed_words[10]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[11] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_12 ),
+        .Q(missed_words[11]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[12] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_11 ),
+        .Q(missed_words[12]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[13] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_10 ),
+        .Q(missed_words[13]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[14] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_9 ),
+        .Q(missed_words[14]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[15] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_8 ),
+        .Q(missed_words[15]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "16" *) 
+  CARRY8 \missed_words_reg[15]_i_1 
+       (.CI(\missed_words_reg[7]_i_1_n_0 ),
+        .CI_TOP(1'b0),
+        .CO({\missed_words_reg[15]_i_1_n_0 ,\missed_words_reg[15]_i_1_n_1 ,\missed_words_reg[15]_i_1_n_2 ,\missed_words_reg[15]_i_1_n_3 ,\missed_words_reg[15]_i_1_n_4 ,\missed_words_reg[15]_i_1_n_5 ,\missed_words_reg[15]_i_1_n_6 ,\missed_words_reg[15]_i_1_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O({\missed_words_reg[15]_i_1_n_8 ,\missed_words_reg[15]_i_1_n_9 ,\missed_words_reg[15]_i_1_n_10 ,\missed_words_reg[15]_i_1_n_11 ,\missed_words_reg[15]_i_1_n_12 ,\missed_words_reg[15]_i_1_n_13 ,\missed_words_reg[15]_i_1_n_14 ,\missed_words_reg[15]_i_1_n_15 }),
+        .S(missed_words[15:8]));
+  FDRE \missed_words_reg[16] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_15 ),
+        .Q(missed_words[16]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[17] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_14 ),
+        .Q(missed_words[17]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[18] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_13 ),
+        .Q(missed_words[18]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[19] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_12 ),
+        .Q(missed_words[19]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[1] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_14 ),
+        .Q(missed_words[1]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[20] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_11 ),
+        .Q(missed_words[20]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[21] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_10 ),
+        .Q(missed_words[21]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[22] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_9 ),
+        .Q(missed_words[22]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[23] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[23]_i_1_n_8 ),
+        .Q(missed_words[23]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "16" *) 
+  CARRY8 \missed_words_reg[23]_i_1 
+       (.CI(\missed_words_reg[15]_i_1_n_0 ),
+        .CI_TOP(1'b0),
+        .CO({\missed_words_reg[23]_i_1_n_0 ,\missed_words_reg[23]_i_1_n_1 ,\missed_words_reg[23]_i_1_n_2 ,\missed_words_reg[23]_i_1_n_3 ,\missed_words_reg[23]_i_1_n_4 ,\missed_words_reg[23]_i_1_n_5 ,\missed_words_reg[23]_i_1_n_6 ,\missed_words_reg[23]_i_1_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O({\missed_words_reg[23]_i_1_n_8 ,\missed_words_reg[23]_i_1_n_9 ,\missed_words_reg[23]_i_1_n_10 ,\missed_words_reg[23]_i_1_n_11 ,\missed_words_reg[23]_i_1_n_12 ,\missed_words_reg[23]_i_1_n_13 ,\missed_words_reg[23]_i_1_n_14 ,\missed_words_reg[23]_i_1_n_15 }),
+        .S(missed_words[23:16]));
+  FDRE \missed_words_reg[24] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_15 ),
+        .Q(missed_words[24]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[25] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_14 ),
+        .Q(missed_words[25]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[26] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_13 ),
+        .Q(missed_words[26]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[27] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_12 ),
+        .Q(missed_words[27]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[28] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_11 ),
+        .Q(missed_words[28]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[29] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_10 ),
+        .Q(missed_words[29]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[2] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_13 ),
+        .Q(missed_words[2]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[30] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_9 ),
+        .Q(missed_words[30]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[31] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[31]_i_2_n_8 ),
+        .Q(missed_words[31]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "16" *) 
+  CARRY8 \missed_words_reg[31]_i_2 
+       (.CI(\missed_words_reg[23]_i_1_n_0 ),
+        .CI_TOP(1'b0),
+        .CO({\NLW_missed_words_reg[31]_i_2_CO_UNCONNECTED [7],\missed_words_reg[31]_i_2_n_1 ,\missed_words_reg[31]_i_2_n_2 ,\missed_words_reg[31]_i_2_n_3 ,\missed_words_reg[31]_i_2_n_4 ,\missed_words_reg[31]_i_2_n_5 ,\missed_words_reg[31]_i_2_n_6 ,\missed_words_reg[31]_i_2_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .O({\missed_words_reg[31]_i_2_n_8 ,\missed_words_reg[31]_i_2_n_9 ,\missed_words_reg[31]_i_2_n_10 ,\missed_words_reg[31]_i_2_n_11 ,\missed_words_reg[31]_i_2_n_12 ,\missed_words_reg[31]_i_2_n_13 ,\missed_words_reg[31]_i_2_n_14 ,\missed_words_reg[31]_i_2_n_15 }),
+        .S(missed_words[31:24]));
+  FDRE \missed_words_reg[3] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_12 ),
+        .Q(missed_words[3]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[4] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_11 ),
+        .Q(missed_words[4]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[5] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_10 ),
+        .Q(missed_words[5]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[6] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_9 ),
+        .Q(missed_words[6]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[7] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[7]_i_1_n_8 ),
+        .Q(missed_words[7]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "16" *) 
+  CARRY8 \missed_words_reg[7]_i_1 
+       (.CI(1'b0),
+        .CI_TOP(1'b0),
+        .CO({\missed_words_reg[7]_i_1_n_0 ,\missed_words_reg[7]_i_1_n_1 ,\missed_words_reg[7]_i_1_n_2 ,\missed_words_reg[7]_i_1_n_3 ,\missed_words_reg[7]_i_1_n_4 ,\missed_words_reg[7]_i_1_n_5 ,\missed_words_reg[7]_i_1_n_6 ,\missed_words_reg[7]_i_1_n_7 }),
+        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1}),
+        .O({\missed_words_reg[7]_i_1_n_8 ,\missed_words_reg[7]_i_1_n_9 ,\missed_words_reg[7]_i_1_n_10 ,\missed_words_reg[7]_i_1_n_11 ,\missed_words_reg[7]_i_1_n_12 ,\missed_words_reg[7]_i_1_n_13 ,\missed_words_reg[7]_i_1_n_14 ,\missed_words_reg[7]_i_1_n_15 }),
+        .S({missed_words[7:1],\missed_words[7]_i_2_n_0 }));
+  FDRE \missed_words_reg[8] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_15 ),
+        .Q(missed_words[8]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  FDRE \missed_words_reg[9] 
+       (.C(clk_in),
+        .CE(\missed_words[31]_i_1_n_0 ),
+        .D(\missed_words_reg[15]_i_1_n_14 ),
+        .Q(missed_words[9]),
+        .R(\frame_cnt[31]_i_1_n_0 ));
+  (* DEF_VAL = "1'b1" *) 
+  (* DEST_SYNC_FF = "4" *) 
+  (* INIT_SYNC_FF = "0" *) 
+  (* INV_DEF_VAL = "1'b0" *) 
+  (* RST_ACTIVE_HIGH = "0" *) 
+  (* VERSION = "0" *) 
+  (* XPM_CDC = "ASYNC_RST" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  zusys_capture_logic_test_0_0_xpm_cdc_async_rst rstn_sync_inst
+       (.dest_arst(rstn_sync),
+        .dest_clk(clk_in),
+        .src_arst(m_axis_aresetn));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h04)) 
     running_i_1
        (.I0(last_frame_reg_n_0),
         .I1(cap_enable),
         .I2(running_reg_n_0),
-        .O(running4_out));
+        .O(running5_out));
   FDRE running_reg
        (.C(clk_in),
         .CE(m_axis_tlast_i_1_n_0),
-        .D(running4_out),
+        .D(running5_out),
         .Q(running_reg_n_0),
         .R(cap_status_i_1_n_0));
   LUT1 #(
@@ -2198,21 +2525,21 @@ module zusys_capture_logic_test_0_0_capture_logic_test
     \word_cnt[0]_i_1 
        (.I0(word_cnt_reg[0]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \word_cnt[1]_i_1 
        (.I0(word_cnt_reg[0]),
         .I1(word_cnt_reg[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \word_cnt[2]_i_1 
        (.I0(word_cnt_reg[2]),
         .I1(word_cnt_reg[1]),
         .I2(word_cnt_reg[0]),
-        .O(\word_cnt[2]_i_1_n_0 ));
+        .O(p_0_in[2]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
@@ -2222,70 +2549,123 @@ module zusys_capture_logic_test_0_0_capture_logic_test
         .I2(word_cnt_reg[1]),
         .I3(word_cnt_reg[2]),
         .O(p_0_in[3]));
+  LUT4 #(
+    .INIT(16'h8FFF)) 
+    \word_cnt[4]_i_1 
+       (.I0(mux_data_valid_o),
+        .I1(gpio),
+        .I2(rstn_sync),
+        .I3(running_reg_n_0),
+        .O(\word_cnt[4]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
-    \word_cnt[4]_i_1 
+    \word_cnt[4]_i_2 
        (.I0(word_cnt_reg[4]),
         .I1(word_cnt_reg[2]),
         .I2(word_cnt_reg[1]),
         .I3(word_cnt_reg[0]),
         .I4(word_cnt_reg[3]),
         .O(p_0_in[4]));
-  LUT4 #(
-    .INIT(16'h8FFF)) 
-    \word_cnt[5]_i_1 
-       (.I0(mux_data_valid_o),
-        .I1(gpio),
-        .I2(m_axis_aresetn),
-        .I3(running_reg_n_0),
-        .O(\word_cnt[5]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h6AAAAAAAAAAAAAAA)) 
-    \word_cnt[5]_i_2 
-       (.I0(word_cnt_reg[5]),
-        .I1(word_cnt_reg[3]),
-        .I2(word_cnt_reg[0]),
-        .I3(word_cnt_reg[1]),
-        .I4(word_cnt_reg[2]),
-        .I5(word_cnt_reg[4]),
-        .O(p_0_in[5]));
   FDRE \word_cnt_reg[0] 
        (.C(clk_in),
         .CE(mux_data_valid_o),
         .D(p_0_in[0]),
         .Q(word_cnt_reg[0]),
-        .R(\word_cnt[5]_i_1_n_0 ));
+        .R(\word_cnt[4]_i_1_n_0 ));
   FDRE \word_cnt_reg[1] 
        (.C(clk_in),
         .CE(mux_data_valid_o),
         .D(p_0_in[1]),
         .Q(word_cnt_reg[1]),
-        .R(\word_cnt[5]_i_1_n_0 ));
+        .R(\word_cnt[4]_i_1_n_0 ));
   FDRE \word_cnt_reg[2] 
        (.C(clk_in),
         .CE(mux_data_valid_o),
-        .D(\word_cnt[2]_i_1_n_0 ),
+        .D(p_0_in[2]),
         .Q(word_cnt_reg[2]),
-        .R(\word_cnt[5]_i_1_n_0 ));
+        .R(\word_cnt[4]_i_1_n_0 ));
   FDRE \word_cnt_reg[3] 
        (.C(clk_in),
         .CE(mux_data_valid_o),
         .D(p_0_in[3]),
         .Q(word_cnt_reg[3]),
-        .R(\word_cnt[5]_i_1_n_0 ));
+        .R(\word_cnt[4]_i_1_n_0 ));
   FDRE \word_cnt_reg[4] 
        (.C(clk_in),
         .CE(mux_data_valid_o),
         .D(p_0_in[4]),
         .Q(word_cnt_reg[4]),
-        .R(\word_cnt[5]_i_1_n_0 ));
-  FDRE \word_cnt_reg[5] 
-       (.C(clk_in),
-        .CE(mux_data_valid_o),
-        .D(p_0_in[5]),
-        .Q(word_cnt_reg[5]),
-        .R(\word_cnt[5]_i_1_n_0 ));
+        .R(\word_cnt[4]_i_1_n_0 ));
+endmodule
+
+(* DEF_VAL = "1'b1" *) (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) 
+(* INV_DEF_VAL = "1'b0" *) (* ORIG_REF_NAME = "xpm_cdc_async_rst" *) (* RST_ACTIVE_HIGH = "0" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) 
+(* xpm_cdc = "ASYNC_RST" *) 
+module zusys_capture_logic_test_0_0_xpm_cdc_async_rst
+   (src_arst,
+    dest_clk,
+    dest_arst);
+  input src_arst;
+  input dest_clk;
+  output dest_arst;
+
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) (* xpm_cdc = "ASYNC_RST" *) wire [3:0]arststages_ff;
+  wire dest_clk;
+  wire reset_pol;
+  wire src_arst;
+
+  assign dest_arst = arststages_ff[3];
+  LUT1 #(
+    .INIT(2'h1)) 
+    \arststages_ff[3]_i_1 
+       (.I0(src_arst),
+        .O(reset_pol));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "ASYNC_RST" *) 
+  FDCE #(
+    .INIT(1'b1)) 
+    \arststages_ff_reg[0] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .CLR(reset_pol),
+        .D(1'b1),
+        .Q(arststages_ff[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "ASYNC_RST" *) 
+  FDCE #(
+    .INIT(1'b1)) 
+    \arststages_ff_reg[1] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .CLR(reset_pol),
+        .D(arststages_ff[0]),
+        .Q(arststages_ff[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "ASYNC_RST" *) 
+  FDCE #(
+    .INIT(1'b1)) 
+    \arststages_ff_reg[2] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .CLR(reset_pol),
+        .D(arststages_ff[1]),
+        .Q(arststages_ff[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "ASYNC_RST" *) 
+  FDCE #(
+    .INIT(1'b1)) 
+    \arststages_ff_reg[3] 
+       (.C(dest_clk),
+        .CE(1'b1),
+        .CLR(reset_pol),
+        .D(arststages_ff[2]),
+        .Q(arststages_ff[3]));
 endmodule
 `ifndef GLBL
 `define GLBL
