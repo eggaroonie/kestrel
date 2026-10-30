@@ -1,12 +1,13 @@
-/****************************************************************************
+/******************************************************************************
  * main.c 
  *
  * Jackson Newman
  * 10/4/26
  *
  * Testing DDR
- ****************************************************************************/
+ ******************************************************************************/
 
+ /***************************** Include Files *********************************/
 #include "xparameters.h"    // base addresses from hardware
 #include "xil_io.h"         // Xil_In32 / Xil_Out32
 #include "xil_printf.h"     // xil_printf over UART
@@ -19,10 +20,16 @@
 #include <string.h>         // strcmp, strtok
 #include <ctype.h>          // tolower, isprint
 #include "control.h"
+
+/******************** Constant Definitions **********************************/
 #define AXI4LITE_CAPTURELOGIC_BASE  XPAR_AXI4LITE_CAPTURELOGIC_0_BASEADDR
 #define UART_BASE                   STDIN_BASEADDRESS
 #define AXIDMA_BASE_LOW             XPAR_AXI_DMA_0_BASEADDR
 #define AXIDMA_BASE_HIGH            XPAR_AXI_DMA_0_HIGHADDR
+/**************************** Type Definitions *******************************/
+
+
+/***************** Macros (Inline Functions) Definitions *********************/
 
 
 /* Registers are 32 bits wide, so offsets step by 4 (ADDR_LSB = 2 in the IP) */
@@ -34,7 +41,7 @@
 /* Write offsets */
 #define REG_FRAME_CNT_TARGET    0x4u
 #define REG_DUMMY_DATA          0x8u
-
+#define  q S2MM_DMACR
 /* Poll cap_status until it equals want; returns false if timeout_us passes first */
 static bool wait_cap_status(uint32_t want, uint32_t timeout_us) {
     for (uint32_t t = 0; t < timeout_us; t += 10) {

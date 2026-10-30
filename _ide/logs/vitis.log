@@ -1,0 +1,12 @@
+15:00:29 INFO  : updated workspace path: 
+15:00:29 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+15:00:30 INFO  : Successfully created repository data at /tmp/rigel_lopper_jackson9437161291305504317
+15:00:30 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_jackson2418911384143585043 -r /tmp/rigel_lopper_jackson9437161291305504317/.repo.yaml && deactivate
+15:00:31 INFO  : Embedded Template List generated successfully
+15:01:32 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+15:01:32 INFO  : created .gitignore file for the project /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1_WS_DDRTEST
+15:01:32 INFO  : Marking the target connection as default Local
+15:01:32 INFO  : Marking the target connection as default Linux Agent
+15:01:32 INFO  : Marking the target connection as default XRTServer
+15:01:32 INFO  : Marking the target connection as default LinuxEmulation
+15:01:32 INFO  : Marking the target connection as default QEMU
