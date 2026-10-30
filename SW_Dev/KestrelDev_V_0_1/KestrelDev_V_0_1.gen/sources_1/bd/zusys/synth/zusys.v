@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Wed Oct 28 14:51:29 2026
+//Date        : Thu Oct 29 18:29:40 2026
 //Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
 //Command     : generate_target zusys.bd
 //Design      : zusys
@@ -195,7 +195,7 @@ endmodule
 
 /* Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!!
 Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!! */
-(* CORE_GENERATION_INFO = "zusys,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zusys,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=39,numNonXlnxBlks=4,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"da_zynq_ultra_ps_e_cnt\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"=5,\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"=1,\"\"da_axi4_cnt\"\"=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "zusys.hwdef" *) 
+(* CORE_GENERATION_INFO = "zusys,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=zusys,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=39,numNonXlnxBlks=4,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"da_zynq_ultra_ps_e_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"=5,\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"=1,\"\"\"da_axi4_cnt\"\"\"=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "zusys.hwdef" *) 
 module zusys
    (BASE_sc0,
     BASE_sc10_i,

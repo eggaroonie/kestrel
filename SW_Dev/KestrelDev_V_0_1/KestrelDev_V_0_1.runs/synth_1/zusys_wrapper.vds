@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Wed Oct 28 14:52:10 2026
-# Process ID         : 123864
+# Start of session at: Thu Oct 29 18:30:37 2026
+# Process ID         : 519878
 # Current directory  : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1
 # Command line       : vivado -log zusys_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zusys_wrapper.tcl
 # Log file           : /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/zusys_wrapper.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04.1 LTS
 # Processor Detail   : Intel(R) Core(TM) Ultra 9 386H
-# CPU Frequency      : 787.190 MHz
+# CPU Frequency      : 1054.748 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 16
 # Host memory        : 32688 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 41278 MB
-# Available Virtual  : 21775 MB
+# Available Virtual  : 21032 MB
 #-----------------------------------------------------------
 source zusys_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -49,9 +49,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 123976
+INFO: [Synth 8-7075] Helper process launched with PID 520138
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2453.008 ; gain = 124.688 ; free physical = 3360 ; free virtual = 18951
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2452.570 ; gain = 124.688 ; free physical = 2332 ; free virtual = 18646
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'zusys_wrapper' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:38]
 INFO: [Synth 8-3491] module 'IOBUF' declared at '/tools/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391' bound to instance 'BASE_sc10_iobuf' of component 'IOBUF' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:75]
@@ -59,15 +59,15 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/tools/Xilinx/Vivado/2024.2/sc
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/tools/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391]
 INFO: [Synth 8-3491] module 'zusys' declared at '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:198' bound to instance 'zusys_i' of component 'zusys' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/hdl/zusys_wrapper.vhd:82]
 INFO: [Synth 8-6157] synthesizing module 'zusys' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:198]
-INFO: [Synth 8-6157] synthesizing module 'zusys_AXI4Lite_CaptureLogic_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_AXI4Lite_CaptureLogic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_AXI4Lite_CaptureLogic_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_AXI4Lite_CaptureLogic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_AXI4Lite_CaptureLogic_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_AXI4Lite_CaptureLogic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_AXI4Lite_CaptureLogic_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_AXI4Lite_CaptureLogic_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'RGPIO_imp_139ZQEB' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:13]
-INFO: [Synth 8-6157] synthesizing module 'zusys_RGPIO_Master_CPLD_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_RGPIO_Master_CPLD_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_RGPIO_Master_CPLD_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_RGPIO_Master_CPLD_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zusys_RGPIO_Slave_CPLD_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_RGPIO_Slave_CPLD_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_RGPIO_Slave_CPLD_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_RGPIO_Slave_CPLD_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zusys_vio_rgpio_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_vio_rgpio_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_vio_rgpio_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_vio_rgpio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_RGPIO_Master_CPLD_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_RGPIO_Master_CPLD_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_RGPIO_Master_CPLD_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_RGPIO_Master_CPLD_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_RGPIO_Slave_CPLD_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_RGPIO_Slave_CPLD_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_RGPIO_Slave_CPLD_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_RGPIO_Slave_CPLD_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_vio_rgpio_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_vio_rgpio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_vio_rgpio_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_vio_rgpio_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'zusys_xlconcat_2_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_2_0/synth/zusys_xlconcat_2_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
@@ -155,59 +155,59 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized1
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized17' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'zusys_xlslice_9_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlslice_9_0/synth/zusys_xlslice_9_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'RGPIO_imp_139ZQEB' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:13]
-INFO: [Synth 8-6157] synthesizing module 'zusys_SC0808BF_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_SC0808BF_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_SC0808BF_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_SC0808BF_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zusys_axi_dma_0_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axi_dma_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_dma_0_1' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axi_dma_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_SC0808BF_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_SC0808BF_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_SC0808BF_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_SC0808BF_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axi_dma_0_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axi_dma_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_dma_0_1' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axi_dma_0_1_stub.v:6]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'zusys_axi_dma_0_1' is unconnected for instance 'axi_dma_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:540]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'zusys_axi_dma_0_1' is unconnected for instance 'axi_dma_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:540]
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'zusys_axi_dma_0_1' has 73 connections declared, but only 71 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:540]
-INFO: [Synth 8-6157] synthesizing module 'zusys_axi_smc_4' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axi_smc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_smc_4' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axi_smc_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axi_smc_4' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axi_smc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_smc_4' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axi_smc_4_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'zusys_axi_smc_4' is unconnected for instance 'axi_smc' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:612]
 WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'zusys_axi_smc_4' is unconnected for instance 'axi_smc' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:612]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'zusys_axi_smc_4' is unconnected for instance 'axi_smc' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:612]
 WARNING: [Synth 8-7023] instance 'axi_smc' of module 'zusys_axi_smc_4' has 79 connections declared, but only 76 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:612]
-INFO: [Synth 8-6157] synthesizing module 'zusys_axi_smc_1_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axi_smc_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_smc_1_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axi_smc_1_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axi_smc_1_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axi_smc_1_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'S00_AXI_arready' of module 'zusys_axi_smc_1_0' is unconnected for instance 'axi_smc_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:689]
 WARNING: [Synth 8-7071] port 'S00_AXI_rdata' of module 'zusys_axi_smc_1_0' is unconnected for instance 'axi_smc_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:689]
 WARNING: [Synth 8-7071] port 'S00_AXI_rresp' of module 'zusys_axi_smc_1_0' is unconnected for instance 'axi_smc_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:689]
 WARNING: [Synth 8-7071] port 'S00_AXI_rlast' of module 'zusys_axi_smc_1_0' is unconnected for instance 'axi_smc_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:689]
 WARNING: [Synth 8-7071] port 'S00_AXI_rvalid' of module 'zusys_axi_smc_1_0' is unconnected for instance 'axi_smc_1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:689]
 WARNING: [Synth 8-7023] instance 'axi_smc_1' of module 'zusys_axi_smc_1_0' has 101 connections declared, but only 96 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:689]
-INFO: [Synth 8-6157] synthesizing module 'zusys_axis_data_fifo_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_axis_data_fifo_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zusys_axis_live_audio_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axis_live_audio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_axis_live_audio_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_axis_live_audio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zusys_capture_logic_test_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_capture_logic_test_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_capture_logic_test_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_capture_logic_test_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axis_data_fifo_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axis_data_fifo_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_axis_live_audio_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axis_live_audio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_axis_live_audio_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_axis_live_audio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_capture_logic_test_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_capture_logic_test_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_capture_logic_test_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_capture_logic_test_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'zusys_capture_logic_test_0_0' is unconnected for instance 'capture_logic_test_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:812]
 WARNING: [Synth 8-7023] instance 'capture_logic_test_0' of module 'zusys_capture_logic_test_0_0' has 21 connections declared, but only 20 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:812]
-INFO: [Synth 8-6157] synthesizing module 'zusys_dummy_AISC110C_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_dummy_AISC110C_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_dummy_AISC110C_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_dummy_AISC110C_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'zusys_proc_sys_reset_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_proc_sys_reset_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_dummy_AISC110C_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_dummy_AISC110C_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_dummy_AISC110C_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_dummy_AISC110C_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_proc_sys_reset_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_proc_sys_reset_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_proc_sys_reset_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:845]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:845]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:845]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'zusys_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:845]
 WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'zusys_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:845]
-INFO: [Synth 8-6157] synthesizing module 'zusys_rst_ps8_0_100M_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_rst_ps8_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_rst_ps8_0_100M_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_rst_ps8_0_100M_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_rst_ps8_0_100M_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_rst_ps8_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:852]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:852]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:852]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'zusys_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:852]
 WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'zusys_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:852]
-INFO: [Synth 8-6157] synthesizing module 'zusys_vio_general_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_vio_general_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_vio_general_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_vio_general_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_vio_general_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_vio_general_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_vio_general_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_vio_general_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'zusys_xlconcat_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_0_0/synth/zusys_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized1' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat__parameterized1' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'zusys_xlconcat_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_xlconcat_0_0/synth/zusys_xlconcat_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'zusys_zynq_ultra_ps_e_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'zusys_zynq_ultra_ps_e_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-123864-JLaptop/realtime/zusys_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zusys_zynq_ultra_ps_e_0_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zusys_zynq_ultra_ps_e_0_0' (0#1) [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/.Xil/Vivado-519878-JLaptop/realtime/zusys_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'saxigp0_bid' of module 'zusys_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:868]
 WARNING: [Synth 8-7071] port 'saxigp0_rid' of module 'zusys_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:868]
 WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'zusys_zynq_ultra_ps_e_0_0' has 101 connections declared, but only 99 given [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/synth/zusys.v:868]
@@ -342,18 +342,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_6_xlconcat__parame
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_6_xlconcat__parameterized1 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2535.945 ; gain = 207.625 ; free physical = 3250 ; free virtual = 18842
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2536.508 ; gain = 208.625 ; free physical = 2183 ; free virtual = 18488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2535.945 ; gain = 207.625 ; free physical = 3250 ; free virtual = 18842
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2536.508 ; gain = 208.625 ; free physical = 2214 ; free virtual = 18519
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2535.945 ; gain = 207.625 ; free physical = 3250 ; free virtual = 18842
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2536.508 ; gain = 208.625 ; free physical = 2214 ; free virtual = 18519
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.914 ; gain = 0.000 ; free physical = 3249 ; free virtual = 18842
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2547.477 ; gain = 0.000 ; free physical = 2266 ; free virtual = 18570
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -398,16 +398,16 @@ Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/Kestrel
 Finished Parsing XDC File [/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2586.934 ; gain = 0.000 ; free physical = 3358 ; free virtual = 18950
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2590.527 ; gain = 0.000 ; free physical = 2335 ; free virtual = 18512
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2586.934 ; gain = 0.000 ; free physical = 3354 ; free virtual = 18946
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2590.527 ; gain = 0.000 ; free physical = 2335 ; free virtual = 18512
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2586.934 ; gain = 258.613 ; free physical = 3259 ; free virtual = 18851
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2590.527 ; gain = 262.645 ; free physical = 2344 ; free virtual = 18509
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -415,7 +415,7 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sfvc784-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2594.938 ; gain = 266.617 ; free physical = 3259 ; free virtual = 18851
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2598.531 ; gain = 270.648 ; free physical = 2346 ; free virtual = 18505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -461,10 +461,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/capture_logic_test_0. (co
 Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/AXI4Lite_CaptureLogic_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for zusys_i/dummy_AISC110C_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2594.938 ; gain = 266.617 ; free physical = 3255 ; free virtual = 18847
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2598.531 ; gain = 270.648 ; free physical = 2338 ; free virtual = 18497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2594.938 ; gain = 266.617 ; free physical = 3234 ; free virtual = 18827
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2598.531 ; gain = 270.648 ; free physical = 2334 ; free virtual = 18493
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -487,25 +487,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2594.938 ; gain = 266.617 ; free physical = 3239 ; free virtual = 18837
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2598.531 ; gain = 270.648 ; free physical = 2347 ; free virtual = 18512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3216.785 ; gain = 888.465 ; free physical = 3025 ; free virtual = 18624
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3217.379 ; gain = 889.496 ; free physical = 1891 ; free virtual = 18032
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3216.785 ; gain = 888.465 ; free physical = 3025 ; free virtual = 18624
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3217.379 ; gain = 889.496 ; free physical = 1891 ; free virtual = 18031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3228.801 ; gain = 900.480 ; free physical = 3009 ; free virtual = 18607
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3228.395 ; gain = 900.512 ; free physical = 1874 ; free virtual = 18015
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -523,37 +523,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2806 ; free virtual = 18405
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1575 ; free virtual = 17716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2806 ; free virtual = 18405
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1575 ; free virtual = 17716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2806 ; free virtual = 18405
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1575 ; free virtual = 17716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2806 ; free virtual = 18405
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1575 ; free virtual = 17716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2806 ; free virtual = 18405
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1575 ; free virtual = 17716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2806 ; free virtual = 18405
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1575 ; free virtual = 17716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -606,18 +606,18 @@ Report Cell Usage:
 |19    |OBUF                          |    10|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2806 ; free virtual = 18405
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1575 ; free virtual = 17716
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 433 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3389.613 ; gain = 1010.305 ; free physical = 2808 ; free virtual = 18407
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3389.613 ; gain = 1061.293 ; free physical = 2808 ; free virtual = 18407
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3390.207 ; gain = 1008.305 ; free physical = 1531 ; free virtual = 17672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3390.207 ; gain = 1062.324 ; free physical = 1531 ; free virtual = 17672
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3389.613 ; gain = 0.000 ; free physical = 2968 ; free virtual = 18567
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3390.207 ; gain = 0.000 ; free physical = 1620 ; free virtual = 17761
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3389.613 ; gain = 0.000 ; free physical = 2953 ; free virtual = 18552
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3390.207 ; gain = 0.000 ; free physical = 1628 ; free virtual = 17769
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 7 instances
@@ -627,10 +627,10 @@ Synth Design complete | Checksum: b6d404c5
 INFO: [Common 17-83] Releasing license: Synthesis
 188 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 3389.613 ; gain = 1914.293 ; free physical = 2953 ; free virtual = 18551
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2459.811; main = 2459.811; forked = 247.704
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3691.113; main = 3315.785; forked = 917.746
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3389.613 ; gain = 0.000 ; free physical = 2953 ; free virtual = 18551
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 3390.207 ; gain = 1978.340 ; free physical = 1628 ; free virtual = 17769
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2518.392; main = 2518.392; forked = 265.269
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3667.738; main = 3316.379; forked = 917.746
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3390.207 ; gain = 0.000 ; free physical = 1624 ; free virtual = 17768
 INFO: [Common 17-1381] The checkpoint '/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.runs/synth_1/zusys_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file zusys_wrapper_utilization_synth.rpt -pb zusys_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 14:52:35 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 18:31:03 2026...

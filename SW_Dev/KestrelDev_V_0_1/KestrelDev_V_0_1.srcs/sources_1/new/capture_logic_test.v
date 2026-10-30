@@ -66,7 +66,7 @@ module capture_logic_test(
     reg         running;
     reg         last_frame;
     wire rstn_sync;
-    assign fifo_arestn = rstn_sync;
+    assign fifo_aresetn = rstn_sync;
     xpm_cdc_async_rst #(
        .DEST_SYNC_FF(4),    // DECIMAL; range: 2-10
        .INIT_SYNC_FF(0),    // DECIMAL; 0=disable simulation init values, 1=enable simulation init values

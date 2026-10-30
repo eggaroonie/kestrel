@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Wed Oct 28 14:54:20 2026
+| Date             : Thu Oct 29 18:32:52 2026
 | Host             : JLaptop running 64-bit Ubuntu 26.04.1 LTS
 | Command          : report_power -file zusys_wrapper_power_routed.rpt -pb zusys_wrapper_power_summary_routed.pb -rpx zusys_wrapper_power_routed.rpx
 | Design           : zusys_wrapper
@@ -55,14 +55,14 @@ Table of Contents
 | Clocks                   |     0.024 |        5 |       --- |             --- |
 | CLB Logic                |     0.028 |    21340 |       --- |             --- |
 |   LUT as Distributed RAM |     0.018 |      578 |     28800 |            2.01 |
-|   LUT as Logic           |     0.008 |     5785 |     70560 |            8.20 |
+|   LUT as Logic           |     0.009 |     5781 |     70560 |            8.19 |
 |   Register               |     0.001 |    11491 |    141120 |            8.14 |
 |   LUT as Shift Register  |    <0.001 |      126 |     28800 |            0.44 |
 |   CARRY8                 |    <0.001 |       44 |      8820 |            0.50 |
 |   BUFG                   |    <0.001 |        1 |        24 |            4.17 |
-|   Others                 |     0.000 |      805 |       --- |             --- |
+|   Others                 |     0.000 |      804 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      385 |     70560 |            0.55 |
-| Signals                  |     0.012 |    15068 |       --- |             --- |
+| Signals                  |     0.012 |    15073 |       --- |             --- |
 | Block RAM                |    <0.001 |        2 |       216 |            0.93 |
 | I/O                      |     0.002 |       18 |       252 |            7.14 |
 | PS8                      |     2.904 |        1 |       --- |             --- |
@@ -174,14 +174,16 @@ Table of Contents
 |       inst                  |     0.004 |
 |     RGPIO                   |     0.002 |
 |       vio_rgpio             |     0.002 |
-|     axi_dma_0               |     0.006 |
-|       U0                    |     0.006 |
+|     axi_dma_0               |     0.007 |
+|       U0                    |     0.007 |
 |     axi_smc                 |     0.005 |
 |       inst                  |     0.005 |
 |     axi_smc_1               |     0.041 |
 |       inst                  |     0.041 |
-|     zynq_ultra_ps_e_0       |     2.905 |
-|       inst                  |     2.905 |
+|     axis_data_fifo_0        |     0.001 |
+|       inst                  |     0.001 |
+|     zynq_ultra_ps_e_0       |     2.904 |
+|       inst                  |     2.904 |
 +-----------------------------+-----------+
 
 

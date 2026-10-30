@@ -1,0 +1,117 @@
+Time resolution is 1 ps
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. capture_logic_test_sim.fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /capture_logic_test_sim/fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial302_37  Scope: capture_logic_test_sim.fifo.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 514
+1100 ns  frame_cnt = 0
+1460 ns  sensor started
+25680 ns  frame_cnt = 1
+50640 ns  frame_cnt = 2
+75600 ns  frame_cnt = 3
+100560 ns  frame_cnt = 4
+125520 ns  frame_cnt = 5
+150480 ns  frame_cnt = 6
+175440 ns  frame_cnt = 7
+200400 ns  frame_cnt = 8
+225360 ns  frame_cnt = 9
+250320 ns  frame_cnt = 10
+275280 ns  frame_cnt = 11
+300240 ns  frame_cnt = 12
+325200 ns  frame_cnt = 13
+350160 ns  frame_cnt = 14
+375120 ns  frame_cnt = 15
+400080 ns  frame_cnt = 16
+425040 ns  frame_cnt = 17
+450000 ns  frame_cnt = 18
+474960 ns  frame_cnt = 19
+499920 ns  frame_cnt = 20
+524880 ns  frame_cnt = 21
+549840 ns  frame_cnt = 22
+574800 ns  frame_cnt = 23
+599760 ns  frame_cnt = 24
+624720 ns  frame_cnt = 25
+649680 ns  frame_cnt = 26
+674640 ns  frame_cnt = 27
+699600 ns  frame_cnt = 28
+724560 ns  frame_cnt = 29
+749520 ns  frame_cnt = 30
+774480 ns  frame_cnt = 31
+799440 ns  frame_cnt = 32
+824400 ns  frame_cnt = 33
+849360 ns  frame_cnt = 34
+874320 ns  frame_cnt = 35
+899280 ns  frame_cnt = 36
+924240 ns  frame_cnt = 37
+949200 ns  frame_cnt = 38
+974160 ns  frame_cnt = 39
+999120 ns  frame_cnt = 40
+1024080 ns  frame_cnt = 41
+1049040 ns  frame_cnt = 42
+1074000 ns  frame_cnt = 43
+1098960 ns  frame_cnt = 44
+1123920 ns  frame_cnt = 45
+1148880 ns  frame_cnt = 46
+1173840 ns  frame_cnt = 47
+1198800 ns  frame_cnt = 48
+1223760 ns  frame_cnt = 49
+1248720 ns  frame_cnt = 50
+1273680 ns  frame_cnt = 51
+1298640 ns  frame_cnt = 52
+1323600 ns  frame_cnt = 53
+1348560 ns  frame_cnt = 54
+1373520 ns  frame_cnt = 55
+1398480 ns  frame_cnt = 56
+1423440 ns  frame_cnt = 57
+1448400 ns  frame_cnt = 58
+1473360 ns  frame_cnt = 59
+1498320 ns  frame_cnt = 60
+1523280 ns  frame_cnt = 61
+1548240 ns  frame_cnt = 62
+1573200 ns  frame_cnt = 63
+1598160 ns  frame_cnt = 64
+1623120 ns  frame_cnt = 65
+1648080 ns  frame_cnt = 66
+1673040 ns  frame_cnt = 67
+1698000 ns  frame_cnt = 68
+1722960 ns  frame_cnt = 69
+1747920 ns  frame_cnt = 70
+1772880 ns  frame_cnt = 71
+1797840 ns  frame_cnt = 72
+1822800 ns  frame_cnt = 73
+1847760 ns  frame_cnt = 74
+1872720 ns  frame_cnt = 75
+1897680 ns  frame_cnt = 76
+1922640 ns  frame_cnt = 77
+1947600 ns  frame_cnt = 78
+1972560 ns  frame_cnt = 79
+1997520 ns  frame_cnt = 80
+2022480 ns  frame_cnt = 81
+2047440 ns  frame_cnt = 82
+2072400 ns  frame_cnt = 83
+2097360 ns  frame_cnt = 84
+2122320 ns  frame_cnt = 85
+2147280 ns  frame_cnt = 86
+2172240 ns  frame_cnt = 87
+2197200 ns  frame_cnt = 88
+2222160 ns  frame_cnt = 89
+2247120 ns  frame_cnt = 90
+2272080 ns  frame_cnt = 91
+2297040 ns  frame_cnt = 92
+2322000 ns  frame_cnt = 93
+2346960 ns  frame_cnt = 94
+2371920 ns  frame_cnt = 95
+2396880 ns  frame_cnt = 96
+2421840 ns  frame_cnt = 97
+2446800 ns  frame_cnt = 98
+2471760 ns  frame_cnt = 99
+2496720 ns  frame_cnt = 100
+--------------------------------------------------
+frames sent by sensor : 102
+frame_cnt at end      : 100 (target 100)
+words into FIFO       : 240000 (expected 240000)
+words lost, FIFO full : 0
+words out of FIFO     : 240000 (expected 240000)
+data mismatches       : 0
+tlast pulses          : 1 (expected 1)
+first tlast on word   : 240000 (expected 240000)
+RESULT: PASS
+--------------------------------------------------
+$finish called at time : 2572100 ns : File "/home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" Line 299

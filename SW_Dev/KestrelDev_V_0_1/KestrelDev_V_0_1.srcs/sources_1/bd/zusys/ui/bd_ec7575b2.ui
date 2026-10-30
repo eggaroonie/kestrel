@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"4.66516",
-   "Default View_TopLeft":"704,204",
+   "Default View_ScaleFactor":"1.64938",
+   "Default View_TopLeft":"289,-199",
    "ExpandedHierarchyInLayout":"",
    "comment_0":"Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!!",
    "comment_1":"Important TEBF0808 CPLD Update to REV07 is needed to use this RGPIO definition!!!",
@@ -28,6 +28,7 @@ preplace inst capture_logic_test_0 -pg 1 -lvl 2 -x 630 -y 290 -defaultsOSRD
 preplace inst AXI4Lite_CaptureLogic_0 -pg 1 -lvl 4 -x 1430 -y 180 -defaultsOSRD
 preplace inst dummy_AISC110C_0 -pg 1 -lvl 1 -x 220 -y 350 -defaultsOSRD
 preplace netloc AXI4Lite_CaptureLogic_0_cap_enable 1 0 5 40 230 420 40 NJ 40 NJ 40 1650
+preplace netloc AXI4Lite_CaptureLogic_0_dummy_data 1 0 5 10 50 NJ 50 NJ 50 NJ 50 1640
 preplace netloc AXI4Lite_CaptureLogic_0_frame_cnt_target 1 1 4 440 60 NJ 60 NJ 60 1620
 preplace netloc AXI4Lite_CaptureLogic_0_rstn 1 0 5 30 220 430 70 NJ 70 NJ 70 1630
 preplace netloc SC0808BF_0_PS_AUX_DI 1 5 3 2110 630 NJ 630 3320
@@ -41,6 +42,7 @@ preplace netloc capture_logic_test_0_m_axis_aclk 1 2 1 820 370n
 preplace netloc capture_logic_test_0_m_axis_tdata 1 2 1 900 220n
 preplace netloc capture_logic_test_0_m_axis_tlast 1 2 1 870 240n
 preplace netloc capture_logic_test_0_m_axis_tvalid 1 2 1 850 260n
+preplace netloc capture_logic_test_0_missed_words 1 2 2 860 180 1240J
 preplace netloc dummy_AISC110C_0_clk_out 1 1 1 410 250n
 preplace netloc dummy_AISC110C_0_gpio 1 1 1 400 290n
 preplace netloc dummy_AISC110C_0_m_mux0_data_o 1 1 1 N 330
@@ -60,8 +62,6 @@ preplace netloc zynq_ultra_ps_e_0_dp_aux_data_out 1 6 1 2790 150n
 preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 4 3 1680 10 2060 20 2750
 preplace netloc zynq_ultra_ps_e_0_pl_clk1 1 0 7 20 470 440 460 890 190 1230 550 1670 510 2060 610 2730
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 6 440 660 NJ 660 NJ 660 1660 620 NJ 620 2760
-preplace netloc AXI4Lite_CaptureLogic_0_dummy_data 1 0 5 10 50 NJ 50 NJ 50 NJ 50 1640
-preplace netloc capture_logic_test_0_missed_words 1 2 2 860 180 1240J
 preplace netloc I2S_0_1 1 0 5 NJ 730 NJ 730 NJ 730 NJ 730 NJ
 preplace netloc RGPIO_Master_CPLD_RGPIO_M_EXT 1 6 1 N 90
 preplace netloc RGPIO_Slave_CPLD_RGPIO_M_EXT 1 6 1 N 110
@@ -87,11 +87,11 @@ pagesize -pg 1 -db -bbox -sgen -80 0 3430 820
    "linktotype_comment_1":"bd_design"
 }
 {
-   """""""""""""da_zynq_ultra_ps_e_cnt""""""""""""":"1",
-   """""""""""da_axi4_cnt""""""""""":"1",
-   """"""""""da_axi4_cnt"""""""""":"5",
-   """"""""da_axi4_cnt"""""""":"1",
-   """da_axi4_cnt""":"1"
+   """"""""""""""da_zynq_ultra_ps_e_cnt"""""""""""""":"1",
+   """"""""""""da_axi4_cnt"""""""""""":"1",
+   """""""""""da_axi4_cnt""""""""""":"5",
+   """""""""da_axi4_cnt""""""""":"1",
+   """"da_axi4_cnt"""":"1"
 }
 {
    "/comment_0":"comment_0",

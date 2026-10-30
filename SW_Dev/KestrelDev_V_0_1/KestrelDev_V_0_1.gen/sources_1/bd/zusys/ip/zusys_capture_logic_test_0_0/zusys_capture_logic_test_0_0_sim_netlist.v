@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Wed Oct 28 14:51:59 2026
+// Date        : Thu Oct 29 18:30:11 2026
 // Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0_sim_netlist.v
@@ -60,11 +60,11 @@ module zusys_capture_logic_test_0_0
   input [7:0]s_mux2_data_o;
   input [7:0]s_mux3_data_o;
 
-  wire \<const0> ;
   wire \<const1> ;
   wire cap_enable;
   wire cap_status;
   wire clk_in;
+  wire fifo_aresetn;
   wire [31:0]frame_cnt;
   wire [31:0]frame_cnt_target;
   wire [3:0]gpio;
@@ -80,20 +80,18 @@ module zusys_capture_logic_test_0_0
   wire [7:0]s_mux2_data_o;
   wire [7:0]s_mux3_data_o;
 
-  assign fifo_aresetn = \<const0> ;
   assign m_axis_aclk = clk_in;
   assign m_axis_tkeep[3] = \<const1> ;
   assign m_axis_tkeep[2] = \<const1> ;
   assign m_axis_tkeep[1] = \<const1> ;
   assign m_axis_tkeep[0] = \<const1> ;
-  GND GND
-       (.G(\<const0> ));
   VCC VCC
        (.P(\<const1> ));
   zusys_capture_logic_test_0_0_capture_logic_test inst
        (.cap_enable(cap_enable),
         .cap_status_reg_0(cap_status),
         .clk_in(clk_in),
+        .fifo_aresetn(fifo_aresetn),
         .frame_cnt(frame_cnt),
         .frame_cnt_target(frame_cnt_target),
         .gpio(gpio[0]),
@@ -112,7 +110,8 @@ endmodule
 
 (* ORIG_REF_NAME = "capture_logic_test" *) 
 module zusys_capture_logic_test_0_0_capture_logic_test
-   (m_axis_tdata,
+   (fifo_aresetn,
+    m_axis_tdata,
     m_axis_tlast,
     frame_cnt,
     missed_words,
@@ -129,6 +128,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
     s_mux1_data_o,
     s_mux2_data_o,
     s_mux3_data_o);
+  output fifo_aresetn;
   output [31:0]m_axis_tdata;
   output m_axis_tlast;
   output [31:0]frame_cnt;
@@ -154,6 +154,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   wire cap_status_reg_0;
   wire clk_in;
   wire [31:1]data0;
+  wire fifo_aresetn;
   wire [31:0]frame_cnt;
   wire \frame_cnt[31]_i_10_n_0 ;
   wire \frame_cnt[31]_i_11_n_0 ;
@@ -452,7 +453,6 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   wire mux_data_valid_o;
   wire [4:0]p_0_in;
   wire [31:0]p_2_in;
-  wire rstn_sync;
   wire running5_out;
   wire running_reg_n_0;
   wire [7:0]s_mux0_data_o;
@@ -477,7 +477,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   LUT1 #(
     .INIT(2'h1)) 
     cap_status_i_1
-       (.I0(rstn_sync),
+       (.I0(fifo_aresetn),
         .O(cap_status_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
@@ -500,7 +500,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
        (.I0(running_reg_n_0),
         .I1(cap_enable),
         .I2(last_frame_reg_n_0),
-        .I3(rstn_sync),
+        .I3(fifo_aresetn),
         .O(\frame_cnt[31]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
@@ -1352,7 +1352,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
     .INIT(4'h7)) 
     \line_cnt[31]_i_1 
        (.I0(running_reg_n_0),
-        .I1(rstn_sync),
+        .I1(fifo_aresetn),
         .O(\line_cnt[31]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
@@ -2242,7 +2242,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
         .I2(cap_status_reg_0),
         .I3(running_reg_n_0),
         .I4(m_axis_tvalid),
-        .I5(rstn_sync),
+        .I5(fifo_aresetn),
         .O(m_axis_tvalid_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
@@ -2503,7 +2503,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
   (* XPM_CDC = "ASYNC_RST" *) 
   (* XPM_MODULE = "TRUE" *) 
   zusys_capture_logic_test_0_0_xpm_cdc_async_rst rstn_sync_inst
-       (.dest_arst(rstn_sync),
+       (.dest_arst(fifo_aresetn),
         .dest_clk(clk_in),
         .src_arst(m_axis_aresetn));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
@@ -2554,7 +2554,7 @@ module zusys_capture_logic_test_0_0_capture_logic_test
     \word_cnt[4]_i_1 
        (.I0(mux_data_valid_o),
         .I1(gpio),
-        .I2(rstn_sync),
+        .I2(fifo_aresetn),
         .I3(running_reg_n_0),
         .O(\word_cnt[4]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 

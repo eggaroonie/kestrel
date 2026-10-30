@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Wed Oct 28 14:51:59 2026
+-- Date        : Thu Oct 29 18:30:11 2026
 -- Host        : JLaptop running 64-bit Ubuntu 26.04.1 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/jackson/projects/kestrel/SW_Dev/KestrelDev_V_0_1/KestrelDev_V_0_1.gen/sources_1/bd/zusys/ip/zusys_capture_logic_test_0_0/zusys_capture_logic_test_0_0_sim_netlist.vhdl
@@ -126,6 +126,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity zusys_capture_logic_test_0_0_capture_logic_test is
   port (
+    fifo_aresetn : out STD_LOGIC;
     m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axis_tlast : out STD_LOGIC;
     frame_cnt : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -154,6 +155,7 @@ architecture STRUCTURE of zusys_capture_logic_test_0_0_capture_logic_test is
   signal cap_status_i_2_n_0 : STD_LOGIC;
   signal \^cap_status_reg_0\ : STD_LOGIC;
   signal data0 : STD_LOGIC_VECTOR ( 31 downto 1 );
+  signal \^fifo_aresetn\ : STD_LOGIC;
   signal \^frame_cnt\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \frame_cnt[31]_i_10_n_0\ : STD_LOGIC;
   signal \frame_cnt[31]_i_11_n_0\ : STD_LOGIC;
@@ -445,7 +447,6 @@ architecture STRUCTURE of zusys_capture_logic_test_0_0_capture_logic_test is
   signal \missed_words_reg[7]_i_1_n_9\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal p_2_in : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal rstn_sync : STD_LOGIC;
   signal running5_out : STD_LOGIC;
   signal running_reg_n_0 : STD_LOGIC;
   signal \word_cnt[4]_i_1_n_0\ : STD_LOGIC;
@@ -538,6 +539,7 @@ architecture STRUCTURE of zusys_capture_logic_test_0_0_capture_logic_test is
   attribute SOFT_HLUTNM of \word_cnt[4]_i_2\ : label is "soft_lutpair0";
 begin
   cap_status_reg_0 <= \^cap_status_reg_0\;
+  fifo_aresetn <= \^fifo_aresetn\;
   frame_cnt(31 downto 0) <= \^frame_cnt\(31 downto 0);
   m_axis_tvalid <= \^m_axis_tvalid\;
   missed_words(31 downto 0) <= \^missed_words\(31 downto 0);
@@ -546,7 +548,7 @@ cap_status_i_1: unisim.vcomponents.LUT1
       INIT => X"1"
     )
         port map (
-      I0 => rstn_sync,
+      I0 => \^fifo_aresetn\,
       O => cap_status_i_1_n_0
     );
 cap_status_i_2: unisim.vcomponents.LUT4
@@ -576,7 +578,7 @@ cap_status_reg: unisim.vcomponents.FDRE
       I0 => running_reg_n_0,
       I1 => cap_enable,
       I2 => last_frame_reg_n_0,
-      I3 => rstn_sync,
+      I3 => \^fifo_aresetn\,
       O => \frame_cnt[31]_i_1_n_0\
     );
 \frame_cnt[31]_i_10\: unisim.vcomponents.LUT4
@@ -1872,7 +1874,7 @@ last_frame_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => running_reg_n_0,
-      I1 => rstn_sync,
+      I1 => \^fifo_aresetn\,
       O => \line_cnt[31]_i_1_n_0\
     );
 \line_cnt[31]_i_2\: unisim.vcomponents.LUT2
@@ -3089,7 +3091,7 @@ m_axis_tvalid_i_1: unisim.vcomponents.LUT6
       I2 => \^cap_status_reg_0\,
       I3 => running_reg_n_0,
       I4 => \^m_axis_tvalid\,
-      I5 => rstn_sync,
+      I5 => \^fifo_aresetn\,
       O => m_axis_tvalid_i_1_n_0
     );
 m_axis_tvalid_i_2: unisim.vcomponents.LUT2
@@ -3479,7 +3481,7 @@ m_axis_tvalid_reg: unisim.vcomponents.FDRE
     );
 rstn_sync_inst: entity work.zusys_capture_logic_test_0_0_xpm_cdc_async_rst
      port map (
-      dest_arst => rstn_sync,
+      dest_arst => \^fifo_aresetn\,
       dest_clk => clk_in,
       src_arst => m_axis_aresetn
     );
@@ -3546,7 +3548,7 @@ running_reg: unisim.vcomponents.FDRE
         port map (
       I0 => mux_data_valid_o,
       I1 => gpio(0),
-      I2 => rstn_sync,
+      I2 => \^fifo_aresetn\,
       I3 => running_reg_n_0,
       O => \word_cnt[4]_i_1_n_0\
     );
@@ -3644,7 +3646,6 @@ entity zusys_capture_logic_test_0_0 is
 end zusys_capture_logic_test_0_0;
 
 architecture STRUCTURE of zusys_capture_logic_test_0_0 is
-  signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \^clk_in\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
@@ -3668,16 +3669,11 @@ architecture STRUCTURE of zusys_capture_logic_test_0_0 is
   attribute X_INTERFACE_INFO of m_axis_tkeep : signal is "xilinx.com:interface:axis:1.0 m_axis TKEEP";
 begin
   \^clk_in\ <= clk_in;
-  fifo_aresetn <= \<const0>\;
   m_axis_aclk <= \^clk_in\;
   m_axis_tkeep(3) <= \<const1>\;
   m_axis_tkeep(2) <= \<const1>\;
   m_axis_tkeep(1) <= \<const1>\;
   m_axis_tkeep(0) <= \<const1>\;
-GND: unisim.vcomponents.GND
-     port map (
-      G => \<const0>\
-    );
 VCC: unisim.vcomponents.VCC
      port map (
       P => \<const1>\
@@ -3687,6 +3683,7 @@ inst: entity work.zusys_capture_logic_test_0_0_capture_logic_test
       cap_enable => cap_enable,
       cap_status_reg_0 => cap_status,
       clk_in => \^clk_in\,
+      fifo_aresetn => fifo_aresetn,
       frame_cnt(31 downto 0) => frame_cnt(31 downto 0),
       frame_cnt_target(31 downto 0) => frame_cnt_target(31 downto 0),
       gpio(0) => gpio(0),

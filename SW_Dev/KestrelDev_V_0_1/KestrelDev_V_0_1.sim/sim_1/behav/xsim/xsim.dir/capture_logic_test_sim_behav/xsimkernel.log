@@ -2,3 +2,6 @@ Running: xsim.dir/capture_logic_test_sim_behav/xsimk -simmode gui -wdb capture_l
 Design successfully loaded
 Design Loading Memory Usage: 181024 KB (Peak: 181024 KB)
 Design Loading CPU Usage: 720 ms
+Simulation completed
+Simulation Memory Usage: 263020 KB (Peak: 320292 KB)
+Simulation CPU Usage: 2830 ms
