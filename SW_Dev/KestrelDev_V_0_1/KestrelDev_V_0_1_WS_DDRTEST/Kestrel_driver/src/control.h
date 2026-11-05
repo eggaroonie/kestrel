@@ -20,5 +20,4 @@ void write_bit_AXI(uint32_t base_address, uint32_t offset, uint32_t bit, uint8_t
 void write_reg_AXI(uint32_t base_address, uint32_t offset, uint32_t val);
 void write_ctrl_reg(CTRL_T selection, uint8_t val);
 
-
 #endif

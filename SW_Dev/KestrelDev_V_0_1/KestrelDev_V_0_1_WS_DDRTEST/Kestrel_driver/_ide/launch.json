@@ -4,7 +4,7 @@
 		{
 			"type": "tcf-debug",
 			"request": "launch",
-			"name": "Kesterl_driver_app_hw_1",
+			"name": "Kestrel_driver_app_hw_1",
 			"debugType": "baremetal-zu",
 			"attachToRunningTargetOptions": {
 				"targetSetupMode": "standalone",
@@ -35,7 +35,7 @@
 					"usingPsuInit": {
 						"runPsuInit": true,
 						"plPowerup": false,
-						"psuInitTclFile": "${workspaceFolder}/Kesterl_driver/_ide/psinit/psu_init.tcl"
+						"psuInitTclFile": "${workspaceFolder}/Kestrel_driver/_ide/psinit/psu_init.tcl"
 					}
 				},
 				"zuTraceOptions": {
@@ -48,7 +48,7 @@
 					{
 						"core": "psu_cortexa53_0",
 						"resetProcessor": true,
-						"elfFile": "${workspaceFolder}/Kesterl_driver/build/Kesterl_driver.elf",
+						"elfFile": "${workspaceFolder}/Kestrel_driver/build/Kestrel_driver.elf",
 						"stopAtEntry": false
 					}
 				],

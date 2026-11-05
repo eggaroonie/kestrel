@@ -4,7 +4,7 @@
  * Jackson Newman
  * 
  * Creation: 10/28/26
- * Last Revision: 10/30/26   
+ * Last Revision: 11/5/26   
  * Notes:
  *      Based off "xaxidma_example_sg_poll.c".
  * 
@@ -21,10 +21,8 @@
 #include "xdebug.h"
 #include "sleep.h"
 
-/* If compiling for 64-bit ARM (ZU3EG yes) */
-#ifdef __aarch64__ 
+/* A53 only: Xil_SetTlbAttributes() is called unconditionally below */
 #include "xil_mmu.h"
-#endif 
 
 /******************** Constant Definitions **********************************/
 
@@ -70,14 +68,41 @@
 //#define MEM_BASE_ADDR		    (DDR_BASE_ADDR + 0x1000000)
 
 /* Each descriptor is 64 bytes */
-#define NUM_RX_BDS          128
+#define NUM_RX_BDS          220000UL
+#define MMU_BLOCK_SIZE      0x200000UL      /* Lower A53 MMU DDR in 2MB blocks */
+#define DDR_LOW_END         0x7FEFFFFFUL    /* Last Byte of DDR Lower (lscript.ld )*/
 
+/* Must not be: BD descriptors
+ * |NUM_RX_BDS*(64Bytes size of a BD)|
+ * but must align with the MMU_BLOCK_SIZE
+ * 
+ * Example:
+ * |Descriptor            |  X   |
+ * |MMU_BLOCK|MMU_BLOCK|MMU_BLOCK|
+ * X = unallocated space still, do not put Buffer space here
+ * 
+ * When the CPU reads the buffer data it wants to be fast so it puts
+ * it into CPU cache (L1, L2) so it can read the data super fast.
+ * BDs do not need to be put into there because they dont hold useful
+ * information other than the buffer address.
+ * 
+ * Doesnt really matter for writes but reading is affected severely.
+ * Note: could add cache-coherent interconnect but could be a waste of time*/
 #define RX_BD_SPACE_BASE    (MEM_BASE_ADDR)
-#define RX_BD_SPACE_HIGH	(MEM_BASE_ADDR + NUM_RX_BDS * XAXIDMA_BD_MINIMUM_ALIGNMENT - 1) /* 8KB of descriptor space */
-#define RX_BUFFER_BASE		(MEM_BASE_ADDR + 0x00300000)  /* Where RECEIVED data gets written (3 MB in) */
-#define RX_BUFFER_HIGH		(MEM_BASE_ADDR + 0x004FFFFF)  /* End of the RX data area (not actually used in */
+/* BD minimum alignment 0x40*/
+#define RX_BD_SPACE_HIGH    (RX_BD_SPACE_BASE + NUM_RX_BDS * XAXIDMA_BD_MINIMUM_ALIGNMENT - 1)
+/* RX_BUFFER BASE adds teh difference betweent he MMU_BLOCK_SIZE to start
+ * at the next boundary */
+#define RX_BUFFER_BASE      ((RX_BD_SPACE_HIGH  + MMU_BLOCK_SIZE) & ~(MMU_BLOCK_SIZE - 1))
+#define RX_BUFFER_HIGH      (RX_BUFFER_BASE + NUM_RX_BDS * MAX_PKT_LEN - 1)
 
-#define TEST_START_VALUE	0xC 
+/* Must be true */
+_Static_assert(RX_BUFFER_HIGH <= DDR_LOW_END, "RX buffers run past the end of low DDR");
+// #define RX_BUFFER_BASE		(MEM_BASE_ADDR + 0x00300000)  /* Where RECEIVED data gets written (3 MB in) */
+// #define RX_BUFFER_HIGH		(MEM_BASE_ADDR + 0x004FFFFF)  /* End of the RX data area (not actually used in */
+
+#define TEST_START_VALUE	0x12345678U
+#define RX_TIMEOUT_MS       10000    /* Give up waiting on the DMA after ~1 s */
 
 // XPAR_AXI_DMA_0_ADDRWIDTH = 0x20 = 32 bits
 // XPAR_AXI_DMA_0_SG_LENGTH_WIDTH 0x14 = 20 bits so each descriptor = 2^20 - 1 = 1,048,575 
@@ -85,8 +110,9 @@
 
 
 /* XAxiDma_LookupConfig(XPAR_XAXIDMA_0_BASEADDR) */
-XAxiDma AxiDma;
+XAxiDma AxiDma;     /* The one definition; axidma.h declares it extern for main.c */
 
+/************************* Functions *****************************************/
 /******************************************************************************
  * AXIDMA_INIT()
  * 
@@ -98,7 +124,9 @@ int AXIDMA_INIT() {
     int Status;
     XAxiDma_Config *Config;
 
-	Xil_SetTlbAttributes(RX_BD_SPACE_BASE, MARK_UNCACHEABLE);
+	for (UINTPTR Addr = RX_BD_SPACE_BASE; Addr <= RX_BD_SPACE_HIGH; Addr += MMU_BLOCK_SIZE) {
+        Xil_SetTlbAttributes(Addr, MARK_UNCACHEABLE);
+    }
     Config = XAxiDma_LookupConfig(XPAR_XAXIDMA_0_BASEADDR);
 
     Status = XAxiDma_CfgInitialize(&AxiDma, Config);
@@ -128,7 +156,7 @@ int RxSetup(XAxiDma *AxiDmaInstPtr) {
     u32 FreeBdCount;        /* Unused BD count */
     UINTPTR RxBufferPtr;    /* Data Buffer attached to current BD */
 
-    int Index;
+    u32 Index;
     RxRingPtr = XAxiDma_GetRxRing(AxiDmaInstPtr);   /* Get the pointer to tbhe RX ring */
 
     /* Disable interrupts while setting up */
@@ -246,32 +274,127 @@ int RxSetup(XAxiDma *AxiDmaInstPtr) {
  * 
  ******************************************************************************/
 int CheckData() {
-    u8 *RxPacket;
-    int Index = 0;
-    u8 Value;
+    u32 *RxWords;
+    u32 Index;
+    u32 Expected;
 
-    RxPacket = (u8 *) RX_BUFFER_BASE;
-    Value = TEST_START_VALUE;
+    RxWords  = (u32 *) RX_BUFFER_BASE;
+    Expected = __builtin_bswap32(TEST_START_VALUE);    /* 0x78563412, as it lands in DDR */
 
     /* We need to invalidate the original RAM values stored in CPU cache so we
-     * invlaidate them and throw them away. Re-read the RAM! */
-    Xil_DCacheInvalidateRange((UINTPTR)RxPacket, MAX_PKT_LEN);
+     * invalidate them and throw them away. Re-read the RAM! */
+    Xil_DCacheInvalidateRange((UINTPTR)RxWords, MAX_PKT_LEN);
 
-    for (Index = 0; Index < MAX_PKT_LEN; Index++) {    /* For each of the 32 bytes... */
-		if (RxPacket[Index] != Value) {                 /* ...if the received byte doesn't match... */
-			/* ...print position, got/expected (in hex) */
-			xil_printf("Data error %d: %x/%x\r\n",
-				   Index, (unsigned int)RxPacket[Index],
-				   (unsigned int)Value);
+    for (Index = 0; Index < MAX_PKT_LEN / 4; Index++) {    /* For each of the 2400 words... */
+        if (RxWords[Index] != Expected) {
+            xil_printf("Data error word %d: %x/%x\r\n", (int)Index,
+                       (unsigned int)RxWords[Index], (unsigned int)Expected);
+            return XST_FAILURE;
+        }
+    }
 
-			return XST_FAILURE;     /* ...and fail on the first mismatch */
-		}                           /* End of if */
-		Value = (Value + 1) & 0xFF; /* Compute the next expected byte (same rule as when sending) */
-	}                               /* End of for loop */
-
-	return XST_SUCCESS;     /* All 32 bytes matched */
+    return XST_SUCCESS;
 }
 
+/******************************************************************************
+ * CheckDmaResult()
+ *
+ * Function:
+ *      Waits for the RX channel to finish a packet, checks every BD the DMA
+ *      handed back (errors + bytes received), checks the data, then gives the
+ *      BDs back to the DMA so it can receive the next capture.
+ *
+ * Notes:
+ *      XAxiDma_BdRingFromHw only hands back BDs once their packet has ended
+ *      (TLAST). capture_logic_test sends one TLAST at the end of the whole
+ *      capture, so the capture has to fit in the ring:
+ *      frame_cnt_target <= NUM_RX_BDS, or the DMA runs out of BDs first.
+ ******************************************************************************/
 int CheckDmaResult(XAxiDma *AxiDmaInstPtr) {
-    return XST_SUCCESS;
+    XAxiDma_BdRing *RxRingPtr;
+    XAxiDma_Bd *BdPtr;          /* First BD the DMA handed back */
+    XAxiDma_Bd *BdCurPtr;       /* BD we are currently checking */
+    int ProcessedBdCount;       /* # of finished BDs handed back */
+    u32 FreeBdCount;            /* # of BDs to give back to the DMA */
+    u32 BdSts;                  /* Status word the DMA wrote into the BD */
+    u32 ActualLen;              /* Bytes the DMA wrote into this BD's buffer */
+    u32 TotalLen = 0;           /* Bytes received across all BDs */
+    u32 Timeout = RX_TIMEOUT_MS;
+    int Result = XST_SUCCESS;   /* Keep checking after a bad BD so every problem prints */
+    int Status;
+    int Index;
+
+    RxRingPtr = XAxiDma_GetRxRing(AxiDmaInstPtr);
+
+    /* Wait for the DMA to finish a packet */
+    while ((ProcessedBdCount = XAxiDma_BdRingFromHw(RxRingPtr, XAXIDMA_ALL_BDS,
+                                                    &BdPtr)) == 0) {
+        if (Timeout == 0) {
+            /* S2MM status register: bit 0 halted, bit 1 idle,
+             * bits 4-6 and 8-10 are errors (XAXIDMA_ERR_ALL_MASK) */
+            xil_printf("RX timeout, S2MM status 0x%x\r\n",
+                       (unsigned int)XAxiDma_ReadReg(RxRingPtr->ChanBase,
+                                                     XAXIDMA_SR_OFFSET));
+            return XST_FAILURE;
+        }
+        usleep(1000);
+        Timeout--;
+    }
+
+    /* Check each BD the DMA handed back */
+    BdCurPtr = BdPtr;
+    for (Index = 0; Index < ProcessedBdCount; Index++) {
+        BdSts = XAxiDma_BdGetSts(BdCurPtr);
+        ActualLen = XAxiDma_BdGetActualLength(BdCurPtr, RxRingPtr->MaxTransferLen);
+        TotalLen += ActualLen;
+
+        /* Internal, slave, or decode error (decode = bad buffer address) */
+        if (BdSts & XAXIDMA_BD_STS_ALL_ERR_MASK) {
+            xil_printf("BD %d error, status 0x%x\r\n", Index, (unsigned int)BdSts);
+            Result = XST_FAILURE;
+        }
+
+        /* Each BD should be one full frame. If TLAST doesn't land on a frame
+         * boundary, the last BD (EOF 1) comes back short. */
+        if (ActualLen != MAX_PKT_LEN) {
+            xil_printf("BD %d got %d bytes, expected %d (EOF %d)\r\n", Index,
+                       (int)ActualLen, MAX_PKT_LEN,
+                       (BdSts & XAXIDMA_BD_STS_RXEOF_MASK) ? 1 : 0);
+            Result = XST_FAILURE;
+        }
+
+        BdCurPtr = (XAxiDma_Bd *)XAxiDma_BdRingNext(RxRingPtr, BdCurPtr);
+    }
+
+    xil_printf("RX: %d BDs, %d bytes (%d frames)\r\n", ProcessedBdCount,
+               (int)TotalLen, (int)(TotalLen / MAX_PKT_LEN));
+
+    /* Check the data before the BDs go back to the DMA, which can overwrite it */
+    if (CheckData() != XST_SUCCESS) {
+        Result = XST_FAILURE;
+    }
+
+    /* Done with these BDs, free them... */
+    Status = XAxiDma_BdRingFree(RxRingPtr, ProcessedBdCount, BdPtr);
+    if (Status != XST_SUCCESS) {
+        xil_printf("RX free BD failed %d\r\n", Status);
+        return XST_FAILURE;
+    }
+
+    /* ...and give them back to the DMA. Their buffer address and length are
+     * still set from RxSetup, and ToHw clears the complete bit. */
+    FreeBdCount = XAxiDma_BdRingGetFreeCnt(RxRingPtr);
+    Status = XAxiDma_BdRingAlloc(RxRingPtr, FreeBdCount, &BdPtr);
+    if (Status != XST_SUCCESS) {
+        xil_printf("RX alloc BD failed %d\r\n", Status);
+        return XST_FAILURE;
+    }
+
+    Status = XAxiDma_BdRingToHw(RxRingPtr, FreeBdCount, BdPtr);
+    if (Status != XST_SUCCESS) {
+        xil_printf("RX submit hw failed %d\r\n", Status);
+        return XST_FAILURE;
+    }
+
+    return Result;
 }

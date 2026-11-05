@@ -20,17 +20,13 @@
 #include <string.h>         // strcmp, strtok
 #include <ctype.h>          // tolower, isprint
 #include "control.h"
+#include "axidma.h"
 
 /******************** Constant Definitions **********************************/
 #define AXI4LITE_CAPTURELOGIC_BASE  XPAR_AXI4LITE_CAPTURELOGIC_0_BASEADDR
 #define UART_BASE                   STDIN_BASEADDRESS
 #define AXIDMA_BASE_LOW             XPAR_AXI_DMA_0_BASEADDR
 #define AXIDMA_BASE_HIGH            XPAR_AXI_DMA_0_HIGHADDR
-/**************************** Type Definitions *******************************/
-
-
-/***************** Macros (Inline Functions) Definitions *********************/
-
 
 /* Registers are 32 bits wide, so offsets step by 4 (ADDR_LSB = 2 in the IP) */
 /* Read offsets */
@@ -41,7 +37,8 @@
 /* Write offsets */
 #define REG_FRAME_CNT_TARGET    0x4u
 #define REG_DUMMY_DATA          0x8u
-#define  q S2MM_DMACR
+
+/************************* Functions *****************************************/
 /* Poll cap_status until it equals want; returns false if timeout_us passes first */
 static bool wait_cap_status(uint32_t want, uint32_t timeout_us) {
     for (uint32_t t = 0; t < timeout_us; t += 10) {
@@ -53,9 +50,15 @@ static bool wait_cap_status(uint32_t want, uint32_t timeout_us) {
 }
 
 int main(void) {
-    uint32_t frame_cnt_target = 10000;
+    uint32_t frame_cnt_target = 160000;
     write_ctrl_reg(RSTN, 1);
     xil_printf("Kestrel driver ready - press a key to capture\r\n");
+    if (AXIDMA_INIT() != XST_SUCCESS) {
+        xil_printf("DMA init failed\r\n");
+        return XST_FAILURE;
+    }
+    write_reg_AXI(AXI4LITE_CAPTURELOGIC_BASE, REG_DUMMY_DATA, TEST_START_VALUE);
+
     for (;;) {
         // wait for input
 
@@ -67,14 +70,14 @@ int main(void) {
             write_ctrl_reg(CAP_ENABLE, 0);  // capture logic only rearms after cap_enable drops
             write_ctrl_reg(CAP_ENABLE, 1);
 
-            // 1000 frames at 24.96 us each is ~25 ms, so these timeouts are generous
+
             if (!wait_cap_status(1, 100000)) {
                 xil_printf("timeout: capture never started (ctrl=0x%08x)\r\n",
                            Xil_In32(AXI4LITE_CAPTURELOGIC_BASE + REG_CTRL));
                 write_ctrl_reg(CAP_ENABLE, 0);
                 continue;
             }
-            if (!wait_cap_status(0, 1000000)) {
+            if (!wait_cap_status(0, 10000000)) {
                 xil_printf("timeout: capture never finished (frame_cnt=%d)\r\n",
                            Xil_In32(AXI4LITE_CAPTURELOGIC_BASE + REG_FRAME_CNT));
                 write_ctrl_reg(CAP_ENABLE, 0);
@@ -83,6 +86,10 @@ int main(void) {
 
             uint32_t frame_cnt = Xil_In32(AXI4LITE_CAPTURELOGIC_BASE + REG_FRAME_CNT);
             uint32_t missed_words = Xil_In32(AXI4LITE_CAPTURELOGIC_BASE + REG_MISSED_WORDS);
+            if (CheckDmaResult(&AxiDma) == XST_SUCCESS) {
+                xil_printf("DMA check passed\r\n");
+            }
+
             write_ctrl_reg(CAP_ENABLE, 0);
             xil_printf("frame_cnt: %d, missed_words: %d\r\n", frame_cnt, missed_words);
         }

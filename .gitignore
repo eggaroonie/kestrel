@@ -41,3 +41,55 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# ==============================================================
+# AMD/Xilinx Vivado + Vitis (generated files; all regenerable)
+# ==============================================================
+
+# The KiCad *.xml / *.csv rules above were also hiding Vivado/Vitis
+# files that MUST be tracked (custom IP component.xml, board files).
+!SW_Dev/**/*.xml
+!SW_Dev/**/*.csv
+
+# --- Vivado logs, journals, crash dumps -----------------------
+*.jou
+*.log
+*.str
+vivado_pid*.zip
+webtalk*
+usage_statistics_webtalk.*
+# ...but keep the vendor's documentation boot logs
+!SW_Dev/te0813/**/doc/*.log
+
+# --- Vivado generated project directories ---------------------
+# Regenerate with: Generate Output Products, Create HDL Wrapper,
+# then re-run synthesis/implementation.
+.Xil/
+*.cache/
+*.gen/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.hw/
+
+# --- Vitis IDE / build state ----------------------------------
+_ide/logs/
+_ide/.wsdata/
+workspace_journal*.py
+compile_commands.json
+.ninja_log
+.ninja_deps
+*.o
+*.d
+*.obj
+SW_Dev/**/build/
+
+# --- Vitis platform BSPs: generated sources + compiled libs ---
+# bsp.yaml / CMake config stay tracked so BSP settings survive.
+# Regenerate with: platform -> BSP settings -> Regenerate BSP, then build.
+SW_Dev/**/bsp/libsrc/
+SW_Dev/**/bsp/include/
+SW_Dev/**/bsp/lib/
+SW_Dev/**/*_bsp/libsrc/
+SW_Dev/**/*_bsp/include/
+SW_Dev/**/*_bsp/lib/

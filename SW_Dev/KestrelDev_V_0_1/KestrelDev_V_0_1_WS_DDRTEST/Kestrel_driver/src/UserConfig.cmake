@@ -30,6 +30,7 @@ set(USER_COMPILE_SOURCES
 "main.c"
 "control.c"
 "terminal.c"
+"axidma.c"
 )
 
 # -----------------------------------------

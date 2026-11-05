@@ -1,5 +1,5 @@
 {
-  "name": "Kesterl_driver",
+  "name": "Kestrel_driver",
   "type": "HOST",
   "platform": "DDR_test",
   "domain": "standalone_psu_cortexa53_0",

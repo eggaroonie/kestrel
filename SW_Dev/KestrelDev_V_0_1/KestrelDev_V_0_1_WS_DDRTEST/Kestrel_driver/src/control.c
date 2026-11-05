@@ -1,3 +1,18 @@
+/******************************************************************************
+ * control.c
+ * 
+ * Jackson Newman
+ * 
+ * Creation: 10/28/26
+ * Last Revision: 11/5/26   
+ * Notes:
+ *
+ * Function: 
+ *      Communicate with AXI4_Lite Buses on capture logic.
+ ******************************************************************************/
+
+/***************************** Include Files *********************************/
+#include "axidma.h"
 #include "xparameters.h"    // base addresses from hardware
 #include "xil_io.h"         // Xil_In32 / Xil_Out32
 #include "xil_printf.h"     // xil_printf over UART
@@ -9,11 +24,14 @@
 #include <string.h>         // strcmp, strtok
 #include <ctype.h>          // tolower, isprint
 #include "control.h"
+
+/******************** Constant Definitions **********************************/
 #define AXI4LITE_CAPTURELOGIC_BASE  XPAR_AXI4LITE_CAPTURELOGIC_0_BASEADDR
 #define UART_BASE                   STDIN_BASEADDRESS
 #define AXIDMA_BASE_LOW             XPAR_AXI_DMA_0_BASEADDR
 #define AXIDMA_BASE_HIGH            XPAR_AXI_DMA_0_HIGHADDR
 
+/************************* Functions *****************************************/
 void write_bit_AXI(uint32_t base_address, uint32_t offset, uint32_t bit, uint8_t val) {
     uint32_t cur_ctrl = Xil_In32(base_address + offset);
     uint32_t new_ctrl = (cur_ctrl & ~(1u << bit)) | ((val & 1u) << bit);
