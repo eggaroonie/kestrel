@@ -600,7 +600,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../Gerbers/SENSOR_RIBBON/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
