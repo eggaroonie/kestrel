@@ -1,0 +1,79 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.334484",
+   "Default View_TopLeft":"-1680,-1082",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port RGPIO_M_EXT -pg 1 -lvl 5 -x 1270 -y 100 -defaultsOSRD
+preplace port RGPIO_M_EXT1 -pg 1 -lvl 5 -x 1270 -y 1150 -defaultsOSRD
+preplace port port-id_RGPIO_M_RESET_N -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port port-id_clk1 -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace inst RGPIO_Master_CPLD -pg 1 -lvl 4 -x 1080 -y 100 -defaultsOSRD
+preplace inst RGPIO_Slave_CPLD -pg 1 -lvl 4 -x 1080 -y 1150 -defaultsOSRD
+preplace inst vio_rgpio -pg 1 -lvl 2 -x 480 -y 1080 -defaultsOSRD
+preplace inst xlconcat_2 -pg 1 -lvl 3 -x 780 -y 1020 -defaultsOSRD
+preplace inst xlconcat_3 -pg 1 -lvl 3 -x 780 -y 1180 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 1 -x 130 -y 180 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 1 -x 130 -y 280 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 1 -x 130 -y 380 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 1 -x 130 -y 480 -defaultsOSRD
+preplace inst xlslice_4 -pg 1 -lvl 1 -x 130 -y 580 -defaultsOSRD
+preplace inst xlslice_5 -pg 1 -lvl 1 -x 130 -y 680 -defaultsOSRD
+preplace inst xlslice_6 -pg 1 -lvl 1 -x 130 -y 780 -defaultsOSRD
+preplace inst xlslice_7 -pg 1 -lvl 1 -x 130 -y 880 -defaultsOSRD
+preplace inst xlslice_8 -pg 1 -lvl 1 -x 130 -y 980 -defaultsOSRD
+preplace inst xlslice_9 -pg 1 -lvl 1 -x 130 -y 1080 -defaultsOSRD
+preplace inst xlslice_10 -pg 1 -lvl 1 -x 130 -y 1180 -defaultsOSRD
+preplace inst xlslice_11 -pg 1 -lvl 1 -x 130 -y 1280 -defaultsOSRD
+preplace inst xlslice_12 -pg 1 -lvl 1 -x 130 -y 1380 -defaultsOSRD
+preplace inst xlslice_13 -pg 1 -lvl 1 -x 130 -y 1480 -defaultsOSRD
+preplace inst xlslice_14 -pg 1 -lvl 1 -x 130 -y 1580 -defaultsOSRD
+preplace inst xlslice_15 -pg 1 -lvl 1 -x 130 -y 1680 -defaultsOSRD
+preplace inst xlslice_16 -pg 1 -lvl 1 -x 130 -y 1780 -defaultsOSRD
+preplace inst xlslice_17 -pg 1 -lvl 1 -x 130 -y 1880 -defaultsOSRD
+preplace inst xlslice_18 -pg 1 -lvl 1 -x 130 -y 1980 -defaultsOSRD
+preplace inst xlslice_19 -pg 1 -lvl 1 -x 130 -y 2080 -defaultsOSRD
+preplace netloc RGPIO_Master_CPLD_RGPIO_M_OUT 1 0 4 20 110 NJ 110 NJ 110 NJ
+preplace netloc RGPIO_Slave_CPLD_RGPIO_M_OUT 1 0 4 20 2140 NJ 2140 NJ 2140 910J
+preplace netloc clk1_1 1 0 2 NJ 120 330J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 4 20J 70 NJ 70 NJ 70 910
+preplace netloc vio_rgpio_m_11dt8_MUX 1 1 1 240J 1100n
+preplace netloc vio_rgpio_m_11dt8_muxsel 1 2 1 670 1030n
+preplace netloc vio_rgpio_m_12_CAN_FAULT 1 1 1 NJ 1080
+preplace netloc vio_rgpio_m_15dt13_PHY_LEDS 1 1 1 240J 980n
+preplace netloc vio_rgpio_m_16_XMOD2BUTTON 1 1 1 250J 880n
+preplace netloc vio_rgpio_m_17_S5_3_USER 1 1 1 260J 780n
+preplace netloc vio_rgpio_m_18_S5_4_FMCVADJ 1 1 1 270J 680n
+preplace netloc vio_rgpio_m_19_reserved 1 1 1 280J 580n
+preplace netloc vio_rgpio_m_20_SD_WP 1 1 1 290J 480n
+preplace netloc vio_rgpio_m_21_FMC_CLKDIR 1 1 1 300J 380n
+preplace netloc vio_rgpio_m_22_PJTAG_TRST 1 1 1 310J 280n
+preplace netloc vio_rgpio_m_23_PJTAG_SRST 1 1 1 320J 180n
+preplace netloc vio_rgpio_m_23dt12_unused 1 2 1 N 1050
+preplace netloc vio_rgpio_m_5dt0_leds 1 2 1 640 990n
+preplace netloc vio_rgpio_m_7dt0_data 1 1 1 250J 1120n
+preplace netloc vio_rgpio_m_7dt6_unused 1 2 1 650 1010n
+preplace netloc vio_rgpio_m_enable 1 2 2 630J 150 N
+preplace netloc vio_rgpio_s_0_S5_1_bootmode 1 1 1 330J 1280n
+preplace netloc vio_rgpio_s_11dt8_bootmode 1 1 1 270J 1160n
+preplace netloc vio_rgpio_s_1_S5_2_bootmode 1 1 1 320J 1260n
+preplace netloc vio_rgpio_s_23dt12_PG 1 1 1 260J 1140n
+preplace netloc vio_rgpio_s_23dt8_unused 1 2 1 670 1130n
+preplace netloc vio_rgpio_s_2_xmod1_button 1 1 1 310J 1240n
+preplace netloc vio_rgpio_s_3_unused 1 1 1 300J 1220n
+preplace netloc vio_rgpio_s_6dt5_SD_CD 1 1 1 290J 1200n
+preplace netloc vio_rgpio_s_7dt0_data 1 2 1 630 1150n
+preplace netloc vio_rgpio_s_7dt6_ER_ERST 1 1 1 280J 1180n
+preplace netloc vio_rgpio_s_enable 1 2 2 660J 1110 890
+preplace netloc xlconcat_2_dout 1 3 1 890 130n
+preplace netloc xlconcat_3_dout 1 3 1 N 1180
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 NJ 90 NJ 90 NJ 90 900
+preplace netloc RGPIO_Master_CPLD_RGPIO_M_EXT 1 4 1 NJ 100
+preplace netloc RGPIO_Slave_CPLD_RGPIO_M_EXT 1 4 1 NJ 1150
+levelinfo -pg 1 0 130 480 780 1080 1270
+pagesize -pg 1 -db -bbox -sgen -180 -10 1430 2150
+"
+}
+0
