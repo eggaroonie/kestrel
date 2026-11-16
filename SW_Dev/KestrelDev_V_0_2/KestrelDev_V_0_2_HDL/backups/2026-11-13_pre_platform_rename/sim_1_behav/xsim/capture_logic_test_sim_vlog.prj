@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/ec67/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/6f8f/hdl" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/f0b6/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/0127/hdl/verilog" --include "../../../../KestrelDev_V_0_1.gen/sources_1/bd/zusys/ipshared/434f/hdl" --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
+"../../../../KestrelDev_V_0_1.srcs/sources_1/new/capture_logic_test.v" \
+"../../../../KestrelDev_V_0_1.srcs/sim_1/new/capture_logic_test_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

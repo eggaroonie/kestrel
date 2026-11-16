@@ -49,10 +49,10 @@ module System_clk_sync(
     cap_status_sync_inst (.src_clk(sensor_clk), .src_in(cap_status_in), .dest_clk(ctrl_clk), .dest_out(cap_status_out));
 
     xpm_cdc_gray #(.DEST_SYNC_FF(4), .INIT_SYNC_FF(0), .REG_OUTPUT(0), .SIM_ASSERT_CHK(0), .SIM_LOSSLESS_GRAY_CHK(0), .WIDTH(32))
-    frame_cnt_sync_inst (.src_clk(sensor_clock), .src_in_bin(frame_cnt_in), .dest_clk(ctrl_clk), .dest_out_bin(frame_cnt_out));
+    frame_cnt_sync_inst (.src_clk(sensor_clk), .src_in_bin(frame_cnt_in), .dest_clk(ctrl_clk), .dest_out_bin(frame_cnt_out));
 
     xpm_cdc_gray #(.DEST_SYNC_FF(4), .INIT_SYNC_FF(0), .REG_OUTPUT(0), .SIM_ASSERT_CHK(0), .SIM_LOSSLESS_GRAY_CHK(0), .WIDTH(32))
-    missed_words_sync_inst (.src_clk(sensor_clock), .src_in_bin(missed_words_in), .dest_clk(ctrl_clk), .dest_out_bin(missed_words_out));   
+    missed_words_sync_inst (.src_clk(sensor_clk), .src_in_bin(missed_words_in), .dest_clk(ctrl_clk), .dest_out_bin(missed_words_out));   
     
     
 endmodule

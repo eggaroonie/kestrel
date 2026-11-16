@@ -21,19 +21,16 @@
 
 
 module capture_logic (
-    (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
-    (* X_INTERFACE_PARAMETER = "ASSOCIATED_RESET rstn" *)
-    (* X_INTERFACE_IGNORE = "true" *)
     input wire [31:0]   ctrl, 
     input wire [31:0]   frame_cnt_target,
     input wire          cap_enable,
     input wire          clk_in,   // must be sensor clock
     input wire          ctrl_clk, //pl_clk0
     
-    output reg          cap_status,
-    output reg [31:0]   frame_cnt,
+    output wire         cap_status,
+    output wire [31:0]  frame_cnt,
     output wire         fifo_aresetn,
-    output reg [31:0]   missed_words,
+    output wire [31:0]  missed_words,
     
     output  reg [31:0]  m_axis_tdata,
     output  wire [3:0]  m_axis_tkeep,
@@ -53,16 +50,25 @@ module capture_logic (
     );
 
     reg  [31:0] clk_cnt;
-    reg  [31:0] line_cnt;
     wire [31:0] data_in;
     assign m_axis_aclk = clk_in;
     assign m_axis_tkeep = 4'hF; // Keep all data
-    wire frame_sync = gpio[0];
-    
-    
+
+    // Frames are counted from DATAVAL (mux_data_valid_o): the sensor holds it high for a
+    // whole frame and drops it between frames. The framesync GPIO (gpio[0]) is a ~5 ns
+    // pulse that the FPGA can't sample reliably, so it isn't used.
+    localparam [11:0] WORDS_PER_FRAME = 12'd2400;   // 80x120 pixels / 4 pixels per word (4x8-bit readout)
+    reg  [11:0] word_cnt;                           // word within the current frame, 0 .. WORDS_PER_FRAME-1
+    reg         dv_prev;                            // DATAVAL on the previous clock
+    reg         synced;                             // seen a frame start since arming
+    wire        dv_rise   = mux_data_valid_o && !dv_prev;
+    wire        take      = mux_data_valid_o && (synced || dv_rise);   // skip a frame already in progress when armed
+    wire        last_word = (word_cnt == WORDS_PER_FRAME - 1'b1);
+
+    always @(posedge clk_in) dv_prev <= mux_data_valid_o;
+
     //assign m_axci_tlast = cap_status & !capture_enable;
     reg [31:0]  last_line;
-    reg [4:0]   word_cnt;
     reg         running;
     reg         last_frame;
     wire rstn_sync;
@@ -101,68 +107,61 @@ module capture_logic (
 
     always @(posedge clk_in) begin
         if (!rstn_sync) begin
-            cap_status      <= 0;
-            line_cnt        <= 1'b0;
-            frame_cnt       <= 32'b0;
+            cap_status_r      <= 0;
+            frame_cnt_r       <= 32'b0;
             m_axis_tvalid   <= 1'b0;
             m_axis_tlast    <= 1'b0;
             m_axis_tdata    <= 32'd0;
             running         <= 0;
             last_frame      <= 0;
-            word_cnt        <= 5'b0;
-            missed_words    <= 32'b0;
-            
-        end else if (running) begin
-            if (mux_data_valid_o && frame_sync) begin
-                line_cnt <= line_cnt + 1;
-                if (line_cnt == 119) begin
-                    frame_cnt   <= frame_cnt + 1'b1;
-                    line_cnt    <= 0;
-                end 
-                if (frame_cnt == (frame_cnt_target - 1)) begin
-                    last_frame <= 1'b1;
-                end
-            end
+            word_cnt        <= 12'd0;
+            synced          <= 1'b0;
+            missed_words_r    <= 32'b0;
 
-            if (mux_data_valid_o) begin
-                if (frame_sync) begin
-                    word_cnt <= 5'b0;
+        end else if (running) begin
+            if (dv_rise) synced <= 1'b1;
+
+            if (take) begin
+                if (last_word) begin
+                    word_cnt    <= 12'd0;
+                    frame_cnt_r <= frame_cnt_r + 1'b1;
+                    if (frame_cnt_r == frame_cnt_target_sync - 1'b1) begin
+                        m_axis_tlast <= 1'b1;   // goes out with this word, the last of the last frame
+                        running      <= 1'b0;
+                        last_frame   <= 1'b1;   // don't re-arm until cap_enable drops
+                    end
                 end else begin
                     word_cnt <= word_cnt + 1'b1;
                 end
             end
 
-            if (mux_data_valid_o && !frame_sync && word_cnt == 5'd18 && frame_cnt == frame_cnt_target) begin
-                m_axis_tlast <= 1'b1;
-                running      <= 1'b0;
+            // The beat on the bus is lost if the FIFO isn't ready (no backpressure to the sensor)
+            if (m_axis_tvalid && !m_axis_tready) begin
+                missed_words_r <= missed_words_r + 1;
             end
-            if (cap_status && mux_data_valid_o && !m_axis_tready) begin
-                missed_words <= missed_words + 1;
-            end
-            m_axis_tvalid <= cap_status && mux_data_valid_o;
+            m_axis_tvalid <= take;
             m_axis_tdata  <= { s_mux3_data_o,
-                               s_mux2_data_o, 
+                               s_mux2_data_o,
                                s_mux1_data_o,
                                s_mux0_data_o};
 
-        end else if (cap_enable && !last_frame) begin
+        end else if (cap_enable_sync && !last_frame) begin
             running         <= 1;
-            cap_status      <= 1;
+            cap_status_r      <= 1;
             m_axis_tlast    <= 1'b0;
-            line_cnt        <= 32'b0;
-            frame_cnt       <= 32'b0;
+            frame_cnt_r       <= 32'b0;
             last_frame      <= 1'b0;
-            word_cnt        <= 5'b0;
-            missed_words    <= 32'b0;
+            word_cnt        <= 12'd0;
+            synced          <= 1'b0;
+            missed_words_r    <= 32'b0;
         end else begin
             running         <= 0;
-            cap_status      <= 0;
-            line_cnt        <= 1'b0;
+            cap_status_r      <= 0;
             m_axis_tvalid   <= 1'b0;
             m_axis_tlast    <= 1'b0;
             m_axis_tdata    <= 32'd0;
-            if (!cap_enable) last_frame <= 1'b0;
-            word_cnt        <= 5'b0;
+            if (!cap_enable_sync) last_frame <= 1'b0;
+            word_cnt        <= 12'd0;
         end
     end
 
